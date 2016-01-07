@@ -212,8 +212,15 @@ function optionsframework_options() {
 
 	$options[] = array(
 		'name' =>  esc_html__( 'Ad 300 x 600', 'quark' ),
-		'desc' => esc_html__( 'Select an image and background color for the homepage banner.', 'quark' ),
+		'desc' => esc_html__( 'Select an image and background color for the Ad 300 x 600.', 'quark' ),
 		'id' => 'ad_300x600',
+		'std' => $background_defaults,
+		'type' => 'background' );
+
+	$options[] = array(
+		'name' =>  esc_html__( 'Ad 300 x 250', 'quark' ),
+		'desc' => esc_html__( 'Select an image and background color for the Ad 300 x 250.', 'quark' ),
+		'id' => 'ad_300x250',
 		'std' => $background_defaults,
 		'type' => 'background' );
 

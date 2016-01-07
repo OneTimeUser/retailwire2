@@ -1146,3 +1146,84 @@ register_sidebar(array(
         'before_title' => '<h2 class="widgettitle">',
         'after_title' => '</h2>',
 ));
+
+register_sidebar(array(
+        'name' => __('Sidebar Discussion'),
+        'id' => 'sidebar_discussion',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+));
+
+add_shortcode( 'ad1', 'ad1' );
+
+function ad1(){
+
+    ob_start();
+    $background = of_get_option( 'ad_300x600', $background_defaults );
+    ?>
+        <img src="<?php echo esc_url( $background['image'] );  ?>">
+
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
+
+add_shortcode( 'ad2', 'ad2' );
+
+function ad2(){
+
+    ob_start();
+    $background_1 = of_get_option( 'ad_300x250', $background_defaults );
+    ?>
+        <img src="<?php echo esc_url( $background_1['image'] );  ?>">
+
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
+
+
+add_shortcode( 'slide_resources', 'slide_resources' );
+
+function slide_resources(){
+
+    ob_start();
+    
+    ?>
+        <?php 
+        
+          $args = array(
+            'order' => 'desc',
+            'posts_per_page' => '3'
+     
+          );
+
+          $wp_query = new WP_Query( $args );
+
+            if ( $wp_query->have_posts() ) {
+
+              while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
+              <div class="box-post">
+                <h1 class="heading-with-top-padding"><?php the_title(); ?></h1>
+                <h6 class="date"><?php the_date(); ?></h6>
+                <div class="excerpt">
+                    <?php the_excerpt();?>
+                </div>
+                <div class="w-clearfix post-line-break"><a href="<?php the_permalink(); ?>" class="button read-more-button" href="#">Read More</a>
+                </div>
+              </div>
+
+            <?php endwhile; // end of the loop.
+            wp_reset_postdata();
+           
+            
+            }?>
+
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
+
+

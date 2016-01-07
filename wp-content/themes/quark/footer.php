@@ -89,29 +89,19 @@
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript">
-	jQuery(document).ready(function($) {
-	    $('.close-miss').click(function(){
-	      $('.dont-miss').fadeOut(1000);
-	    });
-	    function date(){
-	    var currentTime = new Date()
-		var hours = currentTime.getHours()
-		var minutes = currentTime.getMinutes()
-		if (minutes < 10){
-		minutes = "0" + minutes
-		}
-		document.write(hours + ":" + minutes + " ")
-		if(hours > 11){
-		document.write("PM")
-		} else {
-		document.write("AM")
-		}
-		}
-    });
-	
-	
-
-
+	jQuery(document).ready(function($){
+		$(".tabContents").hide(); // Ẩn toàn bộ nội dung của tab
+		$(".tabContents:first").show(); // Mặc định sẽ hiển thị tab1
+		
+		$("#tabContaier ul li span").click(function(){ //Khai báo sự kiện khi click vào một tab nào đó
+			
+			var activeTab = $(this).attr("link"); 
+			$("#tabContaier ul li span").removeClass("active"); 
+			$(this).addClass("active"); 
+			$(".tabContents").hide(); 
+			$(activeTab).fadeIn(); 
+		});
+	});
 </script>
 </body>
 

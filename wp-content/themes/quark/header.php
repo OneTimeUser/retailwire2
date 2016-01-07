@@ -115,7 +115,7 @@ function date(){
 	</div>
 	<div id="bannercontainer">
 		<div class="banner row">
-			<?php if ( is_front_page() ) {
+			<?php /*if ( is_front_page() ) {*/
 				// Count how many banner sidebars are active so we can work out how many containers we need
 				$bannerSidebars = 0;
 				for ( $x=1; $x<=2; $x++ ) {
@@ -142,7 +142,7 @@ function date(){
 					} ?>
 
 				<?php }
-			} ?>
+			/*}*/ ?>
 		</div> <!-- /.banner.row -->
 	</div> <!-- /#bannercontainer -->
 
