@@ -1,17 +1,34 @@
 <?php
 /**
- * The sidebar containing the main widget area.
+ * The Sidebar containing the main widget areas.
  *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
- * @package retailwire
+ * @package Retailwire
+ * @since Retailwire 1.0
  */
-
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
-	return;
-}
 ?>
+	<div class="col grid_4_of_12">
 
-<aside id="secondary" class="widget-area" role="complementary">
-	<?php dynamic_sidebar( 'sidebar-1' ); ?>
-</aside><!-- #secondary -->
+		<div id="secondary" class="widget-area" role="complementary">
+			<?php
+			do_action( 'before_sidebar' );
+
+			if ( is_active_sidebar( 'sidebar-main' ) ) {
+				dynamic_sidebar( 'sidebar-main' );
+			}
+
+			if ( ( is_home() || is_archive() ) && is_active_sidebar( 'sidebar-blog' ) ) {
+				dynamic_sidebar( 'sidebar-blog' );
+			}
+
+			if ( is_single() && is_active_sidebar( 'sidebar-single' ) ) {
+				dynamic_sidebar( 'sidebar-single' );
+			}
+
+			if ( is_page() && is_active_sidebar( 'sidebar-page' ) ) {
+				dynamic_sidebar( 'sidebar-page' );
+			}
+			?>
+
+		</div> <!-- /#secondary.widget-area -->
+
+	</div> <!-- /.col.grid_4_of_12 -->

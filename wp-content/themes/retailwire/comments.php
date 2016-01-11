@@ -1,13 +1,14 @@
 <?php
 /**
- * The template for displaying comments.
+ * The template for displaying Comments.
  *
- * This is the template that displays the area of the page that contains both the current comments
- * and the comment form.
+ * The area of the page that contains both current comments
+ * and the comment form. The actual display of comments is
+ * handled by a callback to Retailwire_comment() which is
+ * located in the functions.php file.
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package retailwire
+ * @package Retailwire
+ * @since Retailwire 1.0
  */
 
 /*
@@ -15,71 +16,39 @@
  * the visitor has not yet entered the password we will
  * return early without loading the comments.
  */
-if ( post_password_required() ) {
+if ( post_password_required() )
 	return;
-}
 ?>
 
-<div id="comments" class="comments-area">
+<section id="comments" class="comments-area">
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) : ?>
+	<?php // You can start editing here -- including this comment! ?>
+
+	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( // WPCS: XSS OK.
-					esc_html( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'retailwire' ) ),
-					number_format_i18n( get_comments_number() ),
-					'<span>' . get_the_title() . '</span>'
-				);
+			printf( _n( 'One response on &ldquo;%2$s&rdquo;', '%1$s responses on &ldquo;%2$s&rdquo;', get_comments_number(), 'Retailwire' ),
+			number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'retailwire' ); ?></h2>
-			<div class="nav-links">
+		<ol class="commentlist">
+			<?php wp_list_comments( array( 'callback' => 'Retailwire_comment', 'style' => 'ol' ) ); ?>
+		</ol> <!-- /.commentlist -->
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'retailwire' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'retailwire' ) ); ?></div>
+		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
+			<nav id="comment-nav-below" class="navigation" role="navigation">
+				<h1 class="assistive-text section-heading"><?php esc_html_e( 'Comment navigation', 'Retailwire' ); ?></h1>
+				<div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'Retailwire' ) ); ?></div>
+				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'Retailwire' ) ); ?></div>
+			</nav>
+		<?php endif; // check for comment navigation ?>
 
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-above -->
-		<?php endif; // Check for comment navigation. ?>
+	<?php // If comments are closed and there are comments, let's leave a little note.
+	elseif ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
+		<p class="nocomments"><?php esc_html_e( 'Comments are closed.', 'Retailwire' ); ?></p>
+	<?php endif; ?>
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol><!-- .comment-list -->
+	<?php comment_form(); ?>
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'retailwire' ); ?></h2>
-			<div class="nav-links">
-
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'retailwire' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'retailwire' ) ); ?></div>
-
-			</div><!-- .nav-links -->
-		</nav><!-- #comment-nav-below -->
-		<?php
-		endif; // Check for comment navigation.
-
-	endif; // Check for have_comments().
-
-
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) : ?>
-
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'retailwire' ); ?></p>
-	<?php
-	endif;
-
-	comment_form();
-	?>
-
-</div><!-- #comments -->
+</section> <!-- /#comments.comments-area -->

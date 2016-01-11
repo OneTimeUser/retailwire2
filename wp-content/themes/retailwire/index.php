@@ -6,51 +6,36 @@
  * and one of the two required files for a theme (the other being style.css).
  * It is used to display a page when nothing more specific matches a query.
  * E.g., it puts together the home page when no home.php file exists.
+ * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
- * @link https://codex.wordpress.org/Template_Hierarchy
- *
- * @package retailwire
+ * @package Retailwire
+ * @since Retailwire 1.0
  */
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<div id="primary" class="site-content row" role="main">
 
-		<?php
-		if ( have_posts() ) :
+		<div class="col grid_8_of_12">
 
-			if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
+			<?php if ( have_posts() ) : ?>
 
-			<?php
-			endif;
+				<?php // Start the Loop ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php get_template_part( 'content', get_post_format() ); // Include the Post-Format-specific template for the content ?>
+				<?php endwhile; ?>
 
-			/* Start the Loop */
-			while ( have_posts() ) : the_post();
+				<?php Retailwire_content_nav( 'nav-below' ); ?>
 
-				/*
-				 * Include the Post-Format-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+			<?php else : ?>
 
-			endwhile;
+				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
-			the_posts_navigation();
+			<?php endif; // end have_posts() check ?>
 
-		else :
+		</div> <!-- /.col.grid_8_of_12 -->
+		<?php get_sidebar(); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+	</div> <!-- /#primary.site-content.row -->
 
-		endif; ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php
-get_sidebar();
-get_footer();
+<?php get_footer(); ?>

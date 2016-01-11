@@ -13,7 +13,7 @@ function alm_get_current_repeater($repeater, $type) {
 	$template = $repeater;
 	$include = '';
 	// If is Custom Repeaters (Custom Repeaters v1)
-	if( $type == 'repeater' && has_action('alm_repeater_installed' ))
+	/*if( $type == 'repeater' && has_action('alm_repeater_installed' ))
 	{ 
 		$include = ALM_REPEATER_PATH . 'repeaters/'. $template .'.php';      					
 		
@@ -41,8 +41,8 @@ function alm_get_current_repeater($repeater, $type) {
 	else
 	{				
 		$include = alm_get_default_repeater();
-	}
-	
+	}*/
+	$include = ALM_PATH. 'core/repeater/'.$repeater .'.php';
 	return $include;
 }
 
