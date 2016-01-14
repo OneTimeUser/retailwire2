@@ -114,15 +114,15 @@
 	      singleItem:true
 	 
 	  });
+	  $("#owl-demo-2").owlCarousel({
+	      navigation : true, 
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      items : 3
+	 
+	  });
 
-	   var coupon_list = jQuery('.item-resource-2');
-        jQuery.each(coupon_list, function(index, el) {
-            var coupon_text =jQuery(el).text();
-            var parent=jQuery(el).closest('.content');
-            parent.find('.button-coupon a').text(coupon_text);
-            console.log(coupon_text);
-        })
-	  
+	 
 
  
 	});
