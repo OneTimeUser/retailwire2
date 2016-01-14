@@ -42,7 +42,7 @@ get_header(); ?>
 
 				              <li class="list-item">
 				              	<div class="item-discussion">
-				              		<span class="title-dis">
+				              		<span class="module-label title-dis">
 				              			Discussion
 				              		</span>
 				              		<?php
@@ -68,7 +68,7 @@ get_header(); ?>
 
 				              	</div>
 				              	<div class="item-braintrust">
-									<span class="title-brain">Braintrust</span>
+									<span class="module-label title-brain">Braintrust</span>
 									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
 									<h2><?php echo get_the_author(); ?></h2>
 									<div class="img-user">
@@ -109,15 +109,36 @@ get_header(); ?>
 
 
 		</div>
+		<?php //get_sidebar(); ?>
+		<div id="bannercontainer">
+			<div class="ad-3"></div>
+		</div>
 		<div class="section-2">
-			<a href="">
-				<?php $background2 = of_get_option( 'ad_970x90', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background2['image'] );  ?>">
-			</a>
+			<div class="module resources">
+				<span class="module-label title-resources">RESOURCES</span>
+			</div>
+			<div class="module news">
+				<span class="module-label title-news">RETAIL NEWS</span>
+			</div>
 		</div>
 		<div class="section-3">
-			<?php echo do_shortcode('[slide_resources id="owl-demo-2"]'); ?></div>
-		<?php //get_sidebar(); ?>
-
+			<div class="module sec-3-l">
+				<div class="press">
+					<span class="module-label title-press">PRESS RELEASES</span>
+				</div>
+			</div>
+			<div class="module sec-3-m">
+				<div class="twitter">
+					<span class="module-label title-twitter">TWITTER FEEDS</span>
+				</div>
+			</div>
+			<div class="sec-3-r">
+				<div class="ad-group-1">
+					<div class="ad-4"></div>
+					<div class="ad-5"></div>
+					<div class="ad-6"></div>
+				</div>
+			</div>
+		</div>
 	</div> <!-- /#primary.site-content.row -->
 <?php get_footer(); ?>
