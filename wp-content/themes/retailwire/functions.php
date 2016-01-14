@@ -1208,12 +1208,12 @@ return $excerpt;
 
 add_shortcode( 'slide_resources', 'slide_resources' );
 
-function slide_resources(){
+function slide_resources($args, $content){
 
     ob_start();
     
     ?>
-    <ul class="list-resource owl-carousel owl-theme" id="owl-demo" >
+    <ul class="list-resource owl-carousel owl-theme" id="<?php echo $args['id']; ?>" >
     	<?php 
         
           $args = array(

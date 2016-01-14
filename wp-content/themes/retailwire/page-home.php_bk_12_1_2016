@@ -109,14 +109,6 @@ get_header(); ?>
 
 
 		</div>
-		<div class="section-2">
-			<a href="">
-				<?php $background2 = of_get_option( 'ad_970x90', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background2['image'] );  ?>">
-			</a>
-		</div>
-		<div class="section-3">
-			<?php echo do_shortcode('[slide_resources id="owl-demo-2"]'); ?></div>
 		<?php //get_sidebar(); ?>
 
 	</div> <!-- /#primary.site-content.row -->

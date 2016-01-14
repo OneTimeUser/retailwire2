@@ -496,7 +496,7 @@ padding-left: 30px;
 	
 }
 .item-resource h2{
-	
+	line-height: 14px;
 }
 
 .item-resource h2 a{
@@ -698,6 +698,7 @@ color: #000;
     font-size: 14px;
     font-family: Calibri;
     line-height: 16px;
+    display: inline;
 }
 .content-re strong{
 	font-weight: normal;
@@ -726,4 +727,14 @@ color: #000;
 .no-thumbnail .categoris-re{
 	top: 0PX;
     left: 0PX;
+}
+.section-2{
+	text-align: center;
+	padding: 30px 0px;
+
+}
+.section-4{
+	border-bottom: 5px solid #9E9B8C;
+	border-right: 1px solid #9E9B8C;
+	padding: 30px 0px;
 }

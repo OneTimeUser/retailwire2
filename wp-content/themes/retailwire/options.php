@@ -218,6 +218,13 @@ function optionsframework_options() {
 		'type' => 'background' );
 
 	$options[] = array(
+		'name' =>  esc_html__( 'Ad 970 x 90', 'Retailwire' ),
+		'desc' => esc_html__( 'Select an image and background color for the Ad 300 x 250.', 'Retailwire' ),
+		'id' => 'ad_970x90',
+		'std' => $background_defaults,
+		'type' => 'background' );
+
+	$options[] = array(
 		'name' =>  esc_html__( 'Ad 300 x 250', 'Retailwire' ),
 		'desc' => esc_html__( 'Select an image and background color for the Ad 300 x 250.', 'Retailwire' ),
 		'id' => 'ad_300x250',
