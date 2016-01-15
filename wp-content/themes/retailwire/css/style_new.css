@@ -12,6 +12,7 @@ need to override main styles
 
 .list-item { /*temp style fix */
 	margin-bottom: 0 !important;
+
 }
 /*below is basic styling for all labels - nuanced styling will happen in title-... class
 need to add module-label class to all labels in php; also add to tagcloud
@@ -34,12 +35,24 @@ need to add module class to all labels in php
     border-bottom: 5px solid #9e9b8c;
 }
 
-.item-discussion {
+.item-discussion { /*overides customer.css*/
 	height: 334px;
+	overflow: hidden;
+	width: auto !important;
+	float: none !important;
+}
+
+.item-discussion img{
+	width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    -ms-interpolation-mode: bicubic !important;
 }
 
 .item-braintrust {
 	height: 334px;
+	width: 222px !important;
 	margin-bottom: 0;
 }
 
@@ -97,14 +110,14 @@ need to add module class to all labels in php
 	
 }
 
-.resources{
+.home-resources{ /*conflict...adjust class name*/
 	width: 100%;
 	height:300px;
 	background-color: green;
 	margin-bottom: 15px;
 }
 
-.news{
+.home-news{
 	width: 100%;
 	height:300px;
 	background-color: blue;
@@ -112,9 +125,9 @@ need to add module class to all labels in php
 
 }
 
-.press{}
+.home-press{}
 
-.twitter{}
+.home-twitter{}
 
 .ad-group-1{
 	width: 300px;

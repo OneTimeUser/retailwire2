@@ -41,6 +41,19 @@ get_header(); ?>
 				              while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
 
 				              <li class="list-item">
+				                <div class="item-braintrust">
+									<span class="module-label title-brain">Braintrust</span>
+									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
+									<h2><?php echo get_the_author(); ?></h2>
+									<div class="img-user">
+										<a href="<?php echo get_the_author_link(); ?>">
+											<?php echo get_avatar(get_the_author_meta()); ?>
+										</a>
+										
+										
+									</div>
+									
+								</div>
 				              	<div class="item-discussion">
 				              		<span class="module-label title-dis">
 				              			Discussion
@@ -67,19 +80,7 @@ get_header(); ?>
 							         </div>  
 
 				              	</div>
-				              	<div class="item-braintrust">
-									<span class="module-label title-brain">Braintrust</span>
-									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
-									<h2><?php echo get_the_author(); ?></h2>
-									<div class="img-user">
-										<a href="<?php echo get_the_author_link(); ?>">
-											<?php echo get_avatar(get_the_author_meta()); ?>
-										</a>
-										
-										
-									</div>
-									
-								</div>
+				              	
 
 				              </li>
 				              
@@ -114,21 +115,21 @@ get_header(); ?>
 			<div class="ad-3"></div>
 		</div>
 		<div class="section-2">
-			<div class="module resources">
+			<div class="module home-resources">
 				<span class="module-label title-resources">RESOURCES</span>
 			</div>
-			<div class="module news">
+			<div class="module home-news">
 				<span class="module-label title-news">RETAIL NEWS</span>
 			</div>
 		</div>
 		<div class="section-3">
 			<div class="module sec-3-l">
-				<div class="press">
+				<div class="home-press">
 					<span class="module-label title-press">PRESS RELEASES</span>
 				</div>
 			</div>
 			<div class="module sec-3-m">
-				<div class="twitter">
+				<div class="home-twitter">
 					<span class="module-label title-twitter">TWITTER FEEDS</span>
 				</div>
 			</div>
