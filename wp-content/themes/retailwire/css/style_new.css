@@ -17,7 +17,7 @@ need to override main styles
 /*below is basic styling for all labels - nuanced styling will happen in title-... class
 need to add module-label class to all labels in php; also add to tagcloud
 */
-.module-label {
+.module-label, .widgettitle {
 	color: #fff !important;
     font-size: 14px !important;
     padding: 2px 15px !important;
@@ -30,9 +30,9 @@ need to add module-label class to all labels in php; also add to tagcloud
 /*below is basic styling for all modules - nuanced styling will happen in item class-... class
 need to add module class to all labels in php
 */
-.module {
-	border-right: 1px solid #9e9b8c;
-    border-bottom: 5px solid #9e9b8c;
+.module{
+	border-right: 1px solid #9e9b8c !important;
+    border-bottom: 5px solid #9e9b8c !important;
 }
 
 .item-discussion { /*overides customer.css*/
@@ -187,10 +187,12 @@ need to add module class to all labels in php
     float: none !important;
 }
 
-.small-ad {
+.small-ad {/*should probably be embedded in text of article*/
 	width: 150px;
 	height:200px;
 	padding: 10px;
 	background-color: red;
+	float: left;
+	margin-right:20px;
 }
 

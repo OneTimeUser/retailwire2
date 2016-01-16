@@ -227,6 +227,8 @@ body #bannercontainer {
 }
 .widget_tag_cloud{
 	margin-top: 30px;
+	border-right: 1px solid #9e9b8c !important;
+    border-bottom: 5px solid #9e9b8c !important;
 }
 .widget_tag_cloud h2,
 #text-6 .widgettitle{
@@ -496,7 +498,7 @@ padding-left: 30px;
 	
 }
 .item-resource h2{
-	line-height: 14px;
+	
 }
 
 .item-resource h2 a{
@@ -540,8 +542,8 @@ font-family: calibri;
     cursor: pointer;
 }
 #text-6{
-    border-bottom: 5px solid #dbdad4;
-    border-right: 1px solid #dbdad4;
+    border-bottom: 5px solid #9e9b8c;
+    border-right: 1px solid #9e9b8c ;
 }
 .list-dis-3{
 	padding-left: 20px;
@@ -698,7 +700,6 @@ color: #000;
     font-size: 14px;
     font-family: Calibri;
     line-height: 16px;
-    display: inline;
 }
 .content-re strong{
 	font-weight: normal;
@@ -727,14 +728,4 @@ color: #000;
 .no-thumbnail .categoris-re{
 	top: 0PX;
     left: 0PX;
-}
-.section-2{
-	text-align: center;
-	padding: 30px 0px;
-
-}
-.section-4{
-	border-bottom: 5px solid #9E9B8C;
-	border-right: 1px solid #9E9B8C;
-	padding: 30px 0px;
 }
