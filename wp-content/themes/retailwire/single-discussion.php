@@ -13,6 +13,22 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="content-single-dis">
+
+						<div class="single-dis-r">
+							<div class="item-braintrust">
+									<span class="module-label title-brain">Braintrust</span>
+									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
+									<h2><?php echo get_the_author(); ?></h2>
+									<div class="img-user">
+										<a href="<?php echo get_the_author_link(); ?>">
+											<?php echo get_avatar(get_the_author_meta()); ?>
+										</a>
+										
+									</div>
+									
+								</div>
+							
+						</div>
 						<div class="single-dis-l">
 							<div class="item-discussion">
 				              		<span class="title-dis">
@@ -39,7 +55,9 @@ get_header(); ?>
 							         		</div>
 							         </div>  
 				              	</div>
+
 				              	<div class="content-post">
+				              		<div class="small-ad"></div>
 				              		<?php the_content(); ?>
 					              	<?php
 									// If comments are open or we have at least one comment, load up the comment template
@@ -50,26 +68,18 @@ get_header(); ?>
 				              	</div>
 				              	
 						</div>
-						<div class="single-dis-r">
-							<div class="item-braintrust">
-									<span class="title-brain">Braintrust</span>
-									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
-									<h2><?php echo get_the_author(); ?></h2>
-									<div class="img-user">
-										<a href="<?php echo get_the_author_link(); ?>">
-											<?php echo get_avatar(get_the_author_meta()); ?>
-										</a>
-										
-									</div>
-									
-								</div>
-							
-						</div>
+
+
+						
 				              	
 				      </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="sec-1-r">
+				<div class="ad-2">
+					<?php $background = of_get_option( 'ad_300x600', $background_defaults ); ?>
+					 <img src="<?php echo esc_url( $background['image'] );  ?>">
+				</div>
 				<?php dynamic_sidebar('sidebar_discussion') ?>
 			</div>
 			<div class="clear"></div>

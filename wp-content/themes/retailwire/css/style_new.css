@@ -177,3 +177,20 @@ need to add module class to all labels in php
 
 }
 
+.single-dis-r{/*overrride*/
+	width: 222px !important;
+    float: right !important;
+}
+
+.single-dis-l{/*override*/
+	width: auto !important;
+    float: none !important;
+}
+
+.small-ad {
+	width: 150px;
+	height:200px;
+	padding: 10px;
+	background-color: red;
+}
+
