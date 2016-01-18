@@ -50,6 +50,9 @@
 		<div class="footer-bottom">
 			<div class="container">
 				<div class="col grid_8_of_12">
+					<div class="menu-footer m-menu-footer">
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'footer-menu' ) ); ?>
+					</div>
 					<div class="logo-footer">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>" rel="home">
 								<?php 
@@ -118,13 +121,19 @@
 	      navigation : true, 
 	      slideSpeed : 300,
 	      paginationSpeed : 400,
-	      items : 3
-	 
+	      items : 3,
+		  itemsCustom : [
+	        [1600, 3]
+	      ]
 	  });
 
-	 
-
- 
+	  $('.m-arrow-menu,.m-arrow-search').click(function(){
+              $('.menu-mobile').slideToggle(500);
+        })
+	  $('.close-menu').click(function(){
+              $('.menu-mobile').slideToggle(500);
+              
+        })
 	});
 
 </script>

@@ -57,18 +57,13 @@ function date(){
 	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to main content', 'Retailwire' ); ?></a></div>
 
 	<div id="headercontainer">
-		<div class="ad-ipad">
-				<?php $background = of_get_option( 'ad_300x250', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background['image'] );  ?>">
-			</div>
 		<div class="dont-miss">
-			<p>dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</p>
+			dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!
 			<span class="close-miss"></span>
 		</div>
 		<header id="masthead" class="site-header row" role="banner">
-			
 			<div class="col grid_4_of_12 site-title">
-				<div class="social-media-icons hide_ipad">
+				<div class="social-media-icons">
 					<?php echo Retailwire_get_social_media(); ?>
 				</div>
 				<h1>
@@ -86,7 +81,7 @@ function date(){
 			</div> <!-- /.col.grid_5_of_12 -->
 
 			<div class="col grid_8_of_12">
-				<div class="top-right hide_ipad">
+				<div class="top-right">
 					<ul>
 						<li>
 							<a href="#" class="regis">Register</a>//<a hre="#" class="sign-in">Sign in</a>
@@ -100,49 +95,12 @@ function date(){
 
 					</ul>
 				</div>
-				<ul class="m-top-right show_ipad">
-					<li><a href="#" class="m-regis"></a></li>
-					<li><a href="#" class="m-join"></a></li>
-					<li><a href="#" class="m-link-search"></a></li>
-
-				</ul>
-				<nav id="site-navigation" class="main-navigation hide_ipad" role="navigation">
+				<nav id="site-navigation" class="main-navigation" role="navigation">
 					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'Retailwire' ); ?></h3>
 					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to content', 'Retailwire' ); ?></a></div>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
 				</nav> <!-- /.site-navigation.main-navigation -->
 			</div> <!-- /.col.grid_7_of_12 -->
-			<div class="m-menu-top show_ipad">
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<h3 class="menu-toggle assistive-text"><?php esc_html_e( 'Menu', 'Retailwire' ); ?></h3>
-					<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to content', 'Retailwire' ); ?></a></div>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav>
-			</div>
-			<span class="m-arrow-menu"></span>
-			<span class="m-arrow-search"></span>
-			<div class="menu-mobile">
-				<div class="m-top-menu">
-					<span class="close-menu"></span>
-					<div class="search-mobile">
-						<?php get_search_form(); ?>
-					</div>
-			    </div>
-				<div class="m-bottom-menu">
-					<ul class="nav-menu-mobile">
-							<li>
-								<a href="#" class="regis">Register</a>//<a hre="#" class="sign-in">Sign in</a>
-							</li>
-							<li>
-								<a href="#" class="join">join the braintrust</a>
-							</li>
-					</ul>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu-mobile' ) ); ?>
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'nav-menu-mobile' ) ); ?>
-					
-				</div>
-				
-			</div>
 		</header> <!-- /#masthead.site-header.row -->
 
 	</div> <!-- /#headercontainer -->
