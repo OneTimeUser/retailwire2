@@ -57,9 +57,9 @@ need to add module class to all labels in php
 }
 
 .ad-2 {
-/*	width: 300px;
+	width: 300px;
 	height: 600px;
-	background-color: red;*/
+	background-color: red;
 	margin-bottom: 15px;
 }
 
@@ -90,7 +90,7 @@ need to add module class to all labels in php
 
 .sec-3-l{
 	 width: 36.5%;
-    height: 804px;
+    height: 780px;
     float: left;
     background-color: purple;
     margin-right: 1%;
@@ -98,15 +98,15 @@ need to add module class to all labels in php
 
 .sec-3-m{
 	width: 36.5%;
-    height: 804px;
+    height: 780px;
     float: left;
     background-color: orange;
     margin-right: 1%;
 }
 
 .sec-3-r{
-/*	width: 25%;
-	float:right;*/
+	width: 25%;
+	float:right;
 	
 }
 
