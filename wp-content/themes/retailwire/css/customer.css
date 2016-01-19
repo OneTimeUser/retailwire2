@@ -1023,6 +1023,97 @@ body .smallprint{
     top: 23px;
     cursor: pointer;
 }
+
+#headercontainer,
+.site-title img,
+body #headercontainer.sticky .main-navigationss{
+	transition: all 0.4s ease;
+}
+#headercontainer.sticky {
+    background: #fff;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 99999999999;
+}
+#headercontainer.sticky .site-title img{
+	width: 200px;
+	height: auto;
+}
+body #headercontainer.sticky .main-navigation {
+    margin: 28px 0 0 0;
+}
+#headercontainer.sticky .social-media-icons,
+#headercontainer.sticky .top-right
+{
+	display: none;
+}
+.site-title h1 {
+    line-height: 0px;
+    margin-top: 5px !important;
+}
+.form-top{
+border-bottom: 1px solid #ccc;
+padding: 10px 0px 20px;
+margin-bottom: 20px;}
+.form-bottom{
+width: 40%;
+}
+.form-bottom input[type="text"],
+.form-bottom input[type="email"],
+.form-bottom textarea{
+	width: 100%;
+}
+.form-contact{
+	width: 100%;
+}
+.group-input{
+	margin-bottom: 10px;	
+}
+.form-contact select{
+    border: 1px solid #ccc;
+    padding: 5px;
+    width: 40%;
+}
+.form-contact br{
+	display: none;
+}
+.form-contact input{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.form-contact textarea{
+	border: 1px solid #ccc;
+	padding: 10px;
+}
+.group-submit{
+
+}
+.group-submit label{
+	float: left;
+}
+.group-submit input{
+	float: right;
+}
+.title-form{
+	display: block;
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.page-id-109 .entry-title,
+.page-id-109 #bannercontainer,
+.page-id-17 .entry-title,
+.page-id-17 #bannercontainer{
+	display: none;
+}
+
+
+
+
+
+
+
 /* REPONSIVE HOMEPAGE */
 @media screen and (max-width: 1280px){
 	.content-date{
@@ -1134,6 +1225,10 @@ body .smallprint{
 	.ad-ipad img{
 		height: 50px;
 	}
+	.form-contact select,
+	.form-bottom{
+    width: 60%;
+	}
 
 }
 @media screen and (max-width: 768px){
@@ -1165,11 +1260,16 @@ body .smallprint{
 	.menu-footer.m-menu-footer {
     display: none;
     }
+
 }
 @media screen and (max-width: 600px){
   .alm-reveal .item-dis-2 {
     width: 48%;
     margin: 10px 1% 20px;
+	}
+	.form-contact select,
+	.form-bottom{
+    width: 100%;
 	}
 }
 @media screen and (max-width: 480px){

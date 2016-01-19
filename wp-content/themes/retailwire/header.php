@@ -55,8 +55,6 @@ function date(){
 <div id="wrapper" class="hfeed site">
 
 	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to main content', 'Retailwire' ); ?></a></div>
-
-	<div id="headercontainer">
 		<div class="ad-ipad">
 				<?php $background = of_get_option( 'ad_300x250', $background_defaults ); ?>
 					 <img src="<?php echo esc_url( $background['image'] );  ?>">
@@ -65,6 +63,7 @@ function date(){
 			<p>dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</p>
 			<span class="close-miss"></span>
 		</div>
+	<div id="headercontainer">
 		<header id="masthead" class="site-header row" role="banner">
 			
 			<div class="col grid_4_of_12 site-title">

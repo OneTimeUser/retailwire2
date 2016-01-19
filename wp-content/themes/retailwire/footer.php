@@ -99,10 +99,10 @@
 	    });
 
 
-		$(".tabContents").hide(); // Ẩn toàn bộ nội dung của tab
-		$(".tabContents:first").show(); // Mặc định sẽ hiển thị tab1
+		$(".tabContents").hide(); 
+		$(".tabContents:first").show(); 
 		
-		$("#tabContaier ul li span").click(function(){ //Khai báo sự kiện khi click vào một tab nào đó
+		$("#tabContaier ul li span").click(function(){ 
 			var activeTab = $(this).attr("link"); 
 			$("#tabContaier ul li span").removeClass("active"); 
 			$(this).addClass("active"); 
@@ -134,6 +134,15 @@
               $('.menu-mobile').slideToggle(500);
               
         })
+
+	   $(window).scroll(function() {
+		if ($(this).scrollTop() > 100){  
+		    $('#headercontainer').addClass("sticky");
+		  }
+		  else{
+		    $('#headercontainer').removeClass("sticky");
+		  }
+		});
 	});
 
 </script>
