@@ -442,8 +442,7 @@ padding-left: 30px;
 	width: 32%;
 	margin-right: 2%;
 	float: left;
-	padding: 0px;
-/*	position: static !important;*/
+	padding: 0px
 }
 .alm-reveal{
 	overflow:hidden;
@@ -1050,7 +1049,7 @@ body #headercontainer.sticky .main-navigation {
 {
 	display: none;
 }
-#headercontainer.sticky .site-title h1 {
+.site-title h1 {
     line-height: 0px;
     margin-top: 5px !important;
 }
@@ -1108,39 +1107,6 @@ width: 40%;
 .page-id-17 #bannercontainer{
 	display: none;
 }
-.sub-list-press{
-
-}
-.sub-list-press h3{
-	margin: 10px 0px 0px 0px;
-	line-height: 15px;
-}
-.sub-list-press h3 a{
-	text-decoration: none;
-    font-size: 18px;
-    font-family: jubilat;
-    color: #000;
-    font-weight: bold;
-}
-.date-press ul {
-	padding: 0px;
-	margin: 0px;
-}
-.date-press ul li a{
-    font-size: 14px !important;
-    color: #c8c9c9 !important;
-    background: transparent !important;
-    padding: 0px;
-}
-.date-press ul li a:hover{
-	color: #c8c9c9;
-}
-.full-date-sub{
-	font-size: 14px;
-    font-family: 'PT Sans', Helvetica, Arial, sans-serif;
-    color: #c8c9c9;
-}
-
 
 
 
@@ -1202,8 +1168,7 @@ width: 40%;
 
 @media screen and (max-width: 1024px){
 	.sec-1-l {
-	    width: auto;
-    	float: none;
+	   width: 100%;
 	}
 	.sec-1-r {
        display: none;
@@ -1264,28 +1229,7 @@ width: 40%;
 	.form-bottom{
     width: 60%;
 	}
-	#headercontainer.sticky .m-top-right.show_ipad{
-		display: none !important;
-	}
-	#headercontainer.sticky .m-menu-top.show_ipad {
-    	display: none !important;
-	}
-	#headercontainer.sticky .main-navigation.hide_ipad {
-    	display: block !important;
-	}
-	body #headercontainer.sticky .main-navigation {
-    margin: 7px 0 0 0;
-	}
-	body #headercontainer.sticky .main-navigation li {
-    margin: 0 0 0 20px;
-	}
-	#headercontainer.sticky .m-arrow-menu{
-		top: 25px;
-	}
-	#headercontainer.sticky .m-arrow-search{
-		top: 20px;
-	}
-	
+
 }
 @media screen and (max-width: 768px){
   	header.site-header .grid_8_of_12{
@@ -1316,41 +1260,7 @@ width: 40%;
 	.menu-footer.m-menu-footer {
     display: none;
     }
-    .alm-listing li.item-resource-2 {
-  
-    border-bottom: 5px solid #ccc;
-    padding-bottom: 10px;
-    border-right: 1px solid #ccc;
-	}
-	.info-resource {
-    border: none;
-	}
-	.item-discussion img {
-    width: auto !important;
-    height: 100% !important;
-    max-width: inherit !important;
-	}
-	.item-braintrust h2 {
-    margin-bottom: 10px;
-	}
-}
-@media screen and (max-width: 680px){
-	.info-resource h2 {
-    text-align: left;
-    line-height: 15px;
-	}
-	.alm-listing li.item-resource-2 img {
-    width: 220px;
-	}
-	.info-resource h2 a {
-    font-size: 18px;
-	}
-	.list-tab-dis {
-    padding: 20px 0px 0px 0px;
-	}
-	.info-dis h2 {
-    font-size: 20px;
-	}
+
 }
 @media screen and (max-width: 600px){
   .alm-reveal .item-dis-2 {
@@ -1361,35 +1271,11 @@ width: 40%;
 	.form-bottom{
     width: 100%;
 	}
-	.info-dis h2 {
-    font-size: 16px;
-	}
 }
 @media screen and (max-width: 480px){
 	.site-title img, 
 	.logo-footer img {
     width: 170px;
-	}
-	.alm-listing li.item-resource-2{
-		text-align: center;
-	}
-	.info-resource {
-    border: none;
-    clear: both;
-    padding-top: 10px;
-    text-align: center;
-	}
-	.info-resource h2 {
-    text-align: center;
-	}
-	.img-item-res {
-    display: block;
-    float: none;
-    width: 96%;
-    margin: 0 auto;
-	}
-	.alm-listing li.item-resource-2 img {
-    width: 100%;
 	}
 }
 @media screen and (max-width: 480px){
@@ -1401,32 +1287,8 @@ width: 40%;
 	}
 	.content-date {
     margin-right: 5px;
-    font-size: 14px;
-	}
-	.item-braintrust {
-    width: auto !important;
-	}
-	.single-dis-l {
-    width: auto !important;
-    float: none !important;
-	}
-	.single-dis-r {
-    width: auto !important;
-    float: none !important;
-	}
-	.small-ad {
-    float: none;
-    margin: 10px auto;
 	}
 }
-@media screen and (max-width: 360px){
-  	#headercontainer.sticky .site-title img {
-    width: 170px;
-	}
-	#headercontainer.sticky .m-arrow-search {
-    top: 15px;
-	}
-	#headercontainer.sticky .m-arrow-menu {
-    top: 22px;
-	}
+@media screen and (max-width: 240px){
+  
 }
