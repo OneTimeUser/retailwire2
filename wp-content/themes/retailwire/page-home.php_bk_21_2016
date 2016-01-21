@@ -43,7 +43,6 @@ get_header(); ?>
 				              <li class="list-item">
 				                <div class="item-braintrust">
 									<span class="module-label title-brain">Braintrust</span>
-									<?php //get_field('content'); ?>
 									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
 									<h2><?php echo get_the_author(); ?></h2>
 									<div class="img-user">
@@ -202,37 +201,6 @@ get_header(); ?>
 			<div class="module sec-3-m">
 				<div class="home-twitter">
 					<span class="module-label title-twitter">TWITTER FEEDS</span>
-					<div class="content-twitter">
-						<div id="tabContaier">
-							<ul>
-						    	<li><span class="active" link="#tab1">Retailers</span></li>
-						    	<li><span link="#tab2">Brands</span></li>
-						    	<li><span link="#tab3">Braintrust</span></li>
-								<li><span link="#tab4">Tech/Services</span></li>
-						    </ul>
-							
-						    <div class="tabDetails">
-						    	<div id="tab1" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_retail" ai_numberoftweets="5"]'); ?>
-						        </div>
-						    	<div id="tab2" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_bt" ai_numberoftweets="5"]'); ?>
-						        </div>
-						    	<div id="tab3" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_tech" ai_numberoftweets="5"]'); ?>
-						        </div>
-								<div id="tab4" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_rw" ai_numberoftweets="5"]'); ?>
-						        </div>
-								
-						    </div>
-						</div>
-
-					</div>
-					
-
-					
-					
 				</div>
 			</div>
 			<div class="sec-3-r">
