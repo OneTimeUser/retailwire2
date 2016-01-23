@@ -801,14 +801,8 @@ function Retailwire_new_contactmethods( $contactmethods ) {
 	//add Facebook
 	$contactmethods['facebook'] = 'Facebook';
 
-	//add Linked In
-    $contactmethods['linked_in'] = 'Linked In';
-
 	//add Google Plus
 	$contactmethods['googleplus'] = 'Google+';
-
-	//add Position
-	$contactmethods['position'] = 'Position';
 
 	return $contactmethods;
 }
@@ -1156,14 +1150,6 @@ register_sidebar(array(
 register_sidebar(array(
         'name' => __('Sidebar Discussion'),
         'id' => 'sidebar_discussion',
-        'before_widget' => '<div id="%1$s" class="widget %2$s">',
-        'after_widget' => '</div>',
-        'before_title' => '<h2 class="widgettitle">',
-        'after_title' => '</h2>',
-));
-register_sidebar(array(
-        'name' => __('Sidebar Braintrust'),
-        'id' => 'sidebar_braintrust',
         'before_widget' => '<div id="%1$s" class="widget %2$s">',
         'after_widget' => '</div>',
         'before_title' => '<h2 class="widgettitle">',
