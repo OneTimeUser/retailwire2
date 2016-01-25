@@ -755,7 +755,7 @@ color: #000;
 }
 .s4-retail{
     background: #eeac00;
-    display: inline-block;
+        display: inline-block;
 
 }
 .s3-resource,
@@ -1034,7 +1034,7 @@ body .smallprint{
 body #headercontainer.sticky .main-navigationss{
 	transition: all 0.4s ease;
 }
-#headercontainer.s3 {
+#headercontainer.sticky {
     background: #fff;
     position: fixed;
     top: 0px;

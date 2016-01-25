@@ -136,7 +136,7 @@
         })
 
 	   $(window).scroll(function() {
-		if ($(this).scrollTop() > 200){  
+		if ($(this).scrollTop() > 100){  
 		    $('#headercontainer').addClass("sticky");
 		  }
 		  else{
