@@ -122,12 +122,12 @@ get_header(); ?>
 			</a>
 		</div>
 		<div class="section-3">
-			<span class="s3-resource">resources</span>
+			<span class="module-label s3-resource">resources</span>
 			<?php echo do_shortcode('[slide_resources id="owl-demo-2"]'); ?>
 		</div>
 		<?php //get_sidebar(); ?>
 		<div class="section-4">
-			<span class="s4-retail">retail news</span>
+			<span class="module-label s4-retail">retail news</span>
 			<div class="list-post" >
 		    	<?php 
 		        

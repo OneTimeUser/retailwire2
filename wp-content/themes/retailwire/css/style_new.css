@@ -84,14 +84,15 @@ need to add module class to all labels in php
 
 }
 
-.section-3{
-
+.section-3, .section-4{
+	padding: 0 !important;
 }
 
 .sec-3-l{
 	 width: 36.5%;
     height: 804px;
     float: left;
+    padding-right: 15px;
 /*    background-color: purple;*/
     margin-right: 1%;
 }

@@ -750,9 +750,13 @@ color: #000;
 }
 .s3-resource{
     background: #9e9b8c;
+    display: inline-block;
+
 }
 .s4-retail{
     background: #eeac00;
+    display: inline-block;
+
 }
 .s3-resource,
 .s4-retail{
@@ -1030,7 +1034,7 @@ body .smallprint{
 body #headercontainer.sticky .main-navigationss{
 	transition: all 0.4s ease;
 }
-#headercontainer.sticky {
+#headercontainer.s3 {
     background: #fff;
     position: fixed;
     top: 0px;
@@ -1140,10 +1144,7 @@ width: 40%;
     font-family: 'PT Sans', Helvetica, Arial, sans-serif;
     color: #c8c9c9;
 }
-.title-press ,
-.title-twitter{
-    font-size: 25px !important;
-}
+
 .content-twitter{
 	padding: 0px 20px;
 }
@@ -1242,13 +1243,13 @@ body .sec-3-m {
 	opacity: 0.5;
 }	
 .icon-face-user{
-	background: url(../images/icon-fb.jpg)no-repeat center;
+	background: url(../images/icon-fb.png)no-repeat center;
 }
 .icon-tt-user{
-	background: url(../images/icon-tt.jpg)no-repeat center;
+	background: url(../images/icon-tt.png)no-repeat center;
 }
 .icon-in-user{
-	background: url(../images/icon-in.jpg)no-repeat center;
+	background: url(../images/icon-in.png)no-repeat center;
 }
 .list-braintrust-bottom{
 	overflow: hidden;
