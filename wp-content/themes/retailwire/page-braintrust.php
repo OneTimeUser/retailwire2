@@ -47,6 +47,7 @@ get_header(); ?>
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+
 					        		?>
 						        	 <li  class="list-user">
 						             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
@@ -55,8 +56,9 @@ get_header(); ?>
 						        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
 						        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
 						        	 </ul>
-						        	 <h2 class="title-user"><a href=""><?php echo $author->display_name; ?></a></h2>
+						        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 						        	 <span class="position-user"><?php echo $author_position; ?></span>
+						        	 
 						        	 	
 						        	</li>
 						        <?php endforeach; ?>

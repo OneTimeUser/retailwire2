@@ -9,46 +9,95 @@
 get_header(); ?>
 
 	<div id="primary" class="site-content row" role="main">
-
-		<div class="col grid_8_of_12">
-
+		<div class="section-1">
+			<div class="sec-1-l braintrust-top">
+				
 			<?php if ( have_posts() ) : ?>
+				<span class="s4-retail">braintrust // FROFILE</span>
+				<div class="single-user">
 
-				<?php
-				// Queue the first post, that way we know what author we're dealing with (if that is the case).
-				// We reset this later so we can run the loop properly with a call to rewind_posts().
-				the_post();
-				?>
+					<div class="single-user-l col grid_2_of_12">
 
-				<header class="archive-header">
-					<h1 class="archive-title"><?php printf( esc_html__( 'Author Archives: %s', 'Retailwire' ), '<span class="vcard">' . get_the_author() . '</span>' ); ?></h1>
-				</header><!-- .archive-header -->
+							<?php 
+									  $author_id = get_the_author_id();
+									  $author_facebook = get_field('facebook', 'user_'. $author_id );
+						              $author_twitter = get_field('twitter', 'user_'. $author_id );
+						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
+						              $author_position = get_field('position', 'user_'. $author_id );
+						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+						              $author_content_user = get_field('content', 'user_'. $author_id );
 
-				<?php // If a user has filled out their description, show a bio on their entries.
-				if ( get_the_author_meta( 'description' ) ) {
-					get_template_part( 'author-bio' );
-				} ?>
+						             
+					        		?>	
+					        		<ul class="list-single-user">
+							        	 <li  class="item-single-user">
+							        	 	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        		 <ul class="list-so-user">
+							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
+							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
+							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 </li>
+						        	</ul>
+						        
+					</div>
+					<div class="single-user-r col grid_10_of_12">
+						<h2 class="title-user-single"><?php echo get_the_author(); ?></a></h2>
+						<span class="position-user"><?php echo $author_position; ?></span>
+						<div class="content-single-user">
+							<?php echo $author_content_user ?>
+						</div>
+						<div class="single-user-bottom">
+							<div class="list-discusssions-page" id="tabContaier">
+								<div class="group-title-top">
+									<ul class="list-tab-dis">
+										<li><span link="#tab2">VIEW ARTICLES</a></li>
+										<li><span class="active" link="#tab1">VIEW COMMENT</a></li>
+										
+									</ul>
 
-				<?php
-				// Since we called the_post() above, we need to rewind the loop back to the beginning that way we can run the loop properly, in full.
-				rewind_posts();
-				?>
+								</div>
+								<div class="content-dis">
+									<div class="tabDetails">
+								    	<div id="tab1" class="tabContents">
+								        	VIEW COMMENT
+								        </div>
+								        <div id="tab2" class="tabContents">
+								        	<?php // Start the Loop ?>
+											<?php while ( have_posts() ) : the_post(); ?>
+												<?php get_template_part( 'content', get_post_format() ); ?>
+											<?php endwhile; ?>
+											<?php Retailwire_content_nav( 'nav-below' ); ?>
+											<?php else : ?>
 
-				<?php // Start the Loop ?>
-				<?php while ( have_posts() ) : the_post(); ?>
-					<?php get_template_part( 'content', get_post_format() ); ?>
-				<?php endwhile; ?>
+												<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
 
-				<?php Retailwire_content_nav( 'nav-below' ); ?>
+											<?php endif; // end have_posts() check ?>
+								        </div>
+								    	
+										
+								    </div>
+									
+									
+								</div>
 
-			<?php else : ?>
+							</div>
+							
 
-				<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
+						</div>
+					</div>
 
-			<?php endif; // end have_posts() check ?>
 
-		</div> <!-- /.col.grid_8_of_12 -->
-		<?php get_sidebar(); ?>
+				</div>
+
+				
+
+			</div>
+			<div class="sec-1-r">
+				<?php dynamic_sidebar('sidebar_braintrust') ?>
+			</div>
+			<div class="clear"></div>
+		</div>
+	
 
 	</div> <!-- /#primary.site-content.row -->
 

@@ -1225,10 +1225,7 @@ body .sec-3-m {
 	height: 24px;
 	display: block;
 	text-indent: -99999999px;
-/*	text-align: left;*/
-}
-.list-so-user li a:hover{
-	opacity: 0.5;
+	text-align: left;
 }	
 .icon-face-user{
 	background: url(../images/icon-fb.jpg)no-repeat center;
@@ -1259,32 +1256,10 @@ body .sec-3-m {
 	margin-bottom: 20px;
 	display: inline-block;
 }
-.single-user{
-	overflow: hidden;
-}
-.single-user-{
-	overflow: hidden;
-}
-.list-single-user{
-	padding:0px;
-	text-align: center;
-}
-.list-single-user ul{
-	margin-top: 20px;
-}
-.single-user-r{
 
-}
-.single-user-r .title-user-single{
-    font-size: 20px;
-    color: #000;
-    margin: 0px;
-    font-family: Calibri;
-    font-weight: bold;
-}
-.single-user-r .position-user{
-	
-}
+
+
+
 
 
 
