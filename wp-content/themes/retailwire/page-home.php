@@ -43,11 +43,14 @@ get_header(); ?>
 				              <li class="list-item">
 				                <div class="item-braintrust">
 									<span class="module-label title-brain">Braintrust</span>
-									<?php //get_field('content'); ?>
-									<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
-									<h2><?php echo get_the_author(); ?></h2>
+									<?php $author_id = get_the_author_meta('ID');
+										  $content_user = get_field('content', 'user_'. $author_id );
+									 ?>
+									
+									<div class="desc"><?php echo $content_user; ?></div>
+									<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
 									<div class="img-user">
-										<a href="<?php echo get_the_author_link(); ?>">
+										<a href="<?php echo get_author_posts_url($author_id); ?>">
 											<?php echo get_avatar(get_the_author_meta()); ?>
 										</a>
 										

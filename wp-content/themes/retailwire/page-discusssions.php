@@ -55,13 +55,13 @@ get_header(); ?>
 
 		</div>
 		<?php //get_sidebar(); ?>
-<script type='text/javascript' src='http://connekthq.com/wp-content/plugins/ajax-load-more/core/js/ajax-load-more.min.js?ver=1.1'></script>
+<!-- <script type='text/javascript' src='http://connekthq.com/wp-content/plugins/ajax-load-more/core/js/ajax-load-more.min.js?ver=1.1'></script>
 <script type='text/javascript' src='http://connekthq.com/wp-content/themes/cnkt/js/libs/imagesloaded.pkgd.min.js?ver=1.0'></script>
-<script type='text/javascript' src='http://connekthq.com/wp-includes/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://connekthq.com/wp-includes/js/masonry.min.js?ver=3.1.2'></script> -->
 <script type="text/javascript">
 
 
-jQuery(document).ready(function($){
+/*jQuery(document).ready(function($){
 $(function() {
   var masonryInit = true;	// set Masonry init flag
   $.fn.almComplete = function(alm){ // Ajax Load More callback function
@@ -83,7 +83,7 @@ $(function() {
   };
 });
     
-  });
+  });*/
 
 
 

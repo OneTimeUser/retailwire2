@@ -1181,24 +1181,13 @@ body .sec-3-m {
 {
 	display: none;
 }
-.list-braintrust-page{
-	position: relative;
-	z-index: 9999;
-	text-align: center;
-	border-bottom: 5px solid #9E9B8C;
-    border-right: 1px solid #9E9B8C;
-    padding: 0px;
-}
-.content-braintrust-all{
-	border-bottom: 5px solid #9E9B8C;
-    border-right: 1px solid #9E9B8C;
-}	
+.list-braintrust-page{position: relative;z-index: 9999;text-align: center;}
 .list-user{
     display: inline-block;
-    width: 21%;
+    width: 27%;
     text-align: center;
     vertical-align: top;
-    margin: 10px 3% !important;
+    margin: 10px 2% !important;
     min-height: 280px;
 /*    border-bottom: 1px solid #ccc;*/
 }
@@ -1252,7 +1241,6 @@ body .sec-3-m {
 }
 .list-braintrust-bottom{
 	overflow: hidden;
-	padding: 0px;
 }
 .list-user-bottom{
 	width: 50%;
@@ -1294,42 +1282,9 @@ body .sec-3-m {
     font-family: Calibri;
     font-weight: bold;
 }
-.single-user-bottom {
-
+.single-user-r .position-user{
+	
 }
-.theme-post-1 .item-dis-2{
-	width: 50%;
-}
-.theme-post-1 .item-dis-2 img{
-	width: 100%;
-}
-.single-user-bottom .list-tab-dis{
-	padding: 0px;
-	display: block;
-	overflow: hidden;
-	float: none;
-}
-.single-user-bottom .list-tab-dis li{
-	border: none;
-	padding: 0px;
-}
-.list-tab-dis li span{
-	font-weight: bold;
-}
-
-.single-user-bottom .tab-single-user .view-articles{
-	float: left;
-}
-.single-user-bottom .tab-single-user .view-comment{
-	float: right;
-}
-#maincontentcontainer {
-    min-height: 500px;
-}
-.link-name-author{
-	text-decoration: none;
-}
-
 
 
 
@@ -1470,9 +1425,6 @@ body .sec-3-m {
 	#headercontainer.sticky .m-arrow-search{
 		top: 20px;
 	}
-	.item-braintrust .desc {
-    padding: 15px 20px 0px;
-	}
 	
 }
 @media screen and (max-width: 768px){
@@ -1539,12 +1491,6 @@ body .sec-3-m {
 	.info-dis h2 {
     font-size: 20px;
 	}
-	.single-user-l{
-	  width: 30%;
-	}
-	.single-user-r {
-      width: 68%;
-	}
 }
 @media screen and (max-width: 600px){
   .alm-reveal .item-dis-2 {
@@ -1557,13 +1503,6 @@ body .sec-3-m {
 	}
 	.info-dis h2 {
     font-size: 16px;
-	}
-	.theme-post-1 .item-dis-2 {
-    width: 100%;
-	}
-	.list-user {
-    width: 45%;
-    margin: 10px 2% !important;
 	}
 }
 @media screen and (max-width: 480px){
@@ -1592,12 +1531,6 @@ body .sec-3-m {
 	.alm-listing li.item-resource-2 img {
     width: 100%;
 	}
-	.list-user,
-	.list-user-bottom {
-    width: auto;
-    margin: 10px 5px !important;
-    display: block;
-	}
 }
 @media screen and (max-width: 480px){
   .alm-reveal .item-dis-2 {
@@ -1625,9 +1558,6 @@ body .sec-3-m {
     float: none;
     margin: 10px auto;
 	}
-	.s3-resource, .s4-retail {
-    font-size: 16px;
-	}
 }
 @media screen and (max-width: 360px){
   	#headercontainer.sticky .site-title img {
@@ -1638,8 +1568,5 @@ body .sec-3-m {
 	}
 	#headercontainer.sticky .m-arrow-menu {
     top: 22px;
-	}
-	.s3-resource, .s4-retail {
-    font-size: 16px;
 	}
 }
