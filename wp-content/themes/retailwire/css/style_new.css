@@ -62,6 +62,14 @@ need to add module class to all labels in php
     margin-left: -222px;
 }
 
+.item-resource h2 a{
+	font-size: 16px !important;
+}
+
+.sub-list-post .group-info > h3 > a, .sub-list-press h3 a{
+	font-size: 14px !important;
+}
+
 .ad-2 {
 /*	width: 300px;
 	height: 600px;

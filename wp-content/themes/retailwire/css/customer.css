@@ -210,8 +210,8 @@ body #bannercontainer {
 	color: #645c47;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 18px;
-    margin-right: 10px;
+    font-size: 14px;
+    margin-right: 0px;
 }
 .banner .widget{
 	margin: 0px !important;
@@ -1337,7 +1337,7 @@ body .sec-3-m {
 /* REPONSIVE HOMEPAGE */
 @media screen and (max-width: 1280px){
 	.content-date{
-	    margin-right: 32px;
+	    margin-right: 0px;
 	}
 	.item-braintrust .desc{
 	    padding: 6px 10px;
@@ -1363,7 +1363,7 @@ body .sec-3-m {
 	    margin: 0 0 0 49px;
 	}
 	.content-date{
-	    margin-right: 55px;
+	    margin-right: 0px;
 	}
 	.item-braintrust h2{
 	    margin-bottom: 10px;
@@ -1608,7 +1608,7 @@ body .sec-3-m {
     float: none;
 	}
 	.content-date {
-    margin-right: 5px;
+    margin-right: 0px;
     font-size: 14px;
 	}
 	.item-braintrust {
