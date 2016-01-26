@@ -13,6 +13,7 @@ need to override main styles
 .list-item { /*temp style fix */
 	margin-bottom: 0 !important;
 
+
 }
 /*below is basic styling for all labels - nuanced styling will happen in title-... class
 need to add module-label class to all labels in php; also add to tagcloud
@@ -40,6 +41,9 @@ need to add module class to all labels in php
 	overflow: hidden;
 	width: auto !important;
 	float: none !important;
+	margin-right: 222px !important;
+
+
 }
 
 .item-discussion img{
@@ -54,6 +58,8 @@ need to add module class to all labels in php
 	height: 334px;
 	width: 222px !important;
 	margin-bottom: 0;
+    float: right !important;
+    margin-left: -222px;
 }
 
 .ad-2 {
@@ -178,14 +184,42 @@ need to add module class to all labels in php
 
 }
 
+/*.content-single-dis{
+	display: -webkit-box;
+    display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	/* Reverse Column Order 
+	-webkit-flex-flow: column-reverse;
+	flex-flow: column-reverse;
+}*/
+
+.wrap-fix{
+	float: left;
+	width: 100%;
+}
+
 .single-dis-r{/*overrride*/
 	width: 222px !important;
     float: right !important;
+    margin-left: -222px;
 }
 
 .single-dis-l{/*override*/
+	margin-right: 222px;
 	width: auto !important;
     float: none !important;
+}
+
+.single-dis-l .item-discussion{
+	width: 100% !important;
+}
+
+.content-post{
+	width: 100% !important;
+	clear: left;
 }
 
 .small-ad {/*should probably be embedded in text of article*/
@@ -195,5 +229,9 @@ need to add module class to all labels in php
 	background-color: red;
 	float: left;
 	margin-right:20px;
+}
+
+.section-5{
+	padding-bottom: 30px;
 }
 

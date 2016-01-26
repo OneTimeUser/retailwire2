@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class="sec-1-l">
 				<div class="list-discusssions-page" id="tabContaier">
 					<div class="group-title-top">
-						<span class="title-dis">Discussion</span>
+						<span class="module-label title-dis">Discussion</span>
 						<ul class="list-tab-dis">
 							<li><span class="active" link="#tab1">Last</a></li>
 							<li><span link="#tab2">popular</a></li>

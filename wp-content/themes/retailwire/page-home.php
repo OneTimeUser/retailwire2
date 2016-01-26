@@ -41,14 +41,42 @@ get_header(); ?>
 				              while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
 
 				              <li class="list-item">
-				                <div class="item-braintrust">
+				                <div class="wrap-fix">
+					              	<div class="item-discussion">
+					              		<span class="module-label title-dis">
+					              			Discussion
+					              		</span>
+					              		<?php
+
+										if ( has_post_thumbnail() ) { ?>
+											<img src="<?php
+								            $thumb_id = get_post_thumbnail_id();
+								            $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+								            echo $thumb_url[0];?>" title="<?php the_title();?>"/>
+										<?php }
+										else { ?>
+											<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/images/post-2.jpg" />
+										<?php }
+										?>
+						                  
+								         <div class="info-dis">
+								         		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								         		<div class="info-bottom">
+								         			<span class="date-dis"><?php the_time('M d,2015'); ?></span>	
+								         			<span class="info-right"><span class="comment"> <?php comments_number( '0', '1', '%'); ?></span> <span class="share">34</span></span>
+								         		</div>
+								         </div>  
+
+					              	</div>
+				              	</div>
+				              	<div class="item-braintrust">
 									<span class="module-label title-brain">Braintrust</span>
 									<?php $author_id = get_the_author_meta('ID');
 										  $content_user = get_field('content', 'user_'. $author_id );
 									 ?>
 									
 									<div class="desc"><?php echo $content_user; ?></div>
-									<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
+									
 									<div class="img-user">
 										<a href="<?php echo get_author_posts_url($author_id); ?>">
 											<?php echo get_avatar(get_the_author_meta()); ?>
@@ -56,34 +84,9 @@ get_header(); ?>
 										
 										
 									</div>
+									<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
 									
 								</div>
-				              	<div class="item-discussion">
-				              		<span class="module-label title-dis">
-				              			Discussion
-				              		</span>
-				              		<?php
-
-									if ( has_post_thumbnail() ) { ?>
-										<img src="<?php
-							            $thumb_id = get_post_thumbnail_id();
-							            $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-							            echo $thumb_url[0];?>" title="<?php the_title();?>"/>
-									<?php }
-									else { ?>
-										<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/images/post-2.jpg" />
-									<?php }
-									?>
-					                  
-							         <div class="info-dis">
-							         		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-							         		<div class="info-bottom">
-							         			<span class="date-dis"><?php the_time('M d,2015'); ?></span>	
-							         			<span class="info-right"><span class="comment"> <?php comments_number( '0', '1', '%'); ?></span> <span class="share">34</span></span>
-							         		</div>
-							         </div>  
-
-				              	</div>
 				              	
 
 				              </li>
