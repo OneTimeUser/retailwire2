@@ -19,7 +19,7 @@ need to add module-label class to all labels in php; also add to tagcloud
 */
 .module-label, .widgettitle {
 	color: #fff !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     padding: 2px 15px !important;
     top: 0px !important;
     left: 0px !important;
@@ -260,6 +260,10 @@ need to add module class to all labels in php
 	color: #9e9b8c;
 	text-decoration: none;
 	
+}
+
+button.alm-load-more-btn.done { 
+	background-color: rgb(158,154,143) !important;
 }
 
 
