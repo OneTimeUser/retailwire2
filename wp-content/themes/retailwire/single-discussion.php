@@ -42,14 +42,16 @@ get_header(); ?>
 					            </div>
 					            <div class="content-post">
 				              		<?php the_content(); ?>
+				              		<div class="article-author"><?php the_author(); ?> </div>
+				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
 					              	<?php
 									// If comments are open or we have at least one comment, load up the comment template
 									if ( comments_open() || '0' != get_comments_number() ) {
 										comments_template( '', true );
 									}
 									?>
-				         </div>
-				             </div>
+				         		</div>
+				            </div>
 						</div>
 						<div class="single-dis-r">
 							<div class="item-braintrust">
@@ -61,7 +63,7 @@ get_header(); ?>
 										</a>
 										
 									</div>
-									<h2><?php echo get_the_author(); ?></h2>
+									<div class="link-name-author"><h2><?php echo get_the_author(); ?></h2></div>
 								</div>
 							
 							</div>

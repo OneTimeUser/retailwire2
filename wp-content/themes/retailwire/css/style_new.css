@@ -247,6 +247,22 @@ need to add module class to all labels in php
 	margin-left: 20px;
 }
 
+.article-author{
+	color: #9e9b8c;
+	padding-bottom: 15px;
+}
+.article-tags{
+	text-transform: uppercase;
+	color: #9e9b8c;
+	padding-bottom: 15px;
+}
+
+.article-tags a{
+	color: #9e9b8c;
+	text-decoration: none;
+	
+}
+
 
 @media screen and (max-width: 680px){
 	.item-discussion{
