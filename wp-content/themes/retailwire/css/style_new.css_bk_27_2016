@@ -13,13 +13,14 @@ need to override main styles
 .list-item { /*temp style fix */
 	margin-bottom: 0 !important;
 
+
 }
 /*below is basic styling for all labels - nuanced styling will happen in title-... class
 need to add module-label class to all labels in php; also add to tagcloud
 */
 .module-label, .widgettitle {
 	color: #fff !important;
-    font-size: 20px !important;
+    font-size: 14px !important;
     padding: 2px 15px !important;
     top: 0px !important;
     left: 0px !important;
@@ -34,14 +35,16 @@ need to add module class to all labels in php
 	border-right: 1px solid #9e9b8c !important;
     border-bottom: 5px solid #9e9b8c !important;
 }
- /*overides customer.css*/
 
-.item-discussion {
+.item-discussion { /*overides customer.css*/
 	height: 334px;
 	overflow: hidden;
-/*	width: auto !important;
-	float: none !important;*/
-} 
+	width: auto !important;
+	float: none !important;
+	margin-right: 222px !important;
+
+
+}
 
 .item-discussion img{
 	width: 100% !important;
@@ -53,8 +56,18 @@ need to add module class to all labels in php
 
 .item-braintrust {
 	height: 334px;
-	/*width: 222px !important;*/
+	width: 222px !important;
 	margin-bottom: 0;
+    float: right !important;
+    margin-left: -222px;
+}
+
+.item-resource h2 a{
+	font-size: 16px !important;
+}
+
+.sub-list-post .group-info > h3 > a, .sub-list-press h3 a{
+	font-size: 14px !important;
 }
 
 .ad-2 {
@@ -85,14 +98,15 @@ need to add module class to all labels in php
 
 }
 
-.section-3{
-
+.section-3, .section-4{
+	padding: 0 !important;
 }
 
 .sec-3-l{
 	 width: 36.5%;
     height: 804px;
     float: left;
+    padding-right: 15px;
 /*    background-color: purple;*/
     margin-right: 1%;
 }
@@ -178,14 +192,42 @@ need to add module class to all labels in php
 
 }
 
+/*.content-single-dis{
+	display: -webkit-box;
+    display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	/* Reverse Column Order 
+	-webkit-flex-flow: column-reverse;
+	flex-flow: column-reverse;
+}*/
+
+.wrap-fix{
+	float: left;
+	width: 100%;
+}
+
 .single-dis-r{/*overrride*/
 	width: 222px !important;
     float: right !important;
+    margin-left: -222px;
 }
 
 .single-dis-l{/*override*/
+	margin-right: 222px;
 	width: auto !important;
     float: none !important;
+}
+
+.single-dis-l .item-discussion{
+	width: 100% !important;
+}
+
+.content-post{
+	width: 100% !important;
+	clear: left;
 }
 
 .small-ad {/*should probably be embedded in text of article*/
@@ -197,3 +239,114 @@ need to add module class to all labels in php
 	margin-right:20px;
 }
 
+.section-5{
+	padding-bottom: 30px;
+}
+
+.list-press{
+	margin-left: 20px;
+}
+
+
+@media screen and (max-width: 680px){
+	.item-discussion{
+		margin-right: 0 !important;
+		height: auto !important;
+	}
+
+	.info-dis{
+		width: 100% !important;
+	}
+	.info-dis h2 {
+    font-size: 2.25rem;
+
+	}
+
+	.item-braintrust{
+		width: 100% !important;
+		height: auto !important;
+	}
+
+	.item-braintrust .title-brain{
+		float:left !important;
+	}
+
+	.item-braintrust .desc {
+		float: left !important;
+	    width: 45% !important;
+	    padding-left: 25px !important;
+	    position: relative !important;
+	    padding-top: 40px !important;
+	    right: 20% !important;
+	}
+
+	.item-braintrust .img-user{
+		float: left !important;
+	    position: relative !important;
+	    padding-top: 40px !important;
+	    width: 25%;
+	}
+
+	.item-braintrust .link-name-author{
+		float: left;
+	    position: relative;
+	    width: 25%;
+	}
+
+	.sub-list-post {
+    	width: 45% !important;
+	}
+
+	.sec-3-l{
+		width: 48%;
+		margin-right: 3%;
+	}
+
+	.sec-3-m{
+		width: 48%;
+	}
+
+	.sec-3-r{
+		width:100%;
+		margin:auto;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.item-braintrust .desc{
+		padding-left: 0px !important;
+	}
+
+	.item-braintrust .link-name-author{
+		left:-5%;
+		width:20%;
+	}
+
+	.item-braintrust .img-user{
+		left: -5%;
+		width: 20%
+	}
+	.info-dis h2{
+		font-size: 1.75rem !important;
+	}
+
+	.sec-3-l{
+		width: 100%;
+
+	}
+
+	.sec-3-m{
+		width:100%;
+		padding-top: 30px;
+	}
+
+	.sub-list-post {
+    	width: 100% !important;
+    	min-height: 0px !important;
+	}
+
+}
+
+@media screen and (max-width: 360px){
+	
+}
