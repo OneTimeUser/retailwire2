@@ -39,8 +39,9 @@ need to add module class to all labels in php
 .item-discussion {
 	height: 334px;
 	overflow: hidden;
-/*	width: auto !important;
-	float: none !important;*/
+	width: auto !important;
+	float: none !important;
+	margin-right: 222px !important;
 } 
 
 .item-discussion img{
@@ -53,8 +54,18 @@ need to add module class to all labels in php
 
 .item-braintrust {
 	height: 334px;
-	/*width: 222px !important;*/
+	width: 222px !important;
 	margin-bottom: 0;
+    float: right !important;
+    margin-left: -222px;
+}
+
+.item-resource h2 a{
+	font-size: 16px !important;
+}
+
+.sub-list-post .group-info > h3 > a, .sub-list-press h3 a{
+	font-size: 14px !important;
 }
 
 .ad-2 {
@@ -85,14 +96,15 @@ need to add module class to all labels in php
 
 }
 
-.section-3{
-
+.section-3, .section-4{
+	padding: 0 !important;
 }
 
 .sec-3-l{
 	 width: 36.5%;
     height: 804px;
     float: left;
+    padding-right: 15px;
 /*    background-color: purple;*/
     margin-right: 1%;
 }
@@ -178,14 +190,42 @@ need to add module class to all labels in php
 
 }
 
+/*.content-single-dis{
+	display: -webkit-box;
+    display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+
+	/* Reverse Column Order 
+	-webkit-flex-flow: column-reverse;
+	flex-flow: column-reverse;
+}*/
+
+.wrap-fix{
+	float: left;
+	width: 100%;
+}
+
 .single-dis-r{/*overrride*/
 	width: 222px !important;
     float: right !important;
+    margin-left: -222px;
 }
 
 .single-dis-l{/*override*/
+	margin-right: 222px;
 	width: auto !important;
     float: none !important;
+}
+
+.single-dis-l .item-discussion{
+	width: 100% !important;
+}
+
+.content-post{
+	width: 100% !important;
+	clear: left;
 }
 
 .small-ad {/*should probably be embedded in text of article*/

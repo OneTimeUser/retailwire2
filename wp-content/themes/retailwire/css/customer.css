@@ -145,7 +145,7 @@ body .main-navigation {
     margin: 75px 0 0 0;
 }
 body .main-navigation li{
-	margin: 0 0 0 50px;
+	margin: 0 0 0 31px;
 }
 .container{
 	max-width: 1200px;
@@ -210,7 +210,7 @@ body #bannercontainer {
 	color: #645c47;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 14px;
     margin-right: 10px;
 }
 .banner .widget{
@@ -389,8 +389,7 @@ padding-left: 30px;
 }
 .img-user{
 	text-align: center;
-	padding-bottom: 16px;
-	padding-bottom: 23px;
+	padding-bottom: 10px;
 }
 .img-user img{
 	border-radius: 100%;
@@ -1490,7 +1489,7 @@ body .sec-3-m {
 /* REPONSIVE HOMEPAGE */
 @media screen and (max-width: 1280px){
 	.content-date{
-	    margin-right: 32px;
+	    margin-right: 10px;
 	}
 	.item-braintrust .desc{
 	    padding: 6px 10px;
@@ -1516,7 +1515,7 @@ body .sec-3-m {
 	    margin: 0 0 0 49px;
 	}
 	.content-date{
-	    margin-right: 0px;
+	    margin-right: 10px;
 	}
 	.item-braintrust h2{
 	    margin-bottom: 10px;
@@ -1685,9 +1684,9 @@ body .sec-3-m {
     border: none;
 	}
 	.item-discussion img {
-    width: auto !important;
+    /*width: auto !important;
     height: 100% !important;
-    max-width: inherit !important;
+    max-width: inherit !important;*/
 	}
 	.item-braintrust h2 {
     margin-bottom: 10px;
@@ -1863,7 +1862,7 @@ body .sec-3-m {
     float: none;
 	}
 	.content-date {
-    margin-right: 0px;
+    margin-right: 10px;
     font-size: 14px;
 	}
 	.item-braintrust {
