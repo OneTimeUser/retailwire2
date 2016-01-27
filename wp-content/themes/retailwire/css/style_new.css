@@ -310,6 +310,16 @@ need to add module class to all labels in php
 		width:100%;
 		margin:auto;
 	}
+
+	.single-dis-l{
+		margin-right: 0px !important;
+	}
+	.single-dis-r{
+		width: 100% !important;
+		margin-left: 0px;
+	}
+
+
 }
 
 @media screen and (max-width: 480px){

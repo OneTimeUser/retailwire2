@@ -40,6 +40,15 @@ get_header(); ?>
 								         		</div>
 								         </div>  
 					            </div>
+					            <div class="content-post">
+				              		<?php the_content(); ?>
+					              	<?php
+									// If comments are open or we have at least one comment, load up the comment template
+									if ( comments_open() || '0' != get_comments_number() ) {
+										comments_template( '', true );
+									}
+									?>
+				         </div>
 				             </div>
 						</div>
 						<div class="single-dis-r">
@@ -57,15 +66,7 @@ get_header(); ?>
 							
 						</div>
 
-						<div class="content-post">
-				              		<?php the_content(); ?>
-					              	<?php
-									// If comments are open or we have at least one comment, load up the comment template
-									if ( comments_open() || '0' != get_comments_number() ) {
-										comments_template( '', true );
-									}
-									?>
-				         </div>
+						
 				              	
 				      </div>
 				<?php endwhile; // end of the loop. ?>
