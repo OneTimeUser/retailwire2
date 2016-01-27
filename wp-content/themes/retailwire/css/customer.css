@@ -145,7 +145,7 @@ body .main-navigation {
     margin: 75px 0 0 0;
 }
 body .main-navigation li{
-	margin: 0 0 0 50px;
+	margin: 0 0 0 31px;
 }
 .container{
 	max-width: 1200px;
@@ -389,8 +389,7 @@ padding-left: 30px;
 }
 .img-user{
 	text-align: center;
-	padding-bottom: 16px;
-	padding-bottom: 23px;
+	padding-bottom: 10px;
 }
 .img-user img{
 	border-radius: 100%;
@@ -1515,9 +1514,9 @@ body .sec-3-m {
     border: none;
 	}
 	.item-discussion img {
-    width: auto !important;
+ /*   width: auto !important;
     height: 100% !important;
-    max-width: inherit !important;
+    max-width: inherit !important;*/
 	}
 	.item-braintrust h2 {
     margin-bottom: 10px;
@@ -1538,7 +1537,7 @@ body .sec-3-m {
     padding: 20px 0px 0px 0px;
 	}
 	.info-dis h2 {
-    font-size: 20px;
+    font-size: 2.25rem;
 	}
 	.single-user-l{
 	  width: 30%;
@@ -1557,7 +1556,7 @@ body .sec-3-m {
     width: 100%;
 	}
 	.info-dis h2 {
-    font-size: 16px;
+    font-size: 2.25rem;
 	}
 	.theme-post-1 .item-dis-2 {
     width: 100%;
@@ -1612,7 +1611,7 @@ body .sec-3-m {
     font-size: 14px;
 	}
 	.item-braintrust {
-    width: auto !important;
+    width: 100% !important;
 	}
 	.single-dis-l {
     width: auto !important;
