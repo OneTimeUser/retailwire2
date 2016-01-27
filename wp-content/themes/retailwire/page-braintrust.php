@@ -23,7 +23,7 @@ get_header(); ?>
 <div id="primary" class="site-content row" role="main">
 		<div class="section-1">
 			<div class="sec-1-l braintrust-top">
-				<span class="s4-retail">braintrust // FEATURED</span>
+				<span class="s4-retail module-label">braintrust // FEATURED</span>
 				<ul class="list-braintrust-page">
 					<?php
 						$args  = array(
@@ -81,7 +81,7 @@ get_header(); ?>
 			<div class="clear"></div>
 		</div>
 		<div class="braintrust-all">
-			<span class="s4-retail">Braintrust // all</span>
+			<span class="s4-retail module-label">Braintrust // all</span>
 			<div class="content-braintrust-all">
 				 <ul class="list-braintrust-bottom">
 					<?php
