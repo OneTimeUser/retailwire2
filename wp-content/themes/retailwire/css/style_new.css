@@ -262,8 +262,8 @@ need to add module class to all labels in php
 	
 }
 
-button.alm-load-more-btn.done { 
-	background-color: rgb(158,154,143) !important;
+.info-resource h2 a{
+	font-size: 18px !important;
 }
 
 

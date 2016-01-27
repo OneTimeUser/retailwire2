@@ -748,10 +748,10 @@ color: #000;
 	margin-top: 30px;
 }
 .s3-resource{
-    background: #9e9b8c;
+    background: #9e9b8c !important;
 }
 .s4-retail{
-    background: #eeac00;
+    background: #eeac00 !important;
 }
 .s3-resource,
 .s4-retail{

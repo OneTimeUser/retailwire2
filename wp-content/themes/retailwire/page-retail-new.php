@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class="sec-1-l">
 				<div class="list-discusssions-page" id="tabContaier">
 					<div class="group-title-top">
-						<span class="title-dis">Discussion</span>
+						<span class="title-dis s4-retail module-label">Retail News</span>
 						<ul class="list-tab-dis">
 							<li><span class="active" link="#last">Last</a></li>
 							<li><span link="#popular">Popular</a></li>

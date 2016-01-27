@@ -24,7 +24,7 @@ get_header(); ?>
 			<div class="sec-1-l">
 				<div class="list-discusssions-page" id="tabContaier">
 					<div class="group-title-top">
-						<span class="title-dis s3-resource">Resource</span>
+						<span class="title-dis s3-resource module-label">Resource</span>
 						<ul class="list-tab-dis">
 							<li><span class="active" link="#all">all</a></li>
 							<li><span link="#whitepapers">whitepapers</a></li>
