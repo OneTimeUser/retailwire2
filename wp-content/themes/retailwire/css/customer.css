@@ -1351,7 +1351,7 @@ body .sec-3-m {
 	    width: 30.26%;
 	}
 	.item-braintrust .desc {
-	    padding: 25px 20px;
+	    padding: 25px 20px 0px 20px;
 	}
 }
 @media screen and (min-width: 1170px){
