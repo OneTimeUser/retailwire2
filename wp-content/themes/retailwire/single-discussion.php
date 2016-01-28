@@ -41,6 +41,7 @@ get_header(); ?>
 								         </div>  
 					            </div>
 					            <div class="content-post">
+					            	<div class="small-ad"></div>
 				              		<?php the_content(); ?>
 				              		<div class="article-author"><?php the_author(); ?> </div>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
