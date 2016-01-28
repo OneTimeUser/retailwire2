@@ -266,6 +266,10 @@ need to add module class to all labels in php
 	font-size: 18px !important;
 }
 
+.dont-miss a{
+	color: white !important;
+    text-decoration: none;
+}
 
 @media screen and (max-width: 680px){
 	.item-discussion{
