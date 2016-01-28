@@ -133,7 +133,7 @@ function date(){
 				<div class="m-bottom-menu">
 					<ul class="nav-menu-mobile">
 							<li>
-								<a href="#" class="regis">Register</a>//<a hre="#" class="sign-in">Sign in</a>
+								<a href="#" class="regis">Register</a>//<a href="#" class="sign-in">Sign in</a>
 							</li>
 							<li>
 								<a href="#" class="join">join the braintrust</a>
@@ -148,6 +148,7 @@ function date(){
 		</header> <!-- /#masthead.site-header.row -->
 
 	</div> <!-- /#headercontainer -->
+	
 	<div class="date-page">
 		<div class="container">
 			<span class="content-date">
