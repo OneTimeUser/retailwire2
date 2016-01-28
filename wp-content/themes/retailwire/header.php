@@ -88,20 +88,23 @@ function date(){
 				<div class="top-right hide_ipad">
 					<ul>
 						<li>
-							<a href="#" class="regis">Register</a>//<a hre="#" class="sign-in">Sign in</a>
+							<a href="<?php echo home_url(); ?>/login" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/login" class="sign-in">Sign in</a>
 						</li>
 						<li>
-							<a href="#" class="join">join the braintrust</a>
+							<a href="" class="join">join the braintrust</a>
 						</li>
-						<li>
+						<li class="form-seach-top">
 							<a href="#" class="link-search">search</a>
+							<div class="content-f-top">
+								<?php get_search_form(); ?>	
+							</div>
 						</li>
 
 					</ul>
 				</div>
 				<ul class="m-top-right show_ipad">
-					<li><a href="#" class="m-regis"></a></li>
-					<li><a href="#" class="m-join"></a></li>
+					<li><a href="<?php echo home_url(); ?>/login" class="m-regis"></a></li>
+					<li><a href="<?php echo home_url(); ?>/login" class="m-join"></a></li>
 					<li><a href="#" class="m-link-search"></a></li>
 
 				</ul>

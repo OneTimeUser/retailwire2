@@ -143,6 +143,18 @@
 		    $('#headercontainer').removeClass("sticky");
 		  }
 		});
+	   $(window).bind('resize', function(e){
+ 
+ 		   	if( $(window).width()<=1000 ) {
+ 	          $('body').addClass('sang');
+ 	        }else {
+ 	        	$('body').removeClass('sang');
+ 	        }
+  
+ 		});
+ 	   	$('.link-search').click(function(){
+               $('.content-f-top').slideToggle(500);
+         })
 	});
 
 </script>
