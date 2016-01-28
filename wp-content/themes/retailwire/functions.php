@@ -1446,4 +1446,3 @@ function braintrust(){
     ob_end_clean();
     return $list_post;
 }
-
