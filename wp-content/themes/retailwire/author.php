@@ -47,11 +47,11 @@ get_header(); ?>
 							<?php echo $author_content_user ?>
 						</div>
 						<div class="single-user-bottom">
-							<div class="list-discusssions-page" id="tabContaier">
+							<div class="tab-single-user" id="tabContaier">
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
-										<li><span link="#tab2">VIEW ARTICLES</a></li>
-										<li><span class="active" link="#tab1">VIEW COMMENT</a></li>
+										<li class="view-articles"><span link="#tab2">VIEW ARTICLES</a></li>
+										<li class="view-comment"><span class="active" link="#tab1">VIEW COMMENT</a></li>
 										
 									</ul>
 
@@ -62,9 +62,12 @@ get_header(); ?>
 								        	VIEW COMMENT
 								        </div>
 								        <div id="tab2" class="tabContents">
-								        	<?php // Start the Loop ?>
-											<?php while ( have_posts() ) : the_post(); ?>
-												<?php get_template_part( 'content', get_post_format() ); ?>
+								        	<?php // Start the Loop 
+								        	$my_query = new WP_Query( 'posts_per_page=2' );
+								        	?>
+
+											<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+												<?php get_template_part( 'content-author', get_post_format() ); ?>
 											<?php endwhile; ?>
 											<?php Retailwire_content_nav( 'nav-below' ); ?>
 											<?php else : ?>
