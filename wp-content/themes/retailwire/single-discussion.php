@@ -13,7 +13,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="content-single-dis">
-						<div class="wrap-fix">
+						
 							<div class="single-dis-l">
 								<div class="item-discussion">
 					              		<span class="module-label title-dis">
@@ -53,7 +53,7 @@ get_header(); ?>
 									?>
 				         		</div>
 				            </div>
-						</div>
+						
 						<div class="single-dis-r">
 							<div class="item-braintrust">
 									<span class="module-label title-brain">Braintrust</span>

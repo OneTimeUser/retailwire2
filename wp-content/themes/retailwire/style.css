@@ -43,7 +43,7 @@ td { vertical-align: top; }
 body { 
 	margin: 0 auto;
 	padding: 0;
-	font: 16px/1.5 'PT Sans', Helvetica, Arial, sans-serif;
+	font: 16px/1.5 'Calibri', Helvetica, Arial, sans-serif;
 	font-size: 1rem;
 	font-style: normal;
 	font-weight: 400;
@@ -105,7 +105,7 @@ img.wp-smiley,
 
 /* Header */
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Jubilat', Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;
@@ -186,25 +186,25 @@ ul ul, ul ol, ol ol, ol ul {
 }
 
 dt {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
 
 b, strong { 
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 }
 
 em {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 }
 
 strong em, b em {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 700;
 }
@@ -283,7 +283,7 @@ blockquote.pull-right {
 }
 
 blockquote p {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 24px;
@@ -301,7 +301,7 @@ blockquote cite:before {
 }
 
 blockquote cite {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 14px;
@@ -372,7 +372,7 @@ sub {
 .wp-caption .wp-caption-text,
 .gallery-caption,
 .entry-caption {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -416,7 +416,7 @@ img.wp-smiley, .rsswidget img {
 }
 
 .menu-toggle, button, input {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-size: 16px;
@@ -661,7 +661,7 @@ select {
 .page-title,
 .entry-content th,
 .comment-content th {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 14px;
@@ -869,7 +869,7 @@ select {
 }
 
 .comments-link {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -895,7 +895,7 @@ select {
 }
 
 article.sticky .featured-post {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Jubilat', Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: 400;
 	border-top: 4px double #aaa;
@@ -992,7 +992,7 @@ article.sticky {
 
 .entry-header address,
 .comment-content address {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	display: block;
@@ -1004,7 +1004,7 @@ article.sticky {
 
 .entry-header time,
 .entry-header address {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	font-size: 14px;
@@ -1057,7 +1057,7 @@ article.sticky {
 
 .entry-content dt,
 .comment-content dt {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 1.5;
@@ -1319,7 +1319,7 @@ article.sticky {
 }
 
 .archive-meta {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	color: #777;
@@ -1379,7 +1379,7 @@ article.sticky {
 }
 
 .comments-area article header time {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: italic;
 	font-weight: 400;
 	line-height: 1.8;
@@ -1536,7 +1536,7 @@ span.required {
 }
 
 form label.error {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	display:block;
@@ -1687,7 +1687,7 @@ form label.error {
 }
 
 #wp-calendar caption {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -1840,7 +1840,7 @@ li span.dots {
 }
 
 .nav-menu {
-	font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
 	font-style: normal;
 	font-weight: 700;
 	font-size: 18px;
@@ -2028,7 +2028,7 @@ li span.dots {
    ========================================================================== */
 
 h1.page-title {
-	font-family: 'Arvo', Georgia, "Times New Roman", Times, serif;
+	font-family: 'Jubilat', Georgia, "Times New Roman", Times, serif;
 	font-style: normal;
 	font-weight: 400;
 	color: #333;

@@ -19,7 +19,7 @@ need to add module-label class to all labels in php; also add to tagcloud
 */
 .module-label, .widgettitle {
 	color: #fff !important;
-    font-size: 20px !important;
+    font-size: 16px !important;
     padding: 2px 15px !important;
     top: 0px !important;
     left: 0px !important;
@@ -178,15 +178,6 @@ need to add module class to all labels in php
 
 }
 
-.single-dis-r{/*overrride*/
-	width: 222px !important;
-    float: right !important;
-}
-
-.single-dis-l{/*override*/
-	width: auto !important;
-    float: none !important;
-}
 
 .small-ad {/*should probably be embedded in text of article*/
 	width: 150px;
@@ -197,3 +188,20 @@ need to add module class to all labels in php
 	margin-right:20px;
 }
 
+.list-press{
+	margin-left: 0px 15px 0px 15px;
+}
+.date-press{
+	padding-top: 5px;
+}
+
+.dont-miss a{
+	color: white !important;
+    text-decoration: none;
+}
+
+button.alm-load-more-btn {
+	background-color:rgb(236,169,3) !important;	
+	font-family: Calibri, Helvetica, Arial, sans-serif !important;
+
+}
