@@ -73,25 +73,7 @@ get_header(); ?>
 							         </div>  
 
 				              	</div>
-				              	<div class="item-braintrust ">
-				              		<div class="item-b-l">
-				              			<span class="module-label title-brain">Braintrust</span>
-										<?php $author_id = get_the_author_meta('ID');
-											  $content_user = get_field('content', 'user_'. $author_id );
-										 ?>
-									<div class="desc"><?php echo $content_user; ?></div>
-									</div>
-									<div class="item-b-r">
-										<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
-										<div class="img-user">
-											<a href="<?php echo get_author_posts_url($author_id); ?>">
-												<?php echo get_avatar(get_the_author_meta()); ?>
-											</a>
-										</div>
-										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
-									</div>
-									
-								</div>
+				              	<?php get_template_part( 'content-braintrust', get_post_format() ); ?>
 				              </li>
 				              <?php } ?>
 				              
