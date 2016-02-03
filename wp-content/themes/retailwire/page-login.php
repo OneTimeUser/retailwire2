@@ -21,7 +21,10 @@ get_header(); ?>
 	<div id="primary" class="site-content row" role="main">
 		<?php if ( !is_user_logged_in() ) { ?>
 
-		
+		<div class="login-disqui">
+	
+
+		</div>
 		<div class="login-l col grid_6_of_12">
 			<div class="form-login-2">
 				<?php 

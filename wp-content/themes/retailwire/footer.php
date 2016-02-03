@@ -92,6 +92,8 @@
 <?php wp_footer(); ?>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/hmac.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($){
 		$('.close-miss').click(function(){
@@ -155,8 +157,31 @@
  	   	$('.link-search').click(function(){
                $('.content-f-top').slideToggle(500);
          })
+
+
+
+
+
 	});
 
+</script>
+<script type="text/javascript">
+var disqus_config = function () {
+    // The generated payload which authenticates users with Disqus
+    this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
+    this.page.api_key = '2jV4kkaizbc8U4auShxMeRCzFUA0hO8mX3pKfmkCPPj81xi58G1FVyEDwPTnJi1j';
+
+// This adds the custom login/logout functionality
+    this.sso = {
+          name:   "SampleNews",
+          button:  "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+          icon:     "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+          url:        "retailwire.icodedark.com/login/",
+          logout:  "retailwire.icodedark.com/login",
+          width:   "800",
+          height:  "400"
+    };
+};
 </script>
 <!-- Start of Async HubSpot Analytics Code -->
   <script type="text/javascript">
