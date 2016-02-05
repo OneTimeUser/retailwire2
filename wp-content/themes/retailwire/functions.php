@@ -1169,6 +1169,14 @@ register_sidebar(array(
         'before_title' => '<h2 class="widgettitle">',
         'after_title' => '</h2>',
 ));
+register_sidebar(array(
+        'name' => __('Sidebar press releases'),
+        'id' => 'sidebar_press',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+));
 
 add_shortcode( 'ad1', 'ad1' );
 
@@ -1198,7 +1206,7 @@ function ad2(){
     return $list_post;
 }
 
-function get_excerpt(){
+function get_excerpt($number){
 
 $excerpt = get_the_content();
 
@@ -1208,7 +1216,7 @@ $excerpt = strip_shortcodes($excerpt);
 
 $excerpt = strip_tags($excerpt);
 
-$excerpt = substr($excerpt, 0, 100);
+$excerpt = substr($excerpt, 0, $number);
 
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 
@@ -1253,7 +1261,7 @@ function slide_resources($args, $content){
 					<?php } ?>
 					</a>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo get_excerpt(); ?></p>
+					<p><?php echo get_excerpt('100'); ?></p>
 
               </li>
 
@@ -1364,7 +1372,7 @@ function list_resource_1(){
 
 								<?php endif; ?>
 						</strong>
-						<span><?php echo get_excerpt(); ?></span>
+						<span><?php echo get_excerpt('100'); ?></span>
 					</div>
               </li>
 

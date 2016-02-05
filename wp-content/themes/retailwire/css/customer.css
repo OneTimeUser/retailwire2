@@ -1731,7 +1731,8 @@ body .sec-3-m {
 	margin: 0 auto;
 }
 .img-user img{
-	height:100%;
+	/*height:100%;*/
+	height: auto;
 }
 .desc p{
 	margin-bottom: 0px;
@@ -1775,6 +1776,18 @@ body .sec-3-m {
     color: #509cd0;
     text-decoration: none;
     font-weight: bold;
+}
+.single .widget_tag_cloud{
+	border-right: 1px solid #9e9b8c;
+    border-bottom: 5px solid #9e9b8c;
+}
+.single-post .s4-retail{
+	margin: 20px 0px;
+	display: inline-block;
+}
+.single-press_releases .title-press{
+	margin: 20px 0px;
+	display: inline-block;
 }
 
 /* REPONSIVE HOMEPAGE */

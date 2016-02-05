@@ -12,7 +12,7 @@ get_header(); ?>
 			<div class="sec-1-l">
 				<?php while ( have_posts() ) : the_post(); ?>
 					<div class="content-single-dis ">
-						<span class="s4-retail">Retail News</span>
+						<span class="module-label title-press">Press Releases</span>
 						<h1 class="title_single"><?php the_title(); ?></h1>
 						<span class="category_single"><?php 
 						$category = get_the_category();
@@ -21,7 +21,7 @@ get_header(); ?>
 						 ?></span>
 						<span class="date_single"><?php the_time( 'd/m/Y' ); ?></span>
 						<div class="content_single"><?php the_content(); ?> </div>
-						<div class="read-more">Read the entire article here: <a href="<?php echo home_url(); ?>/retail-new/">ASSOCITED PRESS</a></div>
+						<!-- <div class="read-more">Read the entire article here: <a href="#">ASSOCITED PRESS</a></div> -->
 				    </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>
