@@ -1446,3 +1446,41 @@ function braintrust(){
     ob_end_clean();
     return $list_post;
 }
+
+add_action( 'add_meta_boxes_comment', 'comment_add_meta_box' );
+function comment_add_meta_box()
+{
+ add_meta_box( 'my-comment-title', __( 'Your field title' ), 'comment_meta_box_age1',     'comment', 'normal', 'high' );
+}
+
+function comment_meta_box_age1( $comment )
+{
+    $values = get_comment_meta( $comment->comment_ID, 'age1', true );
+   /// var_dump($values);
+    $check = isset( $values) ? esc_attr($values) : '';
+   ?>
+ <p>
+     <label for="age1"><?php _e( 'Your label Name' ); ?></label>;
+     <input type="checkbox" name="age1" <?php checked( $check, 'on' ); ?>  class="widefat" />
+ </p>
+ <?php
+}
+add_action( 'edit_comment', 'comment_edit_function' );
+function comment_edit_function( $comment_id )
+{
+	$chk = isset( $_POST['age1'] ) && $_POST['age1'] ? 'on' : 'off';
+/*	var_dump($chk);
+	exit();*/
+    var_dump(update_comment_meta($comment_id, 'age1', $chk )) ;
+
+}
+
+
+
+function my_cpt_columns( $columns ) {
+    $columns["ga1"] = "Featured";
+    return $columns;
+}
+add_filter('manage_edit-comments_columns', 'my_cpt_columns');
+//that's all that's needed!
+

@@ -50,7 +50,10 @@ get_header(); ?>
 
 					        		?>
 						        	 <li  class="list-user">
-						             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+						             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a>
 						        	 <ul class="list-so-user">
 						        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
 						        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
@@ -106,9 +109,10 @@ get_header(); ?>
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+
 					        		?>
 						        	 <li  class="list-user-bottom">
-						            	<h2 class="title-user"><a href=""><?php echo $author->display_name; ?></a></h2>
+						            	<h2 class="title-user"><a href="<?php echo get_author_posts_url($author_id); ?>"><?php echo $author->display_name; ?></a></h2>
 						        	 	<span class="position-user"><?php echo $author_position; ?></span>
 						        		 <ul class="list-so-user">
 						        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
