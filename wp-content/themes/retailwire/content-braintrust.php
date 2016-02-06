@@ -3,7 +3,7 @@
 				              	<div class="item-braintrust">
 
 				              		<?php $args = array(
-									    'number' => 100000,
+									    'number' => 10000,
 									    'post_id' => $post->ID,
 									    'status' => 'approve'
 									);?>
@@ -36,7 +36,8 @@
 										</div>
 										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
 									</div>
-									<?php } ?>
+
+									<?php  break; } ?>
 									<?php } ?>
 				              		
 									

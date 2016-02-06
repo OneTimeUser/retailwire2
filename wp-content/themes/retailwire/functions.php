@@ -1465,10 +1465,10 @@ function comment_meta_box_age1( $comment )
 {
     $values = get_comment_meta( $comment->comment_ID, 'age1', true );
    /// var_dump($values);
-    $check = isset( $values) ? esc_attr($values) : '';
+    $check = isset( $values) ? esc_attr($values) : 'off';
    ?>
  <p>
-     <label for="age1"><?php _e( 'Your label Name' ); ?></label>;
+     <label for="age1"><?php _e( 'Featured' ); ?></label> :
      <input type="checkbox" name="age1" <?php checked( $check, 'on' ); ?>  class="widefat" />
  </p>
  <?php
@@ -1485,10 +1485,10 @@ function comment_edit_function( $comment_id )
 
 
 
-function my_cpt_columns( $columns ) {
+/*function my_cpt_columns( $columns ) {
     $columns["ga1"] = "Featured";
     return $columns;
 }
-add_filter('manage_edit-comments_columns', 'my_cpt_columns');
+add_filter('manage_edit-comments_columns', 'my_cpt_columns');*/
 //that's all that's needed!
 
