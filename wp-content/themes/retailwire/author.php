@@ -12,36 +12,38 @@ get_header(); ?>
 		<div class="section-1">
 			<div class="sec-1-l braintrust-top">
 				
-			<?php if ( have_posts() ) : ?>
+		
 				<span class="s4-retail">braintrust // FROFILE</span>
 				<div class="single-user">
-
 					<div class="single-user-l col grid_2_of_12">
-
 							<?php 
-									  $author_id = get_the_author_id();
+									  $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
+									  //var_dump($author);
+									  $author_id = $author->ID;;
 									  $author_facebook = get_field('facebook', 'user_'. $author_id );
 						              $author_twitter = get_field('twitter', 'user_'. $author_id );
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
 						              $author_content_user = get_field('content', 'user_'. $author_id );
-
 						             
 					        		?>	
 					        		<ul class="list-single-user">
 							        	 <li  class="item-single-user">
-							        	 	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        	 	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a>
 							        		 <ul class="list-so-user">
 							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
 							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
 							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
 							        	 </li>
 						        	</ul>
-						        
+						    
 					</div>
 					<div class="single-user-r col grid_10_of_12">
-						<h2 class="title-user-single"><?php echo get_the_author(); ?></a></h2>
+						<h2 class="title-user-single"><?php echo $author->display_name ; ?></a></h2>
 						<span class="position-user"><?php echo $author_position; ?></span>
 						<div class="content-single-user">
 							<?php echo $author_content_user ?>
@@ -70,11 +72,9 @@ get_header(); ?>
 												<?php get_template_part( 'content-author', get_post_format() ); ?>
 											<?php endwhile; ?>
 											<?php Retailwire_content_nav( 'nav-below' ); ?>
-											<?php else : ?>
+											
 
-												<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
-
-											<?php endif; // end have_posts() check ?>
+												
 								        </div>
 								    	
 										

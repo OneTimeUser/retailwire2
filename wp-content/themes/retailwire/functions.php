@@ -1169,6 +1169,14 @@ register_sidebar(array(
         'before_title' => '<h2 class="widgettitle">',
         'after_title' => '</h2>',
 ));
+register_sidebar(array(
+        'name' => __('Sidebar press releases'),
+        'id' => 'sidebar_press',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widgettitle">',
+        'after_title' => '</h2>',
+));
 
 add_shortcode( 'ad1', 'ad1' );
 
@@ -1198,7 +1206,7 @@ function ad2(){
     return $list_post;
 }
 
-function get_excerpt(){
+function get_excerpt($number){
 
 $excerpt = get_the_content();
 
@@ -1208,7 +1216,7 @@ $excerpt = strip_shortcodes($excerpt);
 
 $excerpt = strip_tags($excerpt);
 
-$excerpt = substr($excerpt, 0, 100);
+$excerpt = substr($excerpt, 0, $number);
 
 $excerpt = substr($excerpt, 0, strripos($excerpt, " "));
 
@@ -1253,7 +1261,7 @@ function slide_resources($args, $content){
 					<?php } ?>
 					</a>
 					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-					<p><?php echo get_excerpt(); ?></p>
+					<p><?php echo get_excerpt('100'); ?></p>
 
               </li>
 
@@ -1364,7 +1372,7 @@ function list_resource_1(){
 
 								<?php endif; ?>
 						</strong>
-						<span><?php echo get_excerpt(); ?></span>
+						<span><?php echo get_excerpt('100'); ?></span>
 					</div>
               </li>
 
@@ -1446,3 +1454,41 @@ function braintrust(){
     ob_end_clean();
     return $list_post;
 }
+
+add_action( 'add_meta_boxes_comment', 'comment_add_meta_box' );
+function comment_add_meta_box()
+{
+ add_meta_box( 'my-comment-title', __( 'Your field title' ), 'comment_meta_box_age1',     'comment', 'normal', 'high' );
+}
+
+function comment_meta_box_age1( $comment )
+{
+    $values = get_comment_meta( $comment->comment_ID, 'age1', true );
+   /// var_dump($values);
+    $check = isset( $values) ? esc_attr($values) : 'off';
+   ?>
+ <p>
+     <label for="age1"><?php _e( 'Featured' ); ?></label> :
+     <input type="checkbox" name="age1" <?php checked( $check, 'on' ); ?>  class="widefat" />
+ </p>
+ <?php
+}
+add_action( 'edit_comment', 'comment_edit_function' );
+function comment_edit_function( $comment_id )
+{
+	$chk = isset( $_POST['age1'] ) && $_POST['age1'] ? 'on' : 'off';
+/*	var_dump($chk);
+	exit();*/
+    var_dump(update_comment_meta($comment_id, 'age1', $chk )) ;
+
+}
+
+
+
+/*function my_cpt_columns( $columns ) {
+    $columns["ga1"] = "Featured";
+    return $columns;
+}
+add_filter('manage_edit-comments_columns', 'my_cpt_columns');*/
+//that's all that's needed!
+

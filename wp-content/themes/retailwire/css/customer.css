@@ -271,7 +271,9 @@ body #bannercontainer {
 	margin-bottom: 20px;
 	width: 25%;
 	float: right;
-	/*height: AUTO;*/
+
+/*	height: AUTO;*/
+
 }
 .item-braintrust span{
     background: #E8AA07;
@@ -290,6 +292,7 @@ body #bannercontainer {
 	padding: 10px;
 	font-family: Jubilat;
 	font-weight: bold;
+	min-height: 150px;
 }
 /*.item-braintrust .desc:before{
 	content: '"';
@@ -1217,9 +1220,14 @@ body .sec-3-m {
 }
 .list-user .avata img{
 	height: 140px;
+    width: auto;
 }
 .title-user{
     margin: 0px;
+    clear: both;
+}
+.list-braintrust-page .list-so-user li{
+	float: none;
 }
 .title-user a{
 	text-decoration: none;
@@ -1239,6 +1247,9 @@ body .sec-3-m {
 }
 .list-so-user li{
 	display: inline-block;
+}
+.single-user-l .list-so-user li{
+	float: none;
 }
 .list-so-user li a{
 	width: 28px;
@@ -1728,7 +1739,8 @@ body .sec-3-m {
 	margin: 0 auto;
 }
 .img-user img{
-	height:100%;
+	/*height:100%;*/
+	height: auto;
 }
 .desc p{
 	margin-bottom: 0px;
@@ -1743,6 +1755,47 @@ body .sec-3-m {
 #dsq-comments{
 	padding-left: 0px;
 	padding-top: 40px;
+}
+.title_single{
+	font-family: Jubilat;
+	font-size: 40px;
+	color: #000;
+	font-weight: bold;
+}
+.category_single{
+	font-family: Calibri;
+	font-size: 20px;
+	color: #000;
+	text-transform: uppercase;
+	display: block;
+}
+.date_single{
+	font-family: Calibri;
+	font-size: 18px;
+	color: #000;
+	display: block;
+}
+.content_single{
+	font-family: Calibri;
+	font-size: 18px;
+	color: #000;
+}
+.read-more a{
+    color: #509cd0;
+    text-decoration: none;
+    font-weight: bold;
+}
+.single .widget_tag_cloud{
+	border-right: 1px solid #9e9b8c;
+    border-bottom: 5px solid #9e9b8c;
+}
+.single-post .s4-retail{
+	margin: 20px 0px;
+	display: inline-block;
+}
+.single-press_releases .title-press{
+	margin: 20px 0px;
+	display: inline-block;
 }
 
 /* REPONSIVE HOMEPAGE */
