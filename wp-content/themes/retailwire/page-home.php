@@ -123,7 +123,7 @@ get_header(); ?>
 		          $args = array(
 		          	'post_type'=>'post',
 		            'order' => 'desc',
-		            'posts_per_page' => 12
+		            'posts_per_page' => 8
 		          );
 
 		          $wp_query = new WP_Query( $args );

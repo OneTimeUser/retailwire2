@@ -88,10 +88,17 @@ function date(){
 				<div class="top-right hide_ipad">
 					<ul>
 						<li>
+						<?php 
+						if (is_user_logged_in()){
+							$current_user = wp_get_current_user();
+						?>
+							<a href="#" class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+						<?php } else{ ?>
 							<a href="<?php echo home_url(); ?>/login" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/login" class="sign-in">Sign in</a>
+						<?php }?>
 						</li>
 						<li>
-							<a href="" class="join">join the braintrust</a>
+							<a href="<?php echo home_url(); ?>/braintrust"  class="join">join the braintrust</a>
 						</li>
 						<li class="form-seach-top">
 							<a href="#" class="link-search">search</a>
@@ -104,7 +111,7 @@ function date(){
 				</div>
 				<ul class="m-top-right show_ipad">
 					<li><a href="<?php echo home_url(); ?>/login" class="m-regis"></a></li>
-					<li><a href="<?php echo home_url(); ?>/login" class="m-join"></a></li>
+					<li><a href="<?php echo home_url(); ?>/braintrust" class="m-join"></a></li>
 					<li><a href="#" class="m-link-search"></a></li>
 
 				</ul>

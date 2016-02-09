@@ -54,21 +54,7 @@ get_header(); ?>
 				         		</div>
 				            </div>
 						<div class="single-dis-r">
-							<div class="item-braintrust">
-									<div class="item-b-l">
-										<span class="module-label title-brain">Braintrust</span>
-										<div class="desc">"Part of what we are seeing is a deep shift in retail tectonics and Wall Street seems to be oblivious to the change"</div>
-									</div>
-									<div class="item-b-l">
-										<div class="img-user">
-											<a href="<?php echo get_the_author_link(); ?>">
-												<?php echo get_avatar(get_the_author_meta()); ?>
-											</a>
-										</div>
-										<div class="link-name-author"><h2><?php echo get_the_author(); ?></h2></div>
-									</div>
-									
-								</div>
+							<?php get_template_part( 'content-braintrust-discussion', get_post_format() ); ?>
 							
 						</div>
 				      </div>

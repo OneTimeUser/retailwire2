@@ -16,8 +16,7 @@
 										//var_dump($vote);
 										if($vote=="on"){
 										?>
-									
-
+										
 									<div class="item-b-l">
 				              			<span class="module-label title-brain">Braintrust</span>
 										<?php $author_id = get_the_author_meta('ID');
