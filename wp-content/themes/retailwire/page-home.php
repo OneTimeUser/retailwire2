@@ -201,6 +201,7 @@ get_header(); ?>
 						    	<li><span link="#tab2">Brands</span></li>
 						    	<li><span link="#tab3">Braintrust</span></li>
 								<li><span link="#tab4">Tech/Services</span></li>
+								<li><span link="#tab5">RW</span></li>
 						    </ul>
 							
 						    <div class="tabDetails">
@@ -208,13 +209,16 @@ get_header(); ?>
 						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_retail" ai_numberoftweets="5"]'); ?>
 						        </div>
 						    	<div id="tab2" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_bt" ai_numberoftweets="5"]'); ?>
+						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_rw" ai_numberoftweets="5"]'); ?>
 						        </div>
 						    	<div id="tab3" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_tech" ai_numberoftweets="5"]'); ?>
+						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_bt" ai_numberoftweets="5"]'); ?>
 						        </div>
 								<div id="tab4" class="tabContents">
-						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_rw" ai_numberoftweets="5"]'); ?>
+						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="rwfeed_tech" ai_numberoftweets="5"]'); ?>
+						        </div>
+						        <div id="tab5" class="tabContents">
+						        	<?php echo do_shortcode('[AIGetTwitterFeeds ai_username="retailwire" ai_numberoftweets="5"]'); ?>
 						        </div>
 								
 						    </div>

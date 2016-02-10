@@ -38,7 +38,7 @@
 										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo get_the_author(); ?></h2></a>
 									</div>
 
-									<?php  break; } ?>
+									<?php } ?>
 									<?php } ?>
 				              		
 									

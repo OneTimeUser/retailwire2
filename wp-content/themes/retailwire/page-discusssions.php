@@ -34,7 +34,7 @@ get_header(); ?>
 					<div class="content-dis">
 						<div class="tabDetails">
 					    	<div id="tab1" class="tabContents">
-					        	<?php echo do_shortcode('[ajax_load_more post_type="discussion" repeater="default" posts_per_page="3" scroll="true"]'); ?>
+					        	<?php echo do_shortcode('[ajax_load_more post_type="discussion" repeater="default" posts_per_page="9" scroll="true"]'); ?>
 					        </div>
 					    	<div id="tab2" class="tabContents">
 					        	<?php echo do_shortcode('[ajax_load_more post_type="discussion" taxonomy="cate_discussions" taxonomy_terms="popular" taxonomy_operator="IN"]'); ?>
