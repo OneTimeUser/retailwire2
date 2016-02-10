@@ -19,7 +19,7 @@ get_header(); ?>
 						$firstCategory = $category[0]->cat_name;
 						echo $firstCategory ;
 						 ?></span>
-						<span class="date_single"><?php the_time( 'd/m/Y' ); ?></span>
+						<span class="date_single"><?php the_time( 'm/d/Y' ); ?></span>
 						<div class="content_single"><?php the_content(); ?> </div>
 						<!-- <div class="read-more">Read the entire article here: <a href="#">ASSOCITED PRESS</a></div> -->
 				    </div>

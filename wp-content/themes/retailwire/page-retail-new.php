@@ -35,7 +35,7 @@ get_header(); ?>
 					<div class="content-dis">
 						<div class="tabDetails">
 					    	<div id="last" class="tabContents">
-					        	<?php echo do_shortcode('[ajax_load_more repeater="template_post" post_type="post" posts_per_page="3" scroll="false"]'); ?>
+					        	<?php echo do_shortcode('[ajax_load_more repeater="template_post" post_type="post" posts_per_page="9" scroll="true"]'); ?>
 					        </div>
 					        <div id="popular" class="tabContents">
 					        	<?php echo do_shortcode('[ajax_load_more repeater="template_post" post_type="post" taxonomy="group_post" taxonomy_terms="popular" taxonomy_operator="IN" posts_per_page="3" scroll="false"] '); ?>

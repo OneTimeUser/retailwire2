@@ -205,3 +205,23 @@ button.alm-load-more-btn {
 	font-family: Calibri, Helvetica, Arial, sans-serif !important;
 
 }
+
+.article-author{
+	color: #9e9b8c;
+}
+
+.article-tags{
+	color: #9e9b8c;
+	text-transform: uppercase;
+	padding-top: 20px;
+}
+
+
+.article-excerpt{
+	padding-top: 20px;
+    font-weight: bold;
+}
+
+#headerwrapper{
+	height: 159px;
+}

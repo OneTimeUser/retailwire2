@@ -45,6 +45,7 @@ get_header(); ?>
 				              		<?php the_content(); ?>
 				              		<div class="article-author"><?php the_author(); ?> </div>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
+				              		<div class="article-excerpt"><?php the_excerpt(); ?></div>
 					              	<?php
 									// If comments are open or we have at least one comment, load up the comment template
 									if ( comments_open() || '0' != get_comments_number() ) {

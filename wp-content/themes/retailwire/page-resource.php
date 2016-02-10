@@ -36,7 +36,7 @@ get_header(); ?>
 					<div class="content-dis">
 						<div class="tabDetails">
 					    	<div id="all" class="tabContents">
-					        	<?php echo do_shortcode('[ajax_load_more repeater="template_8" post_type="resources" posts_per_page="6" scroll="true"]'); ?>
+					        	<?php echo do_shortcode('[ajax_load_more repeater="template_8" post_type="resources" posts_per_page="9" scroll="true"]'); ?>
 					        </div>
 					        <div id="whitepapers" class="tabContents">
 					        	<?php echo do_shortcode('[ajax_load_more repeater="template_8" post_type="resources" taxonomy="categoris_resources" taxonomy_terms="whitepapers" taxonomy_operator="IN" posts_per_page="6" scroll="true"] '); ?>

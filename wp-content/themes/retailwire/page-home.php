@@ -145,7 +145,7 @@ get_header(); ?>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<div class="date">
 									<span><?php the_category(); ?></span>
-									<span class="full-date"><?php echo get_the_date('d/m/Y')?></span>
+									<span class="full-date"><?php echo get_the_date('m/d/Y')?></span>
 								</div>
 							</div>
 		              </div>
@@ -179,7 +179,7 @@ get_header(); ?>
 										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 										<div class="date-press">
 											<span class="cate_press"><?php the_category(); ?></span>
-											<span class="full-date-sub"><?php echo get_the_date('d/m/Y'); ?></span>
+											<span class="full-date-sub"><?php echo get_the_date('m/d/Y'); ?></span>
 										</div>
 				              </div>
 

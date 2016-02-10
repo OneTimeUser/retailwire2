@@ -63,6 +63,7 @@ function date(){
 			<p><a href="http://localhost:8888/retailwire/subscribe/">dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</a></p>
 			<span class="close-miss"></span>
 		</div>
+	<div id="headerwrapper">	
 	<div id="headercontainer">
 		<header id="masthead" class="site-header row" role="banner">
 			
@@ -155,11 +156,11 @@ function date(){
 		</header> <!-- /#masthead.site-header.row -->
 
 	</div> <!-- /#headercontainer -->
-	
+	</div>
 	<div class="date-page">
 		<div class="container">
 			<span class="content-date">
-				<script type="text/javascript">  date().delay(10); </script> // <?php echo date("l d M Y"); ?>
+				<script type="text/javascript">  date().delay(10); </script> // <?php echo date("l m d Y"); ?>
 
 			</span>
 			
