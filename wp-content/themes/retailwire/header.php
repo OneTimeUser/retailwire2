@@ -60,7 +60,7 @@ function date(){
 					 <img src="<?php echo esc_url( $background['image'] );  ?>">
 			</div>
 		<div class="dont-miss">
-			<p><a href="http://localhost:8888/retailwire/subscribe/">dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</a></p>
+			<p><a href="<?php echo home_url(); ?>/subscribe">dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</a></p>
 			<span class="close-miss"></span>
 		</div>
 	<div id="headerwrapper">	
