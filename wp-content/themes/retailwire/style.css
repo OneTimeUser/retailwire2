@@ -1072,7 +1072,6 @@ article.sticky {
 
 .entry-content table,
 .comment-content table {
-	border-bottom: 1px solid #ccc;
 	font-size: 14px;
 	font-size: 0.875rem;
 	line-height: 2;
@@ -1091,7 +1090,6 @@ article.sticky {
 
 .entry-content td,
 .comment-content td {
-	border-top: 1px solid #ccc;
 	padding: 6px 10px 6px 0;
 	padding: 0.375rem 0.625rem 0.375rem 0;
 }

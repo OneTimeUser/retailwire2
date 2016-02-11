@@ -5171,3 +5171,30 @@ function mysql_to_rfc3339( $date_string ) {
 	// Strip timezone information
 	return preg_replace( '/(?:Z|[+-]\d{2}(?::\d{2})?)$/', '', $formatted );
 }
+
+function top_tags() {
+        $tags = get_tags();
+
+        if (empty($tags))
+                return;
+
+        $counts = $tag_links = array();
+        foreach ( (array) $tags as $tag ) {
+                $counts[$tag->name] = $tag->count;
+                $tag_links[$tag->name] = get_tag_link( $tag->term_id );
+        }
+
+        asort($counts);
+        $counts = array_reverse( $counts, true );
+
+        $i = 0;
+        foreach ( $counts as $tag => $count ) {
+                $i++;
+                $tag_link = clean_url($tag_links[$tag]);
+                $tag = str_replace(' ', '&nbsp;', wp_specialchars( $tag ));
+                if($i < 11){
+                        print "<li><a href=\"$tag_link\">$tag ($count)</a></li>";
+                }
+        }
+}
+

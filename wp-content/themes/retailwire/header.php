@@ -99,7 +99,7 @@ function date(){
 						<?php }?>
 						</li>
 						<li>
-							<a href="<?php echo home_url(); ?>/braintrust"  class="join">join the braintrust</a>
+							<a href="<?php echo home_url(); ?>/contact"  class="join">join the braintrust</a>
 						</li>
 						<li class="form-seach-top">
 							<a href="#" class="link-search">search</a>

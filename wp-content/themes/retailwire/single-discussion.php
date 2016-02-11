@@ -41,7 +41,7 @@ get_header(); ?>
 								         </div>  
 					            </div>
 					            <div class="content-post">
-					            	<div class="small-ad"></div>
+					            	<div class="small-ad"><?php echo adrotate_ad(3); ?></div>
 				              		<?php the_content(); ?>
 				              		<div class="article-author"><?php the_author(); ?> </div>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
@@ -67,6 +67,10 @@ get_header(); ?>
 					 <img src="<?php echo esc_url( $background['image'] );  ?>">
 				</div>
 				<?php dynamic_sidebar('sidebar_discussion') ?>
+
+				<span class="s3-resource">resources</span>
+		
+				<?php echo do_shortcode('[slide_resources id="owl-demo"]'); ?>
 			</div>
 			<div class="clear"></div>
 

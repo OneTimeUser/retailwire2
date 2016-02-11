@@ -51,6 +51,7 @@ get_header(); ?>
 				              		<span class="module-label title-dis">
 				              			Discussion
 				              		</span>
+				              		<div class="thumb-wrapper">
 				              		<?php
 
 									if ( has_post_thumbnail() ) { ?>
@@ -63,7 +64,7 @@ get_header(); ?>
 										<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/images/post-2.jpg" />
 									<?php }
 									?>
-					                  
+					                </div>  
 							         <div class="info-dis">
 							         		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							         		<div class="info-bottom">
@@ -98,6 +99,7 @@ get_header(); ?>
 				<div class="tag">
 					<?php dynamic_sidebar('tags'); ?>
 				</div>
+			
 			</div>
 			<div class="clear"></div>
 
