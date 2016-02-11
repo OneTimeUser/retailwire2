@@ -536,7 +536,7 @@ font-family: calibri;
     text-indent: -999999px;
     position: absolute;
     top: 32%;
-    left: -27px;
+    left: -10px;
     cursor: pointer;
 }
 .owl-next{
@@ -547,7 +547,7 @@ font-family: calibri;
     text-indent: -999999px;
     position: absolute;
     top: 32%;
-    right: -27px;
+    right: -10px;
     cursor: pointer;
 }
 #text-6{
@@ -597,6 +597,7 @@ margin-bottom: 10px;
 .single-dis-r .item-braintrust{
 	width:auto;
 	float: none;
+	height: auto;
 }
 .addthis_button_facebook{
 }
