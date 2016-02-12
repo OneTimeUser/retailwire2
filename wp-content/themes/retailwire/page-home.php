@@ -146,6 +146,7 @@ get_header(); ?>
 							<div class="group-info">
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<div class="date">
+									<span><?php the_field('news_source'); ?></span>
 									<span><?php the_category(); ?></span>
 									<span class="full-date"><?php echo get_the_date('m/d/Y')?></span>
 								</div>
@@ -178,9 +179,9 @@ get_header(); ?>
 				              while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
 				              
 				              <div class="sub-list-press <?php  if ( has_post_thumbnail() == '' ) { echo 'not-thumbnail'; } ?>">
-										<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+										<h3><a href="<?php the_field('source_url'); ?>"><?php the_title(); ?></a></h3>
 										<div class="date-press">
-											<span class="cate_press"><?php the_category(); ?></span>
+											<span class="cate_press"><?php the_field('news_source'); ?></span>
 											<span class="full-date-sub"><?php echo get_the_date('m/d/Y'); ?></span>
 										</div>
 				              </div>
