@@ -69,6 +69,12 @@ need to add module class to all labels in php
 
 .tagcloud {
 	margin-left: 15px;
+	height: 100%;
+}
+
+#tag_cloud-3{
+	overflow: hidden;
+	height: 408px;
 }
 
 .ad-3{ /*temp style fix*/
@@ -81,7 +87,7 @@ need to add module class to all labels in php
 }
 
 .section-2{
-
+	padding-top: 30px !important;
 }
 
 .section-3{
@@ -222,3 +228,5 @@ button.alm-load-more-btn {
 #headerwrapper{
 	height: 159px;
 }
+
+
