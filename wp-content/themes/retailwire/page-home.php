@@ -107,6 +107,34 @@ get_header(); ?>
 		</div>
 		<?php //get_sidebar(); ?>
 		<div class="section-2">
+			<?php /*if ( is_front_page() ) {*/
+				// Count how many banner sidebars are active so we can work out how many containers we need
+				$bannerSidebars = 0;
+				for ( $x=1; $x<=2; $x++ ) {
+					if ( is_active_sidebar( 'frontpage-banner' . $x ) ) {
+						$bannerSidebars++;
+					}
+				}
+
+				// If there's one or more one active sidebars, create a row and add them
+				if ( $bannerSidebars > 0 ) { ?>
+					<?php
+					// Work out the container class name based on the number of active banner sidebars
+					$containerClass = "grid_" . 12 / 1 . "_of_12"; //$bannerSidebars
+
+					// Display the active banner sidebars
+					for ( $x=2; $x<=2; $x++ ) {
+						if ( is_active_sidebar( 'frontpage-banner'. $x ) ) { ?>
+							<div class="col <?php echo $containerClass?>">
+								<div class="widget-area" role="complementary">
+									<?php dynamic_sidebar( 'frontpage-banner'. $x ); ?>
+								</div> <!-- /.widget-area -->
+							</div> <!-- /.col.<?php echo $containerClass?> -->
+						<?php }
+					} ?>
+
+				<?php }
+			/*}*/ ?>
 			<a href="">
 				<?php $background2 = of_get_option( 'ad_970x90', $background_defaults ); ?>
 					 <img src="<?php echo esc_url( $background2['image'] );  ?>">
@@ -147,7 +175,7 @@ get_header(); ?>
 								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 								<div class="date">
 									<span><?php the_field('news_source'); ?></span>
-									<span><?php the_category(); ?></span>
+									
 									<span class="full-date"><?php echo get_the_date('m/d/Y')?></span>
 								</div>
 							</div>

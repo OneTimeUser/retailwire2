@@ -57,20 +57,16 @@ get_header(); ?>
 				<li><a href="" class="icon-tt-1">Sign in with Twitter</a></li>
 				<li><a href="" class="icon-fb-1">Sign in with Facebook</a></li>
 				<li><a href="" class="icon-in-1">Sign in with LinkedIn</a></li>
-				<li><a href="" class="icon-gg-1">Sign in with Google</a></li>
+				<!-- <li><a href="" class="icon-gg-1">Sign in with Google</a></li> -->
 			</ul>
-			<a href="#" class="connect-b">Or sIgn up with Email</a>
-			<p>If you sign up with Twitter or Facebook, we’ll start you off 
-				with a network by automatically importing any followers/fol
-				lowees or friends already on Medium. Also, we’ll never post 
-				to Twitter or Facebook without your permission.</p>
+			<a href="#" class="connect-b">Or Sign up with Email</a>
+			<p></p>
 			<button href="#" class="btn">Sign Up</button>
 
 		</div> <!-- /.col.grid_8_of_12 -->
 		
 		<?php } else { ?>
-		<p>Do you see reports of franchises unhappiness at McDonald's part of the normal grumbling that comes 
-		with most changes or a sign of serious problem with the strategy? </p>		
+		<p> </p>		
 		<?php
 
 		$author_id = get_current_user_id();

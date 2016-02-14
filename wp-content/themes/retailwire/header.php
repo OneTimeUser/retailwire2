@@ -93,7 +93,7 @@ function date(){
 						if (is_user_logged_in()){
 							$current_user = wp_get_current_user();
 						?>
-							<a href="#" class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+							<a href="<?php echo home_url(); ?>/login"  class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
 						<?php } else{ ?>
 							<a href="<?php echo home_url(); ?>/login" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/login" class="sign-in">Sign in</a>
 						<?php }?>
@@ -181,10 +181,10 @@ function date(){
 				if ( $bannerSidebars > 0 ) { ?>
 					<?php
 					// Work out the container class name based on the number of active banner sidebars
-					$containerClass = "grid_" . 12 / $bannerSidebars . "_of_12";
+					$containerClass = "grid_" . 12 / 1 . "_of_12"; //$bannerSidebars
 
 					// Display the active banner sidebars
-					for ( $x=1; $x<=2; $x++ ) {
+					for ( $x=1; $x<=1; $x++ ) {
 						if ( is_active_sidebar( 'frontpage-banner'. $x ) ) { ?>
 							<div class="col <?php echo $containerClass?>">
 								<div class="widget-area" role="complementary">

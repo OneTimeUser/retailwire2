@@ -61,7 +61,6 @@ need to add module class to all labels in php
 /*	width: 300px;
 	height: 600px;
 	background-color: red;*/
-	margin-bottom: 15px;
 }
 
 .widget_tag_cloud{ /*temp style fix*/
@@ -191,7 +190,6 @@ need to add module class to all labels in php
 	margin: 0px 15px 0px 15px;
 }
 .date-press{
-	padding-top: 5px;
 }
 
 .dont-miss a{

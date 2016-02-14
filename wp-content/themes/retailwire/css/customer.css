@@ -751,7 +751,6 @@ color: #000;
 .section-4{
 	border-bottom: 5px solid #9E9B8C;
 	border-right: 1px solid #9E9B8C;
-	padding: 30px 0px;
     overflow: hidden;
 }
 /* Update 15-01-2016 */
@@ -816,6 +815,7 @@ color: #000;
     margin: 0;
 }
 .sub-list-post .group-info .date > span.full-date,
+.sub-list-post .group-info .date > span,
 .sub-list-post .group-info .date > span > ul > li > a{
 	background-color:transparent;
     color: #c8c9c9;
@@ -1119,7 +1119,7 @@ width: 40%;
 	display: none;
 }
 .sub-list-press{
-
+	line-height: 15px;
 }
 .sub-list-press h3{
 	margin: 15px 0px 0px 0px;
@@ -1150,6 +1150,20 @@ width: 40%;
 .date-press ul li a:hover{
 	color: #c8c9c9;
 }
+
+.date-press .cate_press{
+	font-family: 'Calibri', Helvetica, Arial, sans-serif;
+    background-color: transparent;
+    color: #c8c9c9;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    line-height: 15px;
+    display: block;
+}
+
 .full-date-sub{
 	font-size: 12px;
     font-family: 'Calibri', Helvetica, Arial, sans-serif;
