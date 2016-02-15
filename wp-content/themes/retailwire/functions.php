@@ -1389,19 +1389,17 @@ function list_resource_1(){
     return $list_post;
 }
 
+add_shortcode( 'admin', 'admin' );
 
-
-add_shortcode( 'braintrust', 'braintrust' );
-
-function braintrust(){
+function admin(){
 
     ob_start();
     
     ?>
-	<ul class="list-braintrust-1">
+	<ul class="list-admin-1">
 						<?php
 							$args  = array(
-							    'number' => '7'
+							    'role' => 'Administrator'
 							);
 
 							// Create the WP_User_Query object
@@ -1444,9 +1442,132 @@ function braintrust(){
 							    </div>
 							<?php endif; ?>
 
-						<li class="item-braintrust-3" >
+					
+					</ul>
+        
 
-						</li>
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
+
+
+
+add_shortcode( 'brain_featured', 'braintrust' );
+
+function braintrust(){
+
+    ob_start();
+    
+    ?>
+	<ul class="list-braintrust-1">
+						<?php
+							$args  = array(
+							    'role' => 'Author'
+							);
+
+							// Create the WP_User_Query object
+							global $wp_query;
+							$wp_query = new WP_User_Query($args);
+
+							// Get the results
+							$authors = $wp_query->get_results();
+
+							if($authors): ?>
+								
+							   
+							        <?php foreach($authors as $author) : ?>
+							        	<?php $author_id = $author->ID;
+										  $author_facebook = get_field('facebook', 'user_'. $author_id );
+							              $author_twitter = get_field('twitter', 'user_'. $author_id );
+							              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
+							              $author_position = get_field('position', 'user_'. $author_id );
+							              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+
+						        		?>
+							        	 <li  class="list-user">
+							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
+							        	 <span class="position-user"><?php echo $author_position; ?></span>
+							        	 <ul class="list-so-user">
+							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
+							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
+							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 </ul>
+							        	 
+
+							        	</li>
+							        <?php endforeach; ?>
+							    
+							<?php else: ?>
+
+							    <div class="post">
+							        <p>Sorry, no posts matched your criteria.</p>
+							    </div>
+							<?php endif; ?>
+
+			
+					</ul>
+        
+
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
+
+add_shortcode( 'brain_all', 'braintrust_all' );
+
+function braintrust_all(){
+
+    ob_start();
+    
+    ?>
+	<ul class="list-braintrust-1">
+						<?php
+							$args  = array(
+							    'role' => 'Contributor'
+							);
+
+							// Create the WP_User_Query object
+							global $wp_query;
+							$wp_query = new WP_User_Query($args);
+
+							// Get the results
+							$authors = $wp_query->get_results();
+
+							if($authors): ?>
+								
+							   
+							        <?php foreach($authors as $author) : ?>
+							        	<?php $author_id = $author->ID;
+										  $author_facebook = get_field('facebook', 'user_'. $author_id );
+							              $author_twitter = get_field('twitter', 'user_'. $author_id );
+							              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
+							              $author_position = get_field('position', 'user_'. $author_id );
+							              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+
+						        		?>
+							        	 <li  class="list-user">
+							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
+							        	 <span class="position-user"><?php echo $author_position; ?></span>
+							        	 <ul class="list-so-user">
+							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
+							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
+							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 </ul>
+							        	 
+
+							        	</li>
+							        <?php endforeach; ?>
+							    
+							<?php else: ?>
+
+							    <div class="post">
+							        <p>Sorry, no posts matched your criteria.</p>
+							    </div>
+							<?php endif; ?>
+
 					</ul>
         
 
