@@ -27,7 +27,7 @@ get_header(); ?>
 				<ul class="list-braintrust-page">
 					<?php
 						$args  = array(
-						    'number' => '10'
+						    'role' => 'Author'
 						);
 
 						// Create the WP_User_Query object
@@ -73,9 +73,6 @@ get_header(); ?>
 						    </div>
 						<?php endif; ?>
 
-					<li class="item-braintrust-3" >
-
-					</li>
 				</ul>
 			</div>
 			<div class="sec-1-r">
@@ -89,7 +86,7 @@ get_header(); ?>
 				 <ul class="list-braintrust-bottom">
 					<?php
 						$args  = array(
-						    'number' => '10'
+						    'role' => 'Contributor'
 						);
 
 						// Create the WP_User_Query object

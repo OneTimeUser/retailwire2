@@ -41,7 +41,7 @@ get_header(); ?>
 								         </div>  
 					            </div>
 					            <div class="content-post">
-					            	<div class="small-ad"><?php echo adrotate_ad(3); ?></div>
+					            	<!-- <div class="small-ad"><?php echo adrotate_ad(3); ?></div>  -->
 				              		<?php the_content(); ?>
 				              		<div class="article-author"><?php the_author(); ?> </div>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>

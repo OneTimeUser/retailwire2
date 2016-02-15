@@ -365,7 +365,7 @@ float: right;
 font-size: 12px;
 }
 .item-dis-2 .comment,
-.single-discussion .info-right .comment{
+.info-right .comment{
 font-size: 12px;
 color: #fff;
 display: inline-block;
@@ -598,6 +598,7 @@ margin-bottom: 10px;
 	width:auto;
 	float: none;
 	height: auto;
+	min-height: 334px;
 }
 .addthis_button_facebook{
 }
@@ -1366,7 +1367,7 @@ body .sec-3-m {
 .link-name-author{
 	text-decoration: none;
 }
-.item-home .link-name-author.show-600{
+.link-name-author.show-600{
 	display: none;
 }
 .list-resource-3 .item-resources-3{
@@ -1814,6 +1815,15 @@ body .sec-3-m {
 	margin: 20px 0px;
 	display: inline-block;
 }
+.item-braintrust-sing-post{
+	margin-bottom: 20px;
+}
+
+.line-5{
+	width: 30%;
+	margin: 10px auto;
+	border-bottom: 5px solid #E8AA07;
+}
 
 /* REPONSIVE HOMEPAGE */
 @media screen and (max-width: 1280px){
@@ -2159,6 +2169,10 @@ body .sec-3-m {
 		display: block;
 	}
 
+	.single-discussion .item-discussion img{
+		width: 100% !important;
+	}
+
 
 }
 @media screen and (max-width: 680px){
@@ -2200,6 +2214,11 @@ body .sec-3-m {
 	}
 }
 @media screen and (max-width: 600px){
+	.single-discussion .img-user{
+		margin-top: 0px;
+		margin-bottom: 10px;
+	}
+
   .alm-reveal .item-dis-2 {
     width: 48%;
     margin: 10px 1% 20px;
@@ -2239,6 +2258,7 @@ body .sec-3-m {
 	}
 	.item-home .info-dis h2 a {
     color: #000;
+    font-size: 20px;
 	}
 	.item-home .date-dis {
     color: #b6b6b6;
@@ -2255,10 +2275,10 @@ body .sec-3-m {
 		width: 50%;
 		float: left;
 	}
-	.item-home .link-name-author{
+	.link-name-author{
 		display: none;
 	}
-	.item-home .link-name-author.show-600{
+	.link-name-author.show-600{
 		display: block;
 	}
 	.item-b-r{

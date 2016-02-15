@@ -97,9 +97,9 @@
 	      slideSpeed : 300,
 	      paginationSpeed : 400,
 	      items : 3,
-		  itemsCustom : [
-	        [1600, 3]
-	      ]
+		  // itemsCustom : [
+	   //      [1600, 3]
+	   //    ]
 	  });
 
 	  $('.m-arrow-menu,.m-arrow-search').click(function(){
@@ -140,22 +140,22 @@
 
 </script>
 <script type="text/javascript">
-var disqus_config = function () {
-    // The generated payload which authenticates users with Disqus
-    this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
-    this.page.api_key = '2jV4kkaizbc8U4auShxMeRCzFUA0hO8mX3pKfmkCPPj81xi58G1FVyEDwPTnJi1j';
+// var disqus_config = function () {
+//     // The generated payload which authenticates users with Disqus
+//     this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
+//     this.page.api_key = '2jV4kkaizbc8U4auShxMeRCzFUA0hO8mX3pKfmkCPPj81xi58G1FVyEDwPTnJi1j';
 
-// This adds the custom login/logout functionality
-    this.sso = {
-          name:   "SampleNews",
-          button:  "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
-          icon:     "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
-          url:        "retailwire.icodedark.com/login/",
-          logout:  "retailwire.icodedark.com/login",
-          width:   "800",
-          height:  "400"
-    };
-};
+// // This adds the custom login/logout functionality
+//     this.sso = {
+//           name:   "SampleNews",
+//           button:  "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+//           icon:     "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+//           url:        "retailwire.icodedark.com/login/",
+//           logout:  "retailwire.icodedark.com/login",
+//           width:   "800",
+//           height:  "400"
+//     };
+// };
 </script>
 <!-- Start of Async HubSpot Analytics Code -->
   <script type="text/javascript">

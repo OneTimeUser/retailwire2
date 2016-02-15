@@ -1396,7 +1396,7 @@ function admin(){
     ob_start();
     
     ?>
-	<ul class="list-admin-1">
+	<ul class="list-braintrust-1">
 						<?php
 							$args  = array(
 							    'role' => 'Administrator'
@@ -1422,7 +1422,10 @@ function admin(){
 
 						        		?>
 							        	 <li  class="list-user">
-							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a>
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
@@ -1486,7 +1489,10 @@ function braintrust(){
 
 						        		?>
 							        	 <li  class="list-user">
-							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a>
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
@@ -1548,7 +1554,10 @@ function braintrust_all(){
 
 						        		?>
 							        	 <li  class="list-user">
-							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><img src="<?php echo $author_avata_user['url']; ?>"></a>
+							        	 <!-- <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a> -->
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
