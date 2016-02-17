@@ -14,6 +14,10 @@ need to override main styles
 	margin-bottom: 0 !important;
 
 }
+
+.item-b-r{
+	margin-bottom: 15px;
+}
 /*below is basic styling for all labels - nuanced styling will happen in title-... class
 need to add module-label class to all labels in php; also add to tagcloud
 */
