@@ -22,16 +22,18 @@
 				              			<span class="module-label title-brain">Braintrust</span>
 										<?php $author_id = get_the_author_meta('ID');
 											  $content_user = get_field('content', 'user_'. $author_id );
+											  $username = get_field('feat_brain');
+											  $user = $username['ID'];
 										 ?>
-									<div class="desc">"<?php echo wp_html_excerpt( $comment->comment_content, 100 ); ?>"</div>
+									<div class="desc">"<?php the_field('feat_comm'); ?>"</div>
 									</div>
 									<div class="item-b-r">
-										<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo $comment->comment_author; ?>:</h2></a>
+										<a class="link-name-author" href="<?php echo get_author_posts_url($author_id); ?>"><h2><?php echo $username["display_name"]; ?></h2></a>
 										<div class="img-user">
 											<a href="<?php echo get_author_posts_url($author_id); ?>">
 												<?php 
 												 $size="110";
-												 echo get_avatar($author_id,$size);
+												 echo get_avatar($user,$size);
 												 ?>
 											</a>
 										</div>
