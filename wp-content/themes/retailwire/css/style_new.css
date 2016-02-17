@@ -189,11 +189,11 @@ need to add module class to all labels in php
 
 
 .small-ad, .g-5 {/*should probably be embedded in text of article*/
-	width: 150px !important;
-	height:200px !important;
-	padding: 10px !important;
-	float: left !important;
-	margin-right:20px !important;
+	width: auto !important;
+    /* height: 200px !important; */
+    padding: 0px 5px 24px 0px !important;
+    /* float: left !important; */
+    /* margin-right: 20px !important; */
 }
 
 .list-press{
@@ -227,10 +227,20 @@ button.alm-load-more-btn {
 .article-excerpt{
 	padding-top: 20px;
     font-weight: bold;
+
+}
+
+.article-excerpt p{
+	font-size: 1.2rem
+    
 }
 
 #headerwrapper{
 	height: 159px;
+}
+
+.content-post ul{
+	list-style-type: inherit;
 }
 
 
