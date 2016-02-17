@@ -160,7 +160,7 @@ function date(){
 	<div class="date-page">
 		<div class="container">
 			<span class="content-date">
-				<script type="text/javascript">  date().delay(10); </script> // <?php echo date("l m d Y"); ?>
+				<?php echo date("l, m/d/Y"); ?>
 
 			</span>
 			
