@@ -67,7 +67,7 @@ function date(){
 	<div id="headercontainer">
 		<header id="masthead" class="site-header row" role="banner">
 			
-			<div class="col grid_4_of_12 site-title">
+			<div class="col grid_3_of_12 site-title">
 				<div class="social-media-icons hide_ipad">
 					<?php echo Retailwire_get_social_media(); ?>
 				</div>
@@ -85,7 +85,7 @@ function date(){
 				</h1>
 			</div> <!-- /.col.grid_5_of_12 -->
 
-			<div class="col grid_8_of_12">
+			<div class="col grid_9_of_12">
 				<div class="top-right hide_ipad">
 					<ul>
 						<li>
@@ -101,7 +101,7 @@ function date(){
 						<li>
 							<a href="<?php echo home_url(); ?>/contact"  class="join">join the braintrust</a>
 						</li>
-						<li class="form-seach-top">
+							<li class="form-seach-top">
 							<a href="#" class="link-search">search</a>
 							<div class="content-f-top">
 								<?php get_search_form(); ?>	

@@ -145,7 +145,7 @@ body .main-navigation {
     margin: 75px 0 0 0;
 }
 body .main-navigation li{
-	margin: 0 0 0 31px;
+	margin: 0 0 0 35px;
 }
 .container{
 	max-width: 1200px;
@@ -1845,13 +1845,16 @@ body .sec-3-m {
 	.item-braintrust .desc {
 	    padding: 0px 20px 0px 20px;
 	}
+	body .main-navigation li {
+	    margin: 0 0 0 18px;
+	}
 }
 @media screen and (min-width: 1170px){
 	body .main-navigation li:nth-child(1){
 		margin-left: 0;
 	}
 	body .main-navigation li {
-	    margin: 0 0 0 49px;
+	    margin: 0 0 0 18px;
 	}
 	.content-date{
 	    margin-right: 10px;
@@ -1928,11 +1931,12 @@ body .sec-3-m {
     text-align: center;
     clear: both;
     margin: 0px;
-    padding: 20px 0px 10px;
+    padding: 20px 0px 0px;
 	}
 	body .main-navigation li {
     display: inline-block;
     float: none;
+
 	}
 	.ad-ipad {
 	display: block;
@@ -1994,12 +1998,15 @@ body .sec-3-m {
 	.box-spon h1 {
     font-size: 16px;
 	}
+	.date-page{
+		padding-top:30px;
+	}
 }
 @media screen and (max-width: 768px){
-  	header.site-header .grid_8_of_12{
+  	header.site-header .grid_9_of_12{
   		display: none;
   	}
-  	header.site-header .grid_4_of_12{
+  	header.site-header .grid_3_of_12{
   		width: auto;
   		float: none;
   		text-align: center;
@@ -2172,6 +2179,9 @@ body .sec-3-m {
 	.single-discussion .item-discussion img{
 		width: 100% !important;
 	}
+	.date-page{
+		padding:0;
+	}
 
 
 }
@@ -2258,7 +2268,7 @@ body .sec-3-m {
 	}
 	.item-home .info-dis h2 a {
     color: #000;
-    font-size: 20px;
+    font-size: 25px;
 	}
 	.item-home .date-dis {
     color: #b6b6b6;
@@ -2321,6 +2331,10 @@ body .sec-3-m {
 	.login-r {
     border-left: none;
     margin-top: 30px !important;
+	}
+
+	.info-dis{
+		padding: 10px;
 	}
 
 	
@@ -2424,7 +2438,7 @@ body .sec-3-m {
 	}
 	.section-3 .item-resource h2,
 	.section-3 .item-resource p{
-		display: none;
+		
 	}
 }
 @media screen and (max-width: 360px){
