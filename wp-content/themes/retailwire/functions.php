@@ -1389,6 +1389,8 @@ function list_resource_1(){
     return $list_post;
 }
 
+add_filter('widget_text', 'do_shortcode');
+
 add_shortcode( 'admin', 'admin' );
 
 function admin(){

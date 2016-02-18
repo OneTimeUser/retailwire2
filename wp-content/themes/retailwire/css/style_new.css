@@ -243,4 +243,9 @@ button.alm-load-more-btn {
 	list-style-type: inherit;
 }
 
+.widget_text .widgettitle{
+	width: 70px;
+	background: #9e9b8c;
+    font-family: Calibri, Helvetica, Arial, sans-serif !important;
+}
 
