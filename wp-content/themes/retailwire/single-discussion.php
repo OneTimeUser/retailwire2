@@ -13,7 +13,9 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="content-single-dis">
-						
+							<div class="content-title"><h2><?php the_title(); ?></h2>
+
+							</div>
 							<div class="single-dis-l">
 								<div class="item-discussion">
 					              		<span class="module-label title-dis">
@@ -33,7 +35,7 @@ get_header(); ?>
 										?>
 						                  
 								         <div class="info-dis">
-								         		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+								         	<h2><?php the_title(); ?></h2>
 								         		<div class="info-bottom">
 								         			<span class="date-dis"><?php the_time('M d,2015'); ?></span>	
 								         			<span class="info-right"><span class="comment"> <?php comments_number( '0', '1', '%'); ?></span> <span class="share">34</span></span>
@@ -42,9 +44,10 @@ get_header(); ?>
 					            </div>
 					            <div class="content-post">
 					            	<!-- <div class="small-ad"><?php echo adrotate_ad(3); ?></div>  -->
+				              		<div class="article-author">by <?php the_author(); ?> </div>
 				              		<?php the_content(); ?>
-				              		<div class="article-author"><?php the_author(); ?> </div>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
+				              		
 				              		<div class="article-excerpt"><?php the_excerpt(); ?></div>
 					              	<?php
 									// If comments are open or we have at least one comment, load up the comment template

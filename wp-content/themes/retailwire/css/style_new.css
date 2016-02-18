@@ -215,6 +215,7 @@ button.alm-load-more-btn {
 
 .article-author{
 	color: #9e9b8c;
+	padding-bottom: 10px;
 }
 
 .article-tags{
@@ -249,3 +250,22 @@ button.alm-load-more-btn {
     font-family: Calibri, Helvetica, Arial, sans-serif !important;
 }
 
+.single-dis-l .info-dis h2{
+	display:none;
+}
+
+.content-title h2 {
+	font-size: 3.5rem;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 680px){
+	.content-title h2 {
+	display: none;
+    
+	}
+	.single-dis-l .info-dis h2{
+	display:block;
+}
+}
