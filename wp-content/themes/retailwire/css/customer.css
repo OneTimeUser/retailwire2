@@ -331,6 +331,7 @@ body #headercontainer {
 }
 .item-discussion img{
 	width:100%;
+
 }
 .info-dis{
 
@@ -630,6 +631,7 @@ margin-bottom: 10px;
 	padding-left: 60px;
 	position: relative;
 	margin-top: 20px;
+	margin-right: 20px;
 }
 .addthis_toolbox a:hover{
 	opacity: 0.8;
@@ -950,7 +952,7 @@ body .smallprint{
     width: 44px;
     height: 43px;
     position: absolute;
-    top: 57px;
+    top: 30px;
     left: 10px;
     cursor: pointer;
     display: none;
@@ -961,7 +963,7 @@ body .smallprint{
 	width: 44px;
 	height: 43px;
 	position: absolute;
-	top: 47px;
+	top: 20px;
 	right: 10px;
 	cursor: pointer;
 	display: none;
@@ -984,7 +986,10 @@ body .smallprint{
 }
 .m-bottom-menu li{
 	color: #fff;
+	line-height: 2;
+    font-size: 18px;
 }
+
 .m-bottom-menu li a{
 	text-transform: uppercase;
 	color: #fff;
@@ -1754,7 +1759,7 @@ body .sec-3-m {
 	width: 80px;
 	height:80px;
 	border-radius: 100%;
-	margin: 0 auto;
+	margin: 0 auto 10px;
 }
 .img-user img{
 	/*height:100%;*/
@@ -1782,20 +1787,19 @@ body .sec-3-m {
 }
 .category_single{
 	font-family: Calibri;
-	font-size: 20px;
+	font-size: 16px;
 	color: #000;
 	text-transform: uppercase;
 	display: block;
 }
 .date_single{
 	font-family: Calibri;
-	font-size: 18px;
-	color: #000;
+	color: rgb(158,154,143);
 	display: block;
 }
 .content_single{
 	font-family: Calibri;
-	font-size: 18px;
+	font-size: 16px;
 	color: #000;
 }
 .read-more a{
@@ -1843,7 +1847,8 @@ body .sec-3-m {
 	    width: 30.26%;
 	}
 	.item-braintrust .desc {
-	    padding: 0px 20px 0px 20px;
+	    padding: 0px 20px 10px 20px;
+    	line-height: 1.25;
 	}
 	body .main-navigation li {
 	    margin: 0 0 0 18px;
@@ -1972,7 +1977,7 @@ body .sec-3-m {
 		top: 20px;
 	}
 	.item-braintrust .desc {
-    padding: 15px 20px 0px;
+    /*padding: 15px 20px 0px;*/
 	}
 	.item-braintrust .desc p{
     margin: 0px;
@@ -2001,6 +2006,10 @@ body .sec-3-m {
 	.date-page{
 		padding-top:30px;
 	}
+
+	#bannercontainer{
+		display: none;
+	}
 }
 @media screen and (max-width: 768px){
   	header.site-header .grid_9_of_12{
@@ -2017,7 +2026,7 @@ body .sec-3-m {
 	body .site-header {
 	width: 100%;
     box-shadow: 0px 2px 10px 2px #999;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     position: relative;
 	}
 	body #headercontainer {
@@ -2041,9 +2050,9 @@ body .sec-3-m {
     border: none;
 	}
 	.item-discussion img {
-    /*width: auto !important;
-    height: 100% !important;
-    max-width: inherit !important;*/
+    width: auto !important;
+    /*height: 100% !important;*/
+    max-width: none !important;
 	}
 	.item-braintrust h2 {
     margin-bottom: 10px;
@@ -2197,8 +2206,8 @@ body .sec-3-m {
     font-size: 18px;
 	}
 	.list-tab-dis {
-    padding: 20px 0px 0px 0px;
-    float: none;
+    /*padding: 20px 0px 0px 0px;
+    float: none;*/
 	}
 	.info-dis h2 {
     font-size: 2.25rem;

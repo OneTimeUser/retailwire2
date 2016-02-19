@@ -48,11 +48,9 @@ need to add module class to all labels in php
 } 
 
 .item-discussion img{
-	width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-    display: block !important;
-    -ms-interpolation-mode: bicubic !important;
+	max-width: none !important;
+    min-width: 100% !important;
+    width: auto !important;
 }
 
 .item-braintrust {

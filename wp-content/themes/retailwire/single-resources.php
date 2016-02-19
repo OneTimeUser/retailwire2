@@ -26,7 +26,7 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 			</div>
 			<div class="sec-1-r">
-				<?php dynamic_sidebar('sidebar_press') ?>
+				
 			</div>
 			<div class="clear"></div>
 

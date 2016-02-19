@@ -2304,6 +2304,16 @@ h1.page-title {
 		padding-left: 16px;
 		padding-left: 1rem;
 	}
+	.site-title h1 {
+		text-align: center;
+		margin-top: 20px;
+	}
+	.m-arrow-menu{
+		top:50px;
+	}
+	.m-arrow-search{
+		top:40px;
+	}
 }
 
 
@@ -2311,6 +2321,10 @@ h1.page-title {
 @media only screen and (max-width: 520px) {
 	.site-title h1 {
 		text-align: center;
+		margin-top: 0px;
+	}
+	#headerwrapper{
+		height: auto;
 	}
 	.main-small-navigation .nav-menu,
 	.main-small-navigation .nav-menu ul,
@@ -2345,6 +2359,22 @@ h1.page-title {
 	.social-media-icons {
 		text-align: center;
 	}
+	.m-arrow-menu{
+		top:40px;
+	}
+	.m-arrow-search{
+		top:30px;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.m-arrow-menu{
+		top:30px;
+	}
+	.m-arrow-search{
+		top:20px;
+	}
+
 }
 
 @media only screen and (max-width: 320px) {
