@@ -258,6 +258,53 @@ button.alm-load-more-btn {
     text-decoration: none;
 }
 
+.tweet_content{
+	padding-bottom: 20px;
+}
+
+.tweet_profile_img{
+	margin: 0 5px 5px 0 !important;
+	float: left;
+}
+
+.tweet_primary_meta a{
+	font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.tweet_primary_meta span{
+	color: gray;
+    font-size: 14px;
+}
+
+.tweet_text{
+	font-size: 14px;
+	padding-left: 53px;
+	min-height: 30px;
+}
+
+.tweet_secondary_meta a{
+	
+		color: gray;
+    	text-decoration: none;
+    	font-size: 12px;
+    	padding-left: 53px;
+
+}
+.tweet_intents{
+	float: right;
+
+}
+
+.tweet_intents a {
+			    color: gray;
+			    font-size: 12px;
+			    text-decoration: none;
+			    padding-right: 3px;
+			    padding-left: 0;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	display: none;
