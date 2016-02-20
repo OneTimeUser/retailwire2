@@ -237,19 +237,19 @@ get_header(); ?>
 							
 						    <div class="tabDetails">
 						    	<div id="tab1" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="5" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						        </div>
 						    	<div id="tab2" class="tabContents">
-						    		<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="5" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						    		<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						    </div>
 						    	<div id="tab3" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="5" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						        </div>
 								<div id="tab4" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="5" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						        </div>
 						        <div id="tab5" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="5" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						        </div>
 								
 						    </div>

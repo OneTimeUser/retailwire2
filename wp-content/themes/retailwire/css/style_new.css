@@ -196,7 +196,15 @@ need to add module class to all labels in php
 
 .list-press{
 	margin: 0px 15px 0px 15px;
+	height: 770px;
+    overflow: scroll;
 }
+
+.content-twitter{
+	height: 770px;
+    overflow: scroll;
+}
+
 .date-press{
 }
 
