@@ -249,7 +249,7 @@ get_header(); ?>
 						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_tech" list="tech/rwfeed_tech"]'); ?>
 						        </div>
 						        <div id="tab5" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed count="6" user="rwfeed_rw"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed count="6" user="retailwire]'); ?>
 						        </div>
 								
 						    </div>
