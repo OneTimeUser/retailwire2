@@ -240,16 +240,16 @@ get_header(); ?>
 						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
 						        </div>
 						    	<div id="tab2" class="tabContents">
-						    		<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						    		<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_brand" list="brand/rwfeed_brand"]'); ?>
 						    </div>
 						    	<div id="tab3" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_bt" list="braintrust/rwfeed_bt"]'); ?>
 						        </div>
 								<div id="tab4" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_tech" list="tech/rwfeed_tech"]'); ?>
 						        </div>
 						        <div id="tab5" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="Retailers/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed count="6" user="rwfeed_rw"]'); ?>
 						        </div>
 								
 						    </div>
