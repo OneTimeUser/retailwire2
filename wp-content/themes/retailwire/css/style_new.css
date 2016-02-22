@@ -330,6 +330,11 @@ article#post-109{
 	height:235px;
 }
 
+.info-dis.single{
+	background: url(../images/bg_img_dis.png)no-repeat center center !important;
+    padding: 10px 10px 10px 10px !important;
+}
+
 
 
 @media screen and (max-width: 680px){

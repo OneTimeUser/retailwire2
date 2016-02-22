@@ -21,8 +21,9 @@ get_header(); ?>
 					              		<span class="module-label title-dis">
 					              			Discussion
 					              		</span>
+					              		<div class= "thumb-wrapper">
 					              		<?php
-
+					              		
 										if ( has_post_thumbnail() ) { ?>
 											<img src="<?php
 								            $thumb_id = get_post_thumbnail_id();
@@ -33,8 +34,8 @@ get_header(); ?>
 											<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/images/post-2.jpg" />
 										<?php }
 										?>
-						                  
-								         <div class="info-dis">
+						                 </div> 
+								         <div class="info-dis single">
 								         	<h2><?php the_title(); ?></h2>
 								         		<div class="info-bottom">
 								         			<span class="date-dis"><?php the_time('M d,2015'); ?></span>	
