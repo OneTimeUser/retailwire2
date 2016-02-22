@@ -5,7 +5,7 @@
 .col {
 	display: block;
 	float:left;
-	margin: 0 0 0 1.6%;
+	margin: 0 0 0 .8%;
 }
 
 /* Remove the margin on the first column. Works on all browsers incl. IE7+ */

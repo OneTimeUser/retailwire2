@@ -1072,7 +1072,6 @@ body #headercontainer.sticky .main-navigation {
     margin-top: 5px !important;
 }
 .form-top{
-border-bottom: 1px solid #ccc;
 padding: 10px 0px 20px;
 margin-bottom: 20px;}
 .form-bottom{
@@ -1090,7 +1089,6 @@ width: 40%;
 	margin-bottom: 10px;	
 }
 .form-contact select{
-    border: 1px solid #ccc;
     padding: 5px;
     width: 40%;
 }
@@ -1850,6 +1848,7 @@ body .sec-3-m {
 	.item-braintrust .desc {
 	    padding: 0px 20px 10px 20px;
     	line-height: 1.25;
+    	font-size:14px;
 	}
 	body .main-navigation li {
 	    margin: 0 0 0 18px;
@@ -2054,6 +2053,10 @@ body .sec-3-m {
     width: auto !important;
     /*height: 100% !important;*/
     max-width: none !important;
+	}
+
+	.item-braintrust .desc {
+		font-size:16px;
 	}
 	.item-braintrust h2 {
     margin-bottom: 10px;
@@ -2264,6 +2267,9 @@ body .sec-3-m {
     height: auto;
     margin-bottom: 20px;
 	}
+
+
+
 	.item-home .item-braintrust {
 		padding-bottom: 30px;
 		overflow: hidden;

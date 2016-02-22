@@ -6,7 +6,7 @@
  * @since Retailwire 1.0
  */
 
-get_header(); ?>
+get_header( 'nobanner' ); ?>
 
 	<div id="primary" class="site-content row" role="main">
 			<div class="section-1">
@@ -21,7 +21,8 @@ get_header(); ?>
 						 ?></span> -->
 						<span class="date_single"><?php the_time( 'd/m/Y' ); ?></span>
 						<div class="content_single"><?php the_content(); ?> </div>
-						<!-- <div class="read-more">Read the entire article here: <a href="#">ASSOCITED PRESS</a></div> -->
+						
+
 				    </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>
