@@ -1615,6 +1615,32 @@ function comment_edit_function( $comment_id )
 
 }
 
+function top_tags() {
+        $tags = get_tags();
+
+        if (empty($tags))
+                return;
+
+        $counts = $tag_links = array();
+        foreach ( (array) $tags as $tag ) {
+                $counts[$tag->name] = $tag->count;
+                $tag_links[$tag->name] = get_tag_link( $tag->term_id );
+        }
+
+        asort($counts);
+        $counts = array_reverse( $counts, true );
+
+        $i = 0;
+        foreach ( $counts as $tag => $count ) {
+                $i++;
+                $tag_link = clean_url($tag_links[$tag]);
+                $tag = str_replace(' ', '&nbsp;', wp_specialchars( $tag ));
+                if($i < 11){
+                        print "<a href=\"$tag_link\">$tag</a>";
+                }
+        }
+}
+
 
 
 /*function my_cpt_columns( $columns ) {
