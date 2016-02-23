@@ -613,8 +613,9 @@ margin-bottom: 10px;
 .addthis_counter:after{
 	position: absolute;
     content: "shares";
-    bottom: -15px;
-    left: 12px;
+    bottom: -10px;
+    left: 18px;
+    font-size: 10px;
 }
 .addthis_toolbox{
 	display: inline-block;
