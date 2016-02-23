@@ -230,6 +230,10 @@ function register_sidebars( $number = 1, $args = array() ) {
  *                                 Default is an opening h2 element.
  *     @type string $after_title   HTML content to append to the sidebar title when displayed.
  *                                 Default is a closing h2 element.
+ *	   @type string $before_span HTML content to prepend to the sidebar title when displayed.
+ *                                 Default is an opening span element.
+ *      @type string $after_span HTML content to prepend to the sidebar title when displayed.
+ *                                 Default is an opening span element.
  * }
  * @return string Sidebar ID added to $wp_registered_sidebars global.
  */
@@ -249,6 +253,8 @@ function register_sidebar($args = array()) {
 		'after_widget' => "</li>\n",
 		'before_title' => '<h2 class="widgettitle">',
 		'after_title' => "</h2>\n",
+		'before_span' => '<span class="widgettitle">',
+		'after_span' => "</span>\n",
 	);
 
 	$sidebar = wp_parse_args( $args, $defaults );
@@ -684,6 +690,8 @@ function dynamic_sidebar( $index = 1 ) {
 		 *         @type string $after_widget  HTML markup to append to each widget in the sidebar.
 		 *         @type string $before_title  HTML markup to prepend to the widget title when displayed.
 		 *         @type string $after_title   HTML markup to append to the widget title when displayed.
+		 *         @type string $before_span   HTML markup to prepend to the widget title when displayed.
+		 *         @type string $after_span   HTML markup to append to the widget title when displayed.
 		 *         @type string $widget_id     ID of the widget.
 		 *         @type string $widget_name   Name of the widget.
 		 *     }
@@ -1022,6 +1030,10 @@ function wp_convert_widget_settings($base_name, $option_name, $settings) {
  *                                 Default `<h2 class="widgettitle">`.
  *     @type string $after_title   HTML content that will be appended to the widget's title when displayed.
  *                                 Default `</h2>`.
+ *     @type string $before_span   HTML content that will be prepended to the widget's title when displayed.
+ *                                 Default `<span class="widgettitle">`.
+ *     @type string $after_span    HTML content that will be appended to the widget's title when displayed.
+ *                                 Default `</span>`.
  * }
  */
 function the_widget( $widget, $instance = array(), $args = array() ) {
@@ -1037,6 +1049,8 @@ function the_widget( $widget, $instance = array(), $args = array() ) {
 		'after_widget'  => "</div>",
 		'before_title'  => '<h2 class="widgettitle">',
 		'after_title'   => '</h2>',
+		'before_span' => '<span class="widgettitle">',
+		'after_span' => "</span>",
 	);
 	$args = wp_parse_args( $args, $default_args );
 	$args['before_widget'] = sprintf( $args['before_widget'], $widget_obj->widget_options['classname'] );

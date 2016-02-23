@@ -59,7 +59,7 @@ class WP_Widget_Text extends WP_Widget {
 
 		echo $args['before_widget'];
 		if ( ! empty( $title ) ) {
-			echo $args['before_title'] . $title . $args['after_title'];
+			echo $args['before_span'] . $title . $args['after_span'];
 		} ?>
 			<div class="textwidget"><?php echo !empty( $instance['filter'] ) ? wpautop( $text ) : $text; ?></div>
 		<?php
