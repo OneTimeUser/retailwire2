@@ -21,6 +21,8 @@ class Personalize_Login_Plugin {
     public function __construct() {
      	add_shortcode( 'custom-login-form', array( $this, 'render_login_form' ) );
      	add_action( 'login_form_login', array( $this, 'redirect_to_custom_login' ) );
+     	remove_filter( 'authenticate', 'wp_authenticate_username_password', 20 );
+		add_filter( 'authenticate', array( $this, 'authenticate_with_email' ), 20, 3 );
      	add_filter( 'authenticate', array( $this, 'maybe_redirect_at_authenticate' ), 101, 3 );
      	add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
      	add_filter( 'login_redirect', array( $this, 'redirect_after_login' ), 10, 3 );
@@ -39,7 +41,7 @@ class Personalize_Login_Plugin {
 		add_action( 'login_form_rp', array( $this, 'do_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'do_password_reset' ) );
 		add_action( 'template_redirect', array( $this, 'redirect_to_protect_account_pages' ) );
-		add_shortcode('account-info', array($this,'render_account_info'));
+		
     }
 
     /**
@@ -53,10 +55,6 @@ class Personalize_Login_Plugin {
         'member-login' => array(
             'title' => __( 'Log In', 'personalize-login' ),
             'content' => '[custom-login-form]'
-        ),
-        'member-account' => array(
-            'title' => __( 'Your Account', 'personalize-login' ),
-            'content' => '[account-info]'
         ),
          'member-register' => array(
         'title' => __( 'Register', 'personalize-login' ),
@@ -141,6 +139,8 @@ class Personalize_Login_Plugin {
 
 		// Check if user just updated password
 		$attributes['password_updated'] = isset( $_REQUEST['password'] ) && $_REQUEST['password'] == 'changed';	
+
+
 
 
 	    // Render the login form using an external template
@@ -352,8 +352,10 @@ class Personalize_Login_Plugin {
 	            $redirect_url = $requested_redirect_to;
 	        }
 	    } else {
+
+	    	
 	        // Non-admin users always go to their account page after login
-	        $redirect_url = home_url( 'member-account' );
+	        $redirect_url = home_url( 'member-account' );// maybe turn this off and redirect only if first time?
 	    }
 	 
 	    return wp_validate_redirect( $redirect_url, home_url() );
@@ -788,57 +790,44 @@ class Personalize_Login_Plugin {
 	exit; }}
 
 
-			/**
-	 * A shortcode for rendering the login form.
-	 *
-	 * @param  array   $attributes  Shortcode attributes.
-	 * @param  string  $content     The text content for shortcode. Not used.
-	 *
-	 * @return string  The shortcode output
-	 */
-	public function render_account_info( $attributes, $content = null ) {
 
+	public function authenticate_with_email( $user, $email, $password ) {
+	    if ( is_wp_error( $user ) ) {
+	        // Already failed
+	        return $user;
+	    }
 
+	    if( empty( $email ) || empty ( $password ) ) {
+	        $error = new WP_Error();
+	        if ( empty( $email ) ) {
+	            $error->add( 'empty_username', __( '<strong>ERROR</strong>: Email field is empty.' ) );
+	        }
+
+	        if ( empty( $password ) ) {
+	            $error->add( 'empty_password', __( '<strong>ERROR</strong>: Password field is empty.' ) );
+	        }
+
+	        return $error;
+	    }
+
+	    // Check if user exists in WordPress database and password is valid
+	    // Notice that we look the user up using the email
+	    $user = get_user_by( 'email', $email );
+	    if ( ! $user ) {
+	        // Optional: if no user with this email exists, you can check the username if you like...
+	        $user = get_user_by( 'login', $email );
+	    }
+
+	    // Check password
+	    if ( ! $user || ! wp_check_password( $password, $user->user_pass, $user->ID ) ) {
+	        $error = new WP_Error();
+	        $error->add( 'invalid', __('<strong>ERROR</strong>: Either the email or password you entered is invalid.' ) );
+	        return $error;
+	    }
+
+	    // User logged in OK
+	    return $user;
 	}
-
-
-	// public function authenticate_with_email( $user, $email, $password ) {
-	//     if ( is_wp_error( $user ) ) {
-	//         // Already failed
-	//         return $user;
-	//     }
-
-	//     if( empty( $email ) || empty ( $password ) ) {
-	//         $error = new WP_Error();
-	//         if ( empty( $email ) ) {
-	//             $error->add( 'empty_username', __( '<strong>ERROR</strong>: Email field is empty.' ) );
-	//         }
-
-	//         if ( empty( $password ) ) {
-	//             $error->add( 'empty_password', __( '<strong>ERROR</strong>: Password field is empty.' ) );
-	//         }
-
-	//         return $error;
-	//     }
-
-	//     // Check if user exists in WordPress database and password is valid
-	//     // Notice that we look the user up using the email
-	//     $user = get_user_by( 'email', $email );
-	//     if ( ! $user ) {
-	//         // Optional: if no user with this email exists, you can check the username if you like...
-	//         $user = get_user_by( 'login', $email );
-	//     }
-
-	//     // Check password
-	//     if ( ! $user || ! wp_check_password( $password, $user->user_pass, $user->ID ) ) {
-	//         $error = new WP_Error();
-	//         $error->add( 'invalid', __('<strong>ERROR</strong>: Either the email or password you entered is invalid.' ) );
-	//         return $error;
-	//     }
-
-	//     // User logged in OK
-	//     return $user;
-	// }
 
 }
  

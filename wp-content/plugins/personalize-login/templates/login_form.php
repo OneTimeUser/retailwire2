@@ -35,6 +35,12 @@
 		    </p>
 		<?php endif; ?>
 
+		<?php if ( $attributes['lost_password_sent'] ) : ?>
+		    <p class="login-info">
+		        <?php _e( 'Your link to reset your password has been sent to your email address.', 'personalize-login' ); ?>
+		    </p>
+		<?php endif; ?>
+
     <?php
         wp_login_form(
             array(
