@@ -19,29 +19,34 @@ class Personalize_Login_Plugin {
 		*add_filter( 'authenticate', array( $this, 'authenticate_with_email' ), 20, 3 );
      */
     public function __construct() {
-     	add_shortcode( 'custom-login-form', array( $this, 'render_login_form' ) );
+     	
      	add_action( 'login_form_login', array( $this, 'redirect_to_custom_login' ) );
      	remove_filter( 'authenticate', 'wp_authenticate_username_password', 20 );
 		add_filter( 'authenticate', array( $this, 'authenticate_with_email' ), 20, 3 );
      	add_filter( 'authenticate', array( $this, 'maybe_redirect_at_authenticate' ), 101, 3 );
-     	add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
      	add_filter( 'login_redirect', array( $this, 'redirect_after_login' ), 10, 3 );
-     	add_shortcode( 'custom-register-form', array( $this, 'render_register_form' ) );
+       	add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
+
      	add_action( 'login_form_register', array( $this, 'redirect_to_custom_register' ) );
-     	add_action( 'login_form_register', array( $this, 'do_register_user' ) );
-     	add_filter( 'admin_init' , array( $this, 'register_settings_fields' ) );
-     	add_action( 'wp_print_footer_scripts', array( $this, 'add_captcha_js_to_footer' ) );
      	add_action( 'login_form_lostpassword', array( $this, 'redirect_to_custom_lostpassword' ) );
-    	add_shortcode( 'custom-password-lost-form', array( $this, 'render_password_lost_form' ) );
-    	add_action( 'login_form_lostpassword', array( $this, 'do_password_lost' ) );
-    	add_filter( 'retrieve_password_message', array( $this, 'replace_retrieve_password_message' ), 10, 4 );
     	add_action( 'login_form_rp', array( $this, 'redirect_to_custom_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'redirect_to_custom_password_reset' ) );
-		add_shortcode( 'custom-password-reset-form', array( $this, 'render_password_reset_form' ) );
+
+     	add_action( 'login_form_register', array( $this, 'do_register_user' ) );
+       	add_action( 'login_form_lostpassword', array( $this, 'do_password_lost' ) );
 		add_action( 'login_form_rp', array( $this, 'do_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'do_password_reset' ) );
+
+    	add_filter( 'retrieve_password_message', array( $this, 'replace_retrieve_password_message' ), 10, 4 );
 		add_action( 'template_redirect', array( $this, 'redirect_to_protect_account_pages' ) );
+
+     	add_action( 'wp_print_footer_scripts', array( $this, 'add_captcha_js_to_footer' ) );
+     	add_filter( 'admin_init' , array( $this, 'register_settings_fields' ) );
 	
+		add_shortcode( 'custom-login-form', array( $this, 'render_login_form' ) );
+     	add_shortcode( 'custom-register-form', array( $this, 'render_register_form' ) );
+		add_shortcode( 'custom-password-reset-form', array( $this, 'render_password_reset_form' ) );
+    	add_shortcode( 'custom-password-lost-form', array( $this, 'render_password_lost_form' ) );
 
 		
     }
@@ -181,29 +186,31 @@ class Personalize_Login_Plugin {
 	 */
 	function redirect_to_custom_login() {
 	    if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
-	        $redirect_to = isset( $_REQUEST['redirect_to'] ) ? $_REQUEST['redirect_to'] : null;
 	     
 	        if ( is_user_logged_in() ) {
-	            $this->redirect_logged_in_user( $redirect_to );
+	            $this->redirect_logged_in_user(  );
 	            exit;
 	        }
 	 
 	        // The rest are redirected to the login page
 	        $login_url = home_url( 'member-login' );
 	        if ( ! empty( $redirect_to ) ) {
-	            $login_url = add_query_arg( 'redirect_to', $redirect_to, $login_url );
+	            $login_url = add_query_arg( 'redirect_to', $_REQUEST['redirect_to'], $login_url );
 	        }
+
+	        if ( ! empty( $_REQUEST['checkemail'] ) ) {
+				$login_url = add_query_arg( 'checkemail', $_REQUEST['checkemail'], $login_url );
+			}
 
 	        if ( isset( $_GET['interim-login'] ) ) {
 
-				$login_url = add_query_arg( 'redirect_to', $redirect_to, $login_url );
-			}
+				$login_url = add_query_arg( 'redirect_to', $_REQUEST['redirect_to'], $login_url );
 	 
 	        wp_redirect( $login_url );
 	        exit;
 	    }
 	}
-
+}
 	/**
  * Redirects the user to the correct page depending on whether he / she
  * is an admin or not.
@@ -351,9 +358,9 @@ class Personalize_Login_Plugin {
 	        if ( $requested_redirect_to == '' ) {
 	            $redirect_url = admin_url();
 	        } else {
-	            $redirect_url = $requested_redirect_to;
+	            $redirect_url = $redirect_to;
 	        }
-	    } else if (strtotime( $user_info->user_registered ) > ( time() - 172800 ) ) {
+	    } else if (strtotime( $user_info->user_registered ) > ( time() - 7200 ) ) {
 	    	
             $redirect_url= home_url('member-account');
 
@@ -457,8 +464,8 @@ class Personalize_Login_Plugin {
 	 
 	    $user_id = wp_insert_user( $user_data );
 
-	    wp_new_user_notification( $user_id, null, true );
-	
+	    wp_new_user_notification( $user_id, null, true ); //null,true
+
 	    return $user_id;
 	}
 
@@ -834,11 +841,11 @@ class Personalize_Login_Plugin {
 
 	    // User logged in OK
 	    return $user;
-	}
-
-
+}
 
 }
+
+
  
 // Initialize the plugin
 $personalize_login_pages_plugin = new Personalize_Login_Plugin();
