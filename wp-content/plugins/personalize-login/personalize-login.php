@@ -41,6 +41,8 @@ class Personalize_Login_Plugin {
 		add_action( 'login_form_rp', array( $this, 'do_password_reset' ) );
 		add_action( 'login_form_resetpass', array( $this, 'do_password_reset' ) );
 		add_action( 'template_redirect', array( $this, 'redirect_to_protect_account_pages' ) );
+		add_filter( 'wpmem_login_redirect', 'my_login_redirect', 1 );
+
 		
     }
 
@@ -353,9 +355,9 @@ class Personalize_Login_Plugin {
 	        }
 	    } else {
 
-	    	
+
 	        // Non-admin users always go to their account page after login
-	        $redirect_url = home_url( 'member-account' );// maybe turn this off and redirect only if first time?
+	        $redirect_url = home_url();// maybe turn this off and redirect only if first time?
 	    }
 	 
 	    return wp_validate_redirect( $redirect_url, home_url() );
@@ -406,7 +408,7 @@ class Personalize_Login_Plugin {
 	        if ( is_user_logged_in() ) {
 	            $this->redirect_logged_in_user();
 	        } else {
-	            wp_redirect( home_url( 'member-register' ) );
+	            wp_redirect( home_url() );
 	        }
 	        exit;
 	    }
@@ -828,6 +830,81 @@ class Personalize_Login_Plugin {
 	    // User logged in OK
 	    return $user;
 	}
+
+	/**
+	 * Function for first-time login redirect
+	 *
+	 * @param $redirect_to
+	 * @return $redirect_to
+	 */
+	function my_login_redirect( $redirect_to )
+	{
+		/**
+		 * Normally, the redirect process does not require login info as that 
+		 * occurs in the login function that the redirect filter is hooking
+		 * into. However, in this case, we have a db flag that is used to 
+		 * indicate if this is a first-time login or not. In order to secure 
+		 * that process, we need to check login info.
+	 	 */
+
+		/**
+		 * Get the $user object using the username
+	 	 */
+		$user = sanitize_user( $_POST['log'] );
+		$user = get_user_by( 'login', $user );
+
+		/**
+		 * Validate the user/pass combination
+	 	 */
+		$pass = wp_check_password($_POST['pwd'],$user->user_pass,$user->ID);
+		if( ! $pass ) {
+			/**
+			 * If it doesn't validate, we will just return the unfiltered 
+			 * $redirect_to.  The login will fail in the login function.
+		 	 */
+			return $redirect_to;
+		}
+
+		/**
+		 * Check for the presence of a flag if the user has logged in before.
+	 	 */
+		$first_login = get_user_meta( $user->ID, 'first_login', true );
+
+		/**
+		 * If no flag, then set one, and redirect to the password change page
+	 	 */
+		if( ! $first_login ) {
+
+			update_user_meta( $user->ID, 'first_login', 'true', '' );
+
+			/**
+			 * In setting the redirect url, use the wpmem_chk_qstr function  
+			 * to apply the appropriate querystring for displaying password
+			 * change.
+		 	 */
+			
+			$url = home_url('member-account/?a=pwdchange');
+			
+			/**
+			 * NOTE: this example assumes that you have set the members-area
+			 * in the plugin settings.  if not, use this line instead
+			 * and update for the location of your members-area page:
+			 * $url = 'http://yoursite.com/members-area-page/?a=pwdchange';
+		 	 */
+			
+			return $url;
+
+		} else {
+
+			/**
+			 * If we are here, it's not a first-time login, so
+			 * no redirect is needed.  Return $redirect_to unfiltered.
+		 	 */
+			return $redirect_to;
+
+		}
+	}
+
 
 }
  
