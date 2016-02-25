@@ -1,9 +1,10 @@
 <div id="password-reset-form" class="widecolumn">
+    <fieldset class="form-boundary">
     <?php if ( $attributes['show_title'] ) : ?>
         <h3><?php _e( 'Pick a New Password', 'personalize-login' ); ?></h3>
     <?php endif; ?>
- 
-    <form name="resetpassform" id="resetpassform" action="<?php echo site_url( 'wp-login.php?action=resetpass' ); ?>" method="post" autocomplete="off">
+    <legend class="form-title module-label"> New Password </legend>
+    <form class="pure-form pure-form-stacked" name="resetpassform" id="resetpassform" action="<?php echo site_url( 'wp-login.php?action=resetpass' ); ?>" method="post" autocomplete="off">
         <input type="hidden" id="user_login" name="rp_login" value="<?php echo esc_attr( $attributes['login'] ); ?>" autocomplete="off" />
         <input type="hidden" name="rp_key" value="<?php echo esc_attr( $attributes['key'] ); ?>" />
          
@@ -31,4 +32,5 @@
                    class="button" value="<?php _e( 'Reset Password', 'personalize-login' ); ?>" />
         </p>
     </form>
+    </fieldset>
 </div>

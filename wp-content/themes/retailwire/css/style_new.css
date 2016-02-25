@@ -340,6 +340,33 @@ article#post-109{
 	margin-left: 10px;
 }
 
+.form-boundary{
+	width: 320px;
+	background-color: rgb(230,230,230);
+	margin: 0 auto;
+}
+
+.form-title{
+	position: relative;
+    top: 14px !important;
+    left: -11px !important;
+    font-size: 16px;
+    background-color:#9D9B8F;
+   margin-bottom: 17px;
+}
+
+.form-boundary input{
+	width: 100%
+}
+
+.signup-submit{
+	padding-top: 15px;
+}
+
+#rememberme{
+	width: auto;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	display: none;

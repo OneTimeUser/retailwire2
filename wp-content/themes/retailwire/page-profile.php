@@ -81,7 +81,9 @@ get_header(); ?>
                     </p><!-- .warning -->
             <?php else : ?>
                 <?php if ( count($error) > 0 ) echo '<p class="error">' . implode("<br />", $error) . '</p>'; ?>
-                <form method="post" id="adduser" action="<?php the_permalink(); ?>">
+                <fieldset class="form-boundary">
+                <legend class="form-title module-label"> Profile  </legend>
+                <form class="pure-form pure-form-stacked" method="post" id="adduser" action="<?php the_permalink(); ?>">
                     <p class="form-username">
                         <label for="first-name"><?php _e('First Name', 'profile'); ?></label>
                         <input class="text-input" name="first-name" type="text" id="first-name" value="<?php the_author_meta( 'first_name', $current_user->ID ); ?>" />
@@ -141,11 +143,12 @@ get_header(); ?>
 
                     <p class="form-submit">
                         <?php echo $referer; ?>
-                        <input name="updateuser" type="submit" id="updateuser" class="submit button" value="<?php _e('Update', 'profile'); ?>" />
+                        <input name="updateuser" type="submit" id="updateuser" class="submit button " value="<?php _e('Update', 'profile'); ?>" />
                         <?php wp_nonce_field( 'update-user' ) ?>
                         <input name="action" type="hidden" id="action" value="update-user" />
                     </p><!-- .form-submit -->
                 </form><!-- #adduser -->
+                </fieldset>
             <?php endif; ?>
         </div><!-- .entry-content -->
     </div><!-- .hentry .post -->

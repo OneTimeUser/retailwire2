@@ -1,6 +1,7 @@
 <div id="register-form" class="widecolumn">
+    <fieldset class="form-boundary">
     <?php if ( $attributes['show_title'] ) : ?>
-        <h3><?php _e( 'Register', 'personalize-login' ); ?></h3>
+        <legend class="form-title module-label"><?php _e( 'Register', 'personalize-login' ); ?></legend>
     <?php endif; ?>
 
     <?php if ( count( $attributes['errors'] ) > 0 ) : ?>
@@ -10,8 +11,8 @@
             </p>
         <?php endforeach; ?>
     <?php endif; ?>
- 
-    <form id="signupform" action="<?php echo wp_registration_url(); ?>" method="post">
+    <legend class="form-title module-label"> Register  </legend>
+    <form class="pure-form pure-form-stacked" id="signupform" action="<?php echo wp_registration_url(); ?>" method="post">
         <p class="form-row">
             <div class="label-row"><label for="email"><?php _e( 'Email', 'personalize-login' ); ?> <strong>*</strong></label></div>
             <input type="text" name="email" id="email">
@@ -47,4 +48,5 @@
                    value="<?php _e( 'Register', 'personalize-login' ); ?>"/>
         </p>
     </form>
+    </fieldset>
 </div>

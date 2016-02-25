@@ -1,7 +1,6 @@
 <div id="password-lost-form" class="widecolumn">
-    <?php if ( $attributes['show_title'] ) : ?>
-        <h3><?php _e( 'Forgot Your Password?', 'personalize-login' ); ?></h3>
-    <?php endif; ?>
+    <fieldset class="form-boundary">
+  
  
     <p>
         <?php
@@ -24,8 +23,8 @@
             </p>
         <?php endforeach; ?>
     <?php endif; ?>
- 
-    <form id="lostpasswordform" action="<?php echo wp_lostpassword_url(); ?>" method="post">
+     <legend class="form-title module-label"> Password Recovery </legend>
+    <form class-"pure-form pure-form-stacked" id="lostpasswordform" action="<?php echo wp_lostpassword_url(); ?>" method="post">
         <p class="form-row">
             <label for="user_login"><?php _e( 'Email', 'personalize-login' ); ?>
             <input type="text" name="user_login" id="user_login">
@@ -36,4 +35,5 @@
                    value="<?php _e( 'Reset Password', 'personalize-login' ); ?>"/>
         </p>
     </form>
+    </fieldset>
 </div>
