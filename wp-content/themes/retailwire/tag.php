@@ -29,7 +29,7 @@ get_header(); ?>
 						$count = $query->post_count;
 						if ($count != 0){?>
 					<?php while ($query->have_posts() ) : $query->the_post(); ?>
-						<?php get_template_part( 'content', get_post_format() ); ?>  <!-- 'extract' -->
+						<?php get_template_part( 'template-parts/content', 'extract' ); ?>  <!-- 'extract'   -->
 					<?php endwhile; ?>
 						<?php Retailwire_content_nav( 'nav-below' ); ?>
 					<?php }else{ ?>

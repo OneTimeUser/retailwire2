@@ -367,6 +367,16 @@ article#post-109{
 	width: auto;
 }
 
+.share a{
+	color: white !important;
+	margin-left:10px;
+}
+
+.comments a {
+	color: white;
+	text-decoration: none;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	display: none;

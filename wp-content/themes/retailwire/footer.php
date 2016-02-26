@@ -167,6 +167,7 @@
     })(document,"script","hs-analytics",300000);
   </script>
 <!-- End of Async HubSpot Analytics Code -->
+<script id="dsq-count-scr" src="//retailwire.disqus.com/count.js" async></script>
 </body>
 
 </html>
