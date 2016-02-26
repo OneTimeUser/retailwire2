@@ -11,8 +11,8 @@ get_header( 'nobanner' ); ?>
 	<div id="primary" class="site-content row" role="main">
 			<div class="section-1">
 				<?php while ( have_posts() ) : the_post(); ?>
-					<div class="content-single-dis ">
-						<span class="title-dis s3-resource module-label">Resource</span>
+					<div class="content-single-dis content-post">
+						<span class="title-dis s3-resource module-label title-fix">Resource</span>
 						<h1 class="title_single"><?php the_title(); ?></h1>
 						<!-- <span class="category_single"><?php 
 						$category = get_the_category();

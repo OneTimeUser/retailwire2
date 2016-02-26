@@ -2433,3 +2433,6 @@ h1.page-title {
 }
 
 .abc{}
+.title-fix{
+	position: relative;
+}
