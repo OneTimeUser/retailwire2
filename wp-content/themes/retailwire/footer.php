@@ -118,7 +118,7 @@
 		    $('#headercontainer').removeClass("sticky");
 		  }
 		});
-	  /* $(window).bind('resize', function(e){*/
+	  // $(window).bind('resize', function(e){
  
  		   	if( $(window).width()<=768 ) {
  	          	$('.addthis_toolbox').detach().appendTo(".share-post-mobile");
@@ -126,7 +126,7 @@
  	        	$('.addthis_toolbox').detach().appendTo(".content-post");
  	        }
   
- 		/*});*/
+ 		// });
  	   	$('.link-search').click(function(){
                $('.content-f-top').slideToggle(500);
          })
