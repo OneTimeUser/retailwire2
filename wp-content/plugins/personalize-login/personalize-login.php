@@ -185,13 +185,14 @@ class Personalize_Login_Plugin {
 	 * Redirect the user to the custom login page instead of wp-login.php.
 	 */
 	function redirect_to_custom_login() {
+		$page = basename($_SERVER['REQUEST_URI']);
 	    if ( $_SERVER['REQUEST_METHOD'] == 'GET' ) {
-	     
+	     	
 	        if ( is_user_logged_in() ) {
 	            $this->redirect_logged_in_user(  );
 	            exit;
 	        }
-	 
+	 		
 	        // The rest are redirected to the login page
 	        $login_url = home_url( 'member-login' );
 	        if ( ! empty( $redirect_to ) ) {
@@ -205,12 +206,17 @@ class Personalize_Login_Plugin {
 	        if ( isset( $_GET['interim-login'] ) ) {
 
 				$login_url = add_query_arg( 'redirect_to', $_REQUEST['redirect_to'], $login_url );
+			}
+
+			if( $page == "wp-login.php"){wp_redirect( $login_url );}
 	 
 	        wp_redirect( $login_url );
 	        exit;
-	    }
+	    	}
+
+
 	}
-}
+
 	/**
  * Redirects the user to the correct page depending on whether he / she
  * is an admin or not.
@@ -841,7 +847,7 @@ class Personalize_Login_Plugin {
 
 	    // User logged in OK
 	    return $user;
-}
+	}
 
 }
 
