@@ -92,10 +92,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="sec-1-r">
-				<div class="ad-2">
-					<?php $background = of_get_option( 'ad_300x600', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background['image'] );  ?>">
-				</div>
+				
 				<div class="tag">
 					<?php dynamic_sidebar('tags'); ?>
 				</div>

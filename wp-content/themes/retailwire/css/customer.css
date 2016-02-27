@@ -1219,7 +1219,6 @@ body .sec-3-m {
 .list-braintrust-page{
 	position: relative;
 	z-index: 9999;
-	text-align: center;
 	border-bottom: 5px solid #9E9B8C;
     border-right: 1px solid #9E9B8C;
     padding: 0px;

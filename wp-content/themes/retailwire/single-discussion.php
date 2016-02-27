@@ -35,15 +35,14 @@ get_header(); ?>
 										<?php }
 										?>
 						                 </div> 
-								         <div class="info-dis single">
-								         	<h2><?php the_title(); ?></h2>
-								         		<div class="info-bottom">
-								         			<span class="date-dis"><?php the_time('M d,Y'); ?></span>	
-								         			<span class="info-right"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"></a></span> <span class="share"><span id="test-share1" class="addthis_counter addthis_bubble_style"></span></span></span>
-								         		</div>
-								         </div>  
+								         
+								         
+
 					            </div>
 					            <div class="content-post">
+					            	<div class="info-dis single">
+								         	<span class="date-dis"><?php the_time('M d, Y'); ?></span>
+								    </div>
 					            	<!-- <div class="small-ad"><?php echo adrotate_ad(3); ?></div>  -->
 				              		<div class="article-author">by <?php the_author(); ?> </div>
 				              		<?php the_content(); ?>

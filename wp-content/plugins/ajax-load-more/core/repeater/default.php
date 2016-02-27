@@ -13,7 +13,7 @@
 	<div class="bottom-dis-2">
 		<span class="date-dis"><?php the_time('M d,Y'); ?></span>	
 		<span class="info-right">
-			<span class="comment"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"></a></span> <span class="share"><span id="test-share1" class="addthis_counter addthis_bubble_style"></span></span>
+			<span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"></a></span> <span class="share"><span id="test-share1" class="addthis_counter addthis_bubble_style"></span>
 		</span>
 	</div>							
 </li>

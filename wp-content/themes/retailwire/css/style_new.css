@@ -331,8 +331,14 @@ article#post-109{
 }
 
 .info-dis.single{
-	background: url(../images/bg_img_dis.png)no-repeat center center !important;
-    padding: 10px 10px 10px 10px !important;
+	background: none;
+    padding: 10px 10px 0px 0px !important;
+    position: relative;
+    display: inline;
+}
+
+.info-dis.single .date-dis{
+	color: #9D9B8F !important;;
 }
 
 .wp-polls p{

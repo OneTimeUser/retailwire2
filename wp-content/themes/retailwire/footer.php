@@ -63,10 +63,10 @@
 </div> <!-- /.#wrapper.hfeed.site -->
 
 <?php wp_footer(); ?>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.3.min.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/hmac.js"></script>
-<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js"></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.3.min.js" async></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.js" async></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/hmac.js" async></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" async></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($){
 		$('.close-miss').click(function(){
