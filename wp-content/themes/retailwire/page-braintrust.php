@@ -24,7 +24,10 @@ get_header(); ?>
 		<div class="section-1">
 			<div class="sec-1-l braintrust-top">
 				<span class="s4-retail module-label">braintrust // FEATURED</span>
-				<ul class="list-braintrust-page">
+				<div class="content-braintrust-featured">
+				<?php echo do_shortcode('[brain_featured]'); ?>
+				</div>
+				<!-- <ul class="list-braintrust-page">
 					<?php
 						$args  = array(
 						    'role' => 'Author'
@@ -73,7 +76,7 @@ get_header(); ?>
 						    </div>
 						<?php endif; ?>
 
-				</ul>
+				</ul> -->
 			</div>
 			<div class="sec-1-r">
 				<?php dynamic_sidebar('sidebar_braintrust') ?>
@@ -83,7 +86,8 @@ get_header(); ?>
 		<div class="braintrust-all">
 			<span class="s4-retail module-label">Braintrust // all</span>
 			<div class="content-braintrust-all">
-				 <ul class="list-braintrust-bottom">
+				<?php echo do_shortcode('[brain_all]'); ?>
+				 <!-- <ul class="list-braintrust-bottom">
 					<?php
 						$args  = array(
 						    'role' => 'Contributor'
@@ -127,7 +131,7 @@ get_header(); ?>
 						        <p>Sorry, no posts matched your criteria.</p>
 						    </div>
 						<?php endif; ?>
-					</ul>
+					</ul> -->
 
 			</div>
 		</div>

@@ -484,6 +484,11 @@ padding-left: 30px;
 	background-image: url(../images/icon-comment-2.png);
 	display: inline;
 }
+
+.item-dis-2 .comment a{
+	color:#b6b6b6;
+
+}
 .item-dis-2 .share{
 	color:#b6b6b6;
 	background-image: url(../images/icon-share-2.png);
@@ -701,7 +706,7 @@ font-size: 13px;
 }
 .info-resource h2{
 text-align: left;
-line-height: 30px;
+line-height: 18px;
 }
 .info-resource h2 a{
 font-family: jubilat;
@@ -731,9 +736,9 @@ color: #000;
 	display: none;
 }
 .categoris-re{
-    position: absolute;
+    position: relative;
     top: 5px;
-    left: 308px; /*10px*/
+    left: 13px; /*10px*/
     text-transform: uppercase;
     font-size: 16px;
     color: #9E9B8C;
@@ -2018,6 +2023,10 @@ body .sec-3-m {
   		float: none;
   		text-align: center;
   	}
+
+  	#headerwrapper{
+  		height: auto;
+  	}
   	.m-menu-top.m-menu-top{
        display: none !important;
 	}
@@ -2027,9 +2036,26 @@ body .sec-3-m {
     padding-bottom: 10px;
     position: relative;
 	}
+
+	.site-title h1 {
+    margin-top: 15px !important;
+    /* margin-top: 2.25rem; */
+	}
+
+	.m-arrow-menu{
+		top:46px;
+	}
+	.m-arroe-search{
+		top:36px !important;
+	}
+
+
+	body #headercontainer{
+		padding-bottom: 0px;
+	}
+	.menu=
 	body #headercontainer {
     box-shadow: none;
-    padding-bottom: 10px;
 	}
 	.m-arrow-search,
 	.m-arrow-menu{
@@ -2077,7 +2103,8 @@ body .sec-3-m {
 	}
 	.list-post {
     margin-left: 0px;
-    overflow: hidden;
+    
+    height: auto;
 	}
 	.home .item-braintrust {
     width: 35%;
@@ -2140,12 +2167,15 @@ body .sec-3-m {
 		display: none;
 	}
 	.single-discussion .content-post {
-    	padding-left: 0px;
+    	padding-left: 50px;
 	}
 	.single-discussion #bannercontainer{
 		display: none;
 	}
-	.single-dis-l,
+	.single-dis-l {
+		width:70%;
+		float: left;
+	}
 	.single-dis-r {
     width: 30%;
     float: right;
@@ -2173,15 +2203,13 @@ body .sec-3-m {
     }
     .single-discussion .item-b-l ,
     .single-discussion .item-b-r{
-    width: 50%;
-    float: left;
+    
 	}
 	#disqus_thread{
 		padding: 30px 0px;
 		clear: both;
 	}
 	.single-discussion .img-user {
-   		 margin-top: 50px;
 	}
 	.single-discussion .share-post-mobile{
 		display: block;
@@ -2194,6 +2222,14 @@ body .sec-3-m {
 		padding:0;
 	}
 
+	.list-press{
+		height: auto;
+	}
+
+	.content-twitter{
+		height:	auto;
+	}
+
 
 }
 @media screen and (max-width: 680px){
@@ -2201,6 +2237,11 @@ body .sec-3-m {
     text-align: left;
     line-height: 15px;
 	}
+
+	.info-resource .content-re{
+		/*display:none;*/
+	}
+
 	.alm-listing li.item-resource-2 img {
     width: 220px;
 	}
@@ -2272,6 +2313,10 @@ body .sec-3-m {
 		padding-bottom: 30px;
 		overflow: hidden;
 	}
+
+	.item-home .item-braintrust .desc {
+		padding: 0px;
+	}
 	.item-home .item-discussion img {
     width: 100% !important;
     height: auto !important;
@@ -2296,8 +2341,9 @@ body .sec-3-m {
 		color: #b6b6b6;
 	}
 	.item-b-l{
-		width: 50%;
-		float: left;
+		width: 75%;
+		margin: 0 auto;
+		
 	}
 	.link-name-author{
 		display: none;
@@ -2306,10 +2352,10 @@ body .sec-3-m {
 		display: block;
 	}
 	.item-b-r{
-		overflow: hidden;
-		width: 50%;
-		float: left;
-		padding-top: 50px;
+		
+		width: 75%;
+		margin: 0 auto;
+		
 	}
 	.list-braintrust-1{
 		text-align: center;
@@ -2338,6 +2384,11 @@ body .sec-3-m {
 		height: auto !important;
 	}
 
+	.single-dis-r .item-braintrust .desc{
+		min-height: auto;
+	}
+
+
 	.box-spon {
     width: 48%;
     margin: 10px 1% !important;
@@ -2359,23 +2410,28 @@ body .sec-3-m {
     width: 170px;
 	}
 	.alm-listing li.item-resource-2{
-		text-align: center;
+		
 	}
 	.info-resource {
     border: none;
     clear: both;
     padding-top: 10px;
-    text-align: center;
 	}
 	.info-resource h2 {
-    text-align: center;
+    
 	}
 	.img-item-res {
     display: block;
     float: none;
     width: 96%;
     margin: 0 auto;
+    max-width: 100%;
 	}
+
+	.content-re p{
+		font-size: 16px;
+	}
+
 	.alm-listing li.item-resource-2 img {
     width: 100%;
 	}
@@ -2422,6 +2478,14 @@ body .sec-3-m {
 	.ad-ipad .widget{
 		margin-bottom: 0 !important;
 	}
+	.single-discussion .content-post {
+    padding-left: 0px;
+	}
+
+	.group-title-top .list-tab-dis{
+		width: 100%;
+    	padding-top: 15px;
+	}
 
 }
 @media screen and (max-width: 480px){
@@ -2463,6 +2527,9 @@ body .sec-3-m {
 	.section-3 .item-resource h2,
 	.section-3 .item-resource p{
 		
+	}
+	.content-title h2 {
+		font-size: 2rem;
 	}
 }
 @media screen and (max-width: 360px){

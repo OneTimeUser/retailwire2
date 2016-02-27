@@ -49,7 +49,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="sec-1-r">
-				<?php dynamic_sidebar('sidebar_discussion') ?>
+				<?php dynamic_sidebar('sidebar-single') ?>
 			</div>
 			<div class="clear"></div>
 

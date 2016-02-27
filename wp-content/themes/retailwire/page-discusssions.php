@@ -26,7 +26,7 @@ get_header(); ?>
 					<div class="group-title-top">
 						<span class="module-label title-dis">Discussion</span>
 						<ul class="list-tab-dis">
-							<li><span class="active" link="#tab1">Last</a></li>
+							<li><span class="active" link="#tab1">Latest</a></li>
 							<li><span link="#tab2">popular</a></li>
 						</ul>
 

@@ -391,9 +391,11 @@ article#post-109{
 	opacity: 0.1;
 }
 
+
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
-	display: none;
+	
     
 	}
 	.single-dis-l .info-dis h2{
