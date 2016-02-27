@@ -1428,9 +1428,8 @@ function admin(){
 												 $size="144";
 												 echo get_avatar($author_id,$size);
 												 ?></a>
-							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
-							        	 <span class="position-user"><?php echo $author_position; ?></span>
-							        	 <ul class="list-so-user">
+
+										<ul class="list-so-user">
 							        	 		<?php if ($author_facebook) { ?>
 							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
@@ -1446,6 +1445,9 @@ function admin(){
 							        	 		
 							        	 		
 							        	 </ul>
+							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
+							        	 <span class="position-user"><?php echo $author_position; ?></span>
+							        	 
 							        	 
 
 							        	</li>
@@ -1506,9 +1508,7 @@ function braintrust(){
 												 $size="144";
 												 echo get_avatar($author_id,$size);
 												 ?></a>
-							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
-							        	 <span class="position-user"><?php echo $author_position; ?></span>
-							        	 <ul class="list-so-user">
+										<ul class="list-so-user">
 							        	 		<?php if ($author_facebook) { ?>
 							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
@@ -1522,6 +1522,9 @@ function braintrust(){
 							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
 							        	 		<?php } ?>
 							        	 </ul>
+							        	 
+							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
+							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 
 
 							        	</li>
