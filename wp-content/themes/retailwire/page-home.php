@@ -68,8 +68,14 @@ get_header(); ?>
 							         <div class="info-dis">
 							         		<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							         		<div class="info-bottom">
-							         			<span class="date-dis"><?php the_time('M d, Y'); ?></span>	
-							         			<span class="info-right"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"></a></span> <span class="share"><span id="test-share1" class="addthis_counter addthis_bubble_style"></span></span></span>
+							         			<span class="date-dis"><?php the_time('M d, Y'); ?></span>
+							         			<span class="info-right"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"></a></span><span class="share">
+							         				<?php
+								         				$json = file_get_contents('http://api-public.addthis.com/url/shares.json?url='.get_post_permalink().'');
+														$obj = json_decode($json);
+														echo $obj->shares;
+							         				?>
+							         			</span></span>
 							         		</div>
 							         </div>  
 
