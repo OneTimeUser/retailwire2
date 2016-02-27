@@ -482,6 +482,7 @@ padding-left: 30px;
 .item-dis-2 .comment{
 	color:#b6b6b6;
 	background-image: url(../images/icon-comment-2.png);
+	display: inline;
 }
 .item-dis-2 .share{
 	color:#b6b6b6;
