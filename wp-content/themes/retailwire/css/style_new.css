@@ -372,9 +372,17 @@ article#post-109{
 	margin-left:10px;
 }
 
-.comments a {
+.comment a {
 	color: white;
 	text-decoration: none;
+}
+
+.g-4{
+	margin: 0 auto !important;
+}
+
+.list-so-user .inactive{
+	opacity: 0.1;
 }
 
 @media screen and (max-width: 680px){

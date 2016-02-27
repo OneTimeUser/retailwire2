@@ -1274,7 +1274,7 @@ body .sec-3-m {
 .single-user-l .list-so-user li{
 	float: none;
 }
-.list-so-user li a{
+.list-so-user li a, .list-so-user li span{
 	width: 28px;
 	height: 24px;
 	display: block;
@@ -1416,7 +1416,7 @@ body .sec-3-m {
 	list-style: none;
 }
 .list-braintrust-1 .list-user{
-    width: 17.7%;
+    width: 15%;
     margin: 10px 7% 0px 0px !important;
 }
 .list-braintrust-1 .list-user .avata img {
@@ -1947,11 +1947,9 @@ body .sec-3-m {
 	.ad-ipad {
 	display: block;
 	text-align: center;
-	padding: 20px 0px;
+	padding: 20px 0px 85px 0;
 	}
-	.ad-ipad img{
-		height: 50px;
-	}
+	
 	.form-contact select,
 	.form-bottom{
     width: 60%;
@@ -2416,6 +2414,16 @@ body .sec-3-m {
 	.single-discussion .info-dis h2 a {
     font-size: 20px;
 	}
+
+	.ad-ipad {
+	display: block;
+	text-align: center;
+	padding: 0px 0px 53px 0;
+	}
+	.ad-ipad .widget{
+		margin-bottom: 0 !important;
+	}
+
 }
 @media screen and (max-width: 480px){
   .alm-reveal .item-dis-2 {

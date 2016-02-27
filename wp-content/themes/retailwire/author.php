@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="sec-1-l braintrust-top">
 				
 		
-				<span class="s4-retail">braintrust // FROFILE</span>
+				<span class="s4-retail">PROFILE</span>
 				<div class="single-user">
 					<div class="single-user-l col grid_2_of_12">
 							<?php 
@@ -52,8 +52,8 @@ get_header(); ?>
 							<div class="tab-single-user" id="tabContaier">
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
-										<li class="view-articles"><span link="#tab2">VIEW ARTICLES</a></li>
-										<li class="view-comment"><span class="active" link="#tab1">VIEW COMMENT</a></li>
+										<li class="view-articles"><span class="active" link="#tab2">VIEW ARTICLES</a></li>
+										<li class="view-comment"><span link="#tab1">VIEW COMMENT</a></li>
 										
 									</ul>
 
@@ -61,11 +61,11 @@ get_header(); ?>
 								<div class="content-dis">
 									<div class="tabDetails">
 								    	<div id="tab1" class="tabContents">
-								        	VIEW COMMENT
+								        	
 								        </div>
 								        <div id="tab2" class="tabContents">
 								        	<?php // Start the Loop 
-								        	$my_query = new WP_Query( 'posts_per_page=2' );
+								        	$my_query = new WP_Query( 'posts_per_page=5' );
 								        	?>
 
 											<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>

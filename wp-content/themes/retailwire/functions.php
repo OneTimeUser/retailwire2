@@ -1431,9 +1431,20 @@ function admin(){
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
-							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
-							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
-							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 		<?php if ($author_facebook) { ?>
+							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_twitter) { ?>
+							        	 			<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_linked_in) { ?>
+							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
+							        	 		<?php } ?>
+							        	 		
+							        	 		
 							        	 </ul>
 							        	 
 
@@ -1498,9 +1509,18 @@ function braintrust(){
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
-							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
-							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
-							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 		<?php if ($author_facebook) { ?>
+							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_twitter) { ?>
+							        	 			<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_linked_in) { ?>
+							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
+							        	 		<?php } ?>
 							        	 </ul>
 							        	 
 
@@ -1563,9 +1583,18 @@ function braintrust_all(){
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">
-							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
-							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
-							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 		<?php if ($author_facebook) { ?>
+							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_twitter) { ?>
+							        	 			<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_linked_in) { ?>
+							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
+							        	 		<?php } ?>
 							        	 </ul>
 							        	 
 

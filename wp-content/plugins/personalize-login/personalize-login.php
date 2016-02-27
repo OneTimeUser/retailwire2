@@ -330,7 +330,7 @@ class Personalize_Login_Plugin {
 	            break;
 	    }
 	     
-	    return __( 'An unknown error occurred. Please try again later.', 'personalize-login' );
+	    return __( 'An unknown error occurred. Please try again.', 'personalize-login' );
 	}
 
 	/**

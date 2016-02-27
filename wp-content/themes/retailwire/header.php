@@ -54,12 +54,38 @@ function date(){
 
 </script>
 <div id="wrapper" class="hfeed site">
-
-	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to main content', 'Retailwire' ); ?></a></div>
+	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to main content', 'Retailwire' ); ?></a>
+	</div>
 		<div class="ad-ipad">
-				<?php $background = of_get_option( 'ad_300x250', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background['image'] );  ?>">
-			</div>
+				<?php /*if ( is_front_page() ) {*/
+				// Count how many banner sidebars are active so we can work out how many containers we need
+				$bannerSidebars = 0;
+				for ( $x=1; $x<=2; $x++ ) {
+					if ( is_active_sidebar( 'frontpage-banner' . $x ) ) {
+						$bannerSidebars++;
+					}
+				} 
+
+				if ( $bannerSidebars > 0 ) { ?>
+					<?php
+					// Work out the container class name based on the number of active banner sidebars
+					$containerClass = "grid_" . 12 / 1 . "_of_12"; //$bannerSidebars
+
+					// Display the active banner sidebars
+					for ( $x=1; $x<=1; $x++ ) {
+						if ( is_active_sidebar( 'frontpage-banner'. $x ) ) { ?>
+							<div class="col <?php echo $containerClass?>">
+								<div class="widget-area" role="complementary">
+									<?php dynamic_sidebar( 'frontpage-banner'. $x ); ?>
+								</div> <!-- /.widget-area -->
+							</div> <!-- /.col.<?php echo $containerClass?> -->
+						<?php }
+					} ?>
+
+				<?php }
+			/*}*/ ?>
+				
+		</div>
 		<div class="dont-miss">
 			<p><a href="<?php echo home_url(); ?>/subscribe">dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</a></p>
 			<span class="close-miss"></span>
@@ -169,14 +195,7 @@ function date(){
 	</div>
 	<div id="bannercontainer">
 		<div class="banner row">
-			<?php /*if ( is_front_page() ) {*/
-				// Count how many banner sidebars are active so we can work out how many containers we need
-				$bannerSidebars = 0;
-				for ( $x=1; $x<=2; $x++ ) {
-					if ( is_active_sidebar( 'frontpage-banner' . $x ) ) {
-						$bannerSidebars++;
-					}
-				}
+			<?php
 
 				// If there's one or more one active sidebars, create a row and add them
 				if ( $bannerSidebars > 0 ) { ?>
