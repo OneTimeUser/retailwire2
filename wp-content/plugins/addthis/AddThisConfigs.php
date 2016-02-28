@@ -56,6 +56,10 @@ if (!class_exists('AddThisConfigs')) {
             'addthis_sidebar_count'        => '5',
             'addthis_sidebar_enabled'      => false,
             'addthis_sidebar_position'     => 'left',
+            'addthis_mobile_toolbar_enabled'  => false,
+            'addthis_mobile_toolbar_numPreferredServices' => '4',
+            'addthis_mobile_toolbar_position' => 'bottom',
+            'addthis_mobile_toolbar_counts' => true,
             'addthis_twitter_template'     => '',
             'atversion'                    => 300,
             'atversion_update_status'      => 0,
@@ -232,7 +236,9 @@ if (!class_exists('AddThisConfigs')) {
                         continue;
                     }
 
-                    if ($location == 'sidebar' && $template['fieldName'] == 'excerpts') {
+                    if (($location == 'sidebar' || $location == 'mobile_toolbar')
+                        && $template['fieldName'] == 'excerpts'
+                    ) {
                         continue;
                     }
 
@@ -424,6 +430,25 @@ if (!class_exists('AddThisConfigs')) {
                 }
             }
 
+            if (!empty($this->configs['addthis_mobile_toolbar_enabled'])) {
+                $templateType = _addthis_determine_template_type();
+
+                $display = false;
+                if (is_string($templateType)) {
+                    $fieldList = $this->getFieldsForContentTypeSharingLocations($templateType, 'mobile_toolbar');
+                    $fieldName = $fieldList[0]['fieldName'];
+                    if (!empty($this->configs[$fieldName])) {
+                        $display = true;
+                    }
+                }
+
+                if ($display) {
+                    $addThisLayersVariable['sharedock']['counts'] = (boolean)$this->configs['addthis_mobile_toolbar_counts'];
+                    $addThisLayersVariable['sharedock']['position'] = strtolower($this->configs['addthis_mobile_toolbar_position']);
+                    $addThisLayersVariable['sharedock']['numPreferredServices'] = (int)$this->configs['addthis_mobile_toolbar_numPreferredServices'];
+                }
+            }
+
             $variablesWithLayersJson = array(
                 'addthis_layers_follow_json',
                 'addthis_layers_recommended_json',
@@ -504,6 +529,10 @@ if (!class_exists('AddThisConfigs')) {
 
             if (isset($this->configs['addthis_sidebar_enabled'])) {
                 $pluginInfo['select_prefs']['addthis_sidebar_enabled'] = $this->configs['addthis_sidebar_enabled'];
+            }
+
+            if (isset($this->configs['addthis_mobile_toolbar_enabled'])) {
+                $pluginInfo['select_prefs']['addthis_mobile_toolbar_enabled'] = $this->configs['addthis_mobile_toolbar_enabled'];
             }
 
             if (is_array($this->configs)) {

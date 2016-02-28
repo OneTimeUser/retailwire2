@@ -345,6 +345,7 @@ if (!class_exists('AddThisWordPressConnector')) {
                 'above',
                 'below',
                 'sidebar',
+                'mobile_toolbar',
             );
             return $types;
         }
@@ -525,6 +526,33 @@ if (!class_exists('AddThisWordPressConnector')) {
                 }
                 if($this->configs['below_sharing'] == 'below-enabled-smart-sharing') {
                     $this->configs['below_auto_services'] = true;
+                }
+            }
+
+            // automatically turn mobile sharing toolbar on where ever the sharing sidebar is enabled
+            if (!isset($this->configs['addthis_mobile_toolbar_enabled'])
+                && isset($this->configs['addthis_sidebar_enabled'])
+                && $this->configs['addthis_sidebar_enabled'] === true
+            ) {
+                $this->configs['addthis_mobile_toolbar_enabled'] = true;
+
+                if (isset($this->configs['addthis_sidebar_count'])) {
+                    $this->configs['addthis_mobile_toolbar_numPreferredServices'] = $this->configs['addthis_sidebar_count'];
+                }
+                if (isset($this->configs['addthis_sidebar_showon_home'])) {
+                    $this->configs['addthis_mobile_toolbar_showon_home'] = $this->configs['addthis_sidebar_showon_home'];
+                }
+                if (isset($this->configs['addthis_sidebar_showon_posts'])) {
+                    $this->configs['addthis_mobile_toolbar_showon_posts'] = $this->configs['addthis_sidebar_showon_posts'];
+                }
+                if (isset($this->configs['addthis_sidebar_showon_pages'])) {
+                    $this->configs['addthis_mobile_toolbar_showon_pages'] = $this->configs['addthis_sidebar_showon_pages'];
+                }
+                if (isset($this->configs['addthis_sidebar_showon_archives'])) {
+                    $this->configs['addthis_mobile_toolbar_showon_archives'] = $this->configs['addthis_sidebar_showon_archives'];
+                }
+                if (isset($this->configs['addthis_sidebar_showon_categories'])) {
+                    $this->configs['addthis_mobile_toolbar_showon_categories'] = $this->configs['addthis_sidebar_showon_categories'];
                 }
             }
 

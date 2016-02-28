@@ -531,6 +531,8 @@ a.addthis_button, a.addthis_button:hover, a.addthis_button:focus, a.addthis_butt
   clip: rect(0 0 0 0);
 }
 
+.addthis-mobile_toolbar-position-label,
+.addthis-mobile-toolbar-counts-label,
 .addthis-sidebar-position-label {
   display: block;
   min-height: 25px;

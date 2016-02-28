@@ -25,6 +25,7 @@ jQuery(document).ready(function(jQuery) {
     jQuery( "#Card-above-post" ).tabs();
     jQuery( "#Card-below-post" ).tabs();
     jQuery( "#Card-side-sharing" ).tabs();
+    jQuery( "#Card-mobile-toolbar" ).tabs();
 
     var thickDims, tbWidth, tbHeight, img = '';
 

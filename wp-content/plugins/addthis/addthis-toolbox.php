@@ -139,7 +139,7 @@ class Addthis_ToolBox
                 }
 
                 if ($recommendedContent
-                    && strpos($inputHtml, 'AddThis Recommended Content below') === false
+                    && strpos($content, 'AddThis Recommended Content below') === false
                 ) {
                   $content .= '<!-- AddThis Recommended Content below --> ' ;
                   $content .= self::_buildDiv(self::AT_CONTENT_BELOW_POST, false);
