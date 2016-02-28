@@ -397,6 +397,11 @@ article#post-109{
 .wpp-list {
 	padding:0;
 }
+.wpp-list li {
+    overflow: hidden;
+    float: none;
+    clear: none !important;
+    }
 
 
 @media screen and (max-width: 680px){
