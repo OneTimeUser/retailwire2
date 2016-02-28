@@ -2319,7 +2319,7 @@ h1.page-title {
 		margin-top: 0px;
 	}
 	#headerwrapper{
-		height: auto;
+		height: 60px;
 	}
 	.main-small-navigation .nav-menu,
 	.main-small-navigation .nav-menu ul,

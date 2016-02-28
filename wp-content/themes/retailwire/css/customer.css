@@ -2040,7 +2040,10 @@ body .sec-3-m {
 	#headercontainer.sticky .site-title h1 {
     line-height: 0px;
     margin-top: 0 !important;
-
+	}
+	#menu-item-299, #menu-item-301{  /*299,301*/
+		display: none;
+	}
 }
 @media screen and (max-width: 768px){
   	header.site-header .grid_9_of_12{
@@ -2611,5 +2614,7 @@ body .sec-3-m {
 	}
 	.list-braintrust-1 .list-so-user li {
     margin: 0px 0px 0px 0px !important;
-	}
+	}.content-title h2 {
+    font-size: 1.5rem;
+}
 }

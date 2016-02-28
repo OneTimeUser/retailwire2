@@ -69,6 +69,9 @@
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" async></script>
 <script type="text/javascript">
 	jQuery(document).ready(function($){
+
+		
+
 		$('.close-miss').click(function(){
 	      $('.dont-miss').fadeOut(1000);
 	    });
@@ -111,13 +114,18 @@
         })
 
 	   $(window).scroll(function() {
-		if ($(this).scrollTop() > 200){  
-		    $('#headercontainer').addClass("sticky");
-		  }
-		  else{
-		    $('#headercontainer').removeClass("sticky");
-		  }
-		});
+		   	var scrollTop     = $(window).scrollTop();
+			var elementOffset = $('#maincontentcontainer').offset().top;
+			var distance      = (elementOffset - scrollTop);
+			
+			if ($(this).scrollTop() > elementOffset){  
+			    $('#headercontainer').addClass("sticky");
+			  }
+			  else{
+			    $('#headercontainer').removeClass("sticky");
+			  }
+			});
+
 	  // $(window).bind('resize', function(e){
  
  		   	if( $(window).width()<=768 ) {
