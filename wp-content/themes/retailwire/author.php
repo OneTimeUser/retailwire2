@@ -53,7 +53,7 @@ get_header(); ?>
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
 										<li class="view-articles"><span class="active" link="#tab2">VIEW ARTICLES</a></li>
-										<!-- <li class="view-comment"><span link="#tab1">VIEW COMMENT</a></li> -->
+										<li class="view-comment"><span link="#tab1">VIEW COMMENT</a></li>
 										
 									</ul>
 
