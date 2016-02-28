@@ -2308,12 +2308,7 @@ h1.page-title {
 		text-align: center;
 		margin-top: 20px;
 	}
-	.m-arrow-menu{
-		top:50px;
-	}
-	.m-arrow-search{
-		top:40px;
-	}
+
 }
 
 
@@ -2359,21 +2354,11 @@ h1.page-title {
 	.social-media-icons {
 		text-align: center;
 	}
-	.m-arrow-menu{
-		top:40px;
-	}
-	.m-arrow-search{
-		top:30px;
-	}
+
 }
 
 @media only screen and (max-width: 480px) {
-	.m-arrow-menu{
-		top:30px;
-	}
-	.m-arrow-search{
-		top:20px;
-	}
+
 
 }
 

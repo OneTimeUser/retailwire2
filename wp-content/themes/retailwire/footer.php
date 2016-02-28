@@ -122,6 +122,7 @@
  
  		   	if( $(window).width()<=768 ) {
  	          	$('.addthis_toolbox').detach().appendTo(".share-post-mobile");
+ 	          	$('.dont-miss a').text('Subscribe to the Newsletter!');
  	        }else {
  	        	$('.addthis_toolbox').detach().appendTo(".content-post");
  	        }

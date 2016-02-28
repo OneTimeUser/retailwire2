@@ -27,7 +27,7 @@ get_header(); ?>
 						<span class="title-dis s4-retail module-label">Retail News</span>
 						<ul class="list-tab-dis">
 							<li><span class="active" link="#last">Latest</a></li>
-							<li><span link="#popular">Popular</a></li>
+							
 						
 						</ul>
 
@@ -37,9 +37,7 @@ get_header(); ?>
 					    	<div id="last" class="tabContents">
 					        	<?php echo do_shortcode('[ajax_load_more repeater="template_post" post_type="post" posts_per_page="9" scroll="true"]'); ?>
 					        </div>
-					        <div id="popular" class="tabContents">
-					        	<?php echo do_shortcode('[ajax_load_more repeater="template_post" post_type="post" taxonomy="group_post" taxonomy_terms="popular" taxonomy_operator="IN" posts_per_page="3" scroll="false"] '); ?>
-					        </div>
+					        
 							
 					    </div>
 						

@@ -390,7 +390,13 @@ article#post-109{
 .list-so-user .inactive{
 	opacity: 0.1;
 }
+.atss{
+	top: 50% !important;
+}
 
+.wpp-list {
+	padding:0;
+}
 
 
 @media screen and (max-width: 680px){

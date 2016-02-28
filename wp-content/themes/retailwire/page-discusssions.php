@@ -37,7 +37,9 @@ get_header(); ?>
 					        	<?php echo do_shortcode('[ajax_load_more post_type="discussion" repeater="default" posts_per_page="9" scroll="true"]'); ?>
 					        </div>
 					    	<div id="tab2" class="tabContents">
-					        	<?php echo do_shortcode('[ajax_load_more post_type="discussion" taxonomy="cate_discussions" taxonomy_terms="popular" taxonomy_operator="IN"]'); ?>
+					    	<div class="alm-reveal">
+					        	<?php echo do_shortcode('[wpp post_type=discussion limit=9 range=weekly thumbnail_width=284 thumbnail_height=142 stats_views=0 stats_date=1 stats_date_format="M d, Y" post_html="<li class=\'item-dis-2\'>{thumb} <h2><a href=\'{url}\'>{text_title}</a></h2><div class=\'bottom-dis-2\'><span class=\'date-dis\'>{date}</span></div></li>"]'); ?>   <!-- [ajax_load_more post_type="discussion" taxonomy="cate_discussions" taxonomy_terms="popular" taxonomy_operator="IN"] -->
+					        </div>
 					        </div>
 							
 					    </div>
