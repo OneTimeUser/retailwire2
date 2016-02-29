@@ -322,8 +322,8 @@ h1.page-title {
     }
 
 article#post-109{
-	position: relative;
-    left: 25%;
+	/*position: relative;
+    left: 25%;*/
 }
 
 .alm-reveal .item-dis-2{
@@ -407,6 +407,9 @@ article#post-109{
 	display: none;
 }
 
+.nav-menu-mobile #menu-item-174, .nav-menu-mobile #menu-item-175{
+	display: none;
+}
 
 @media screen and (max-width: 680px){
 	.content-title h2 {

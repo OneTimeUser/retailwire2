@@ -26,8 +26,22 @@ get_header(); ?>
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
 						              $author_content_user = get_field('content', 'user_'. $author_id );
-						             
+
+						              $args = array(
+												'posts_per_page'   => 10,
+												'post_author'	   => $author_id,
+												'post_status'      => 'publish',
+												'post_type'		=> 'discussion',
+												'orderby'          => 'date',
+												'order'            => 'DESC',
+												
+										);
+						              $author_posts = get_posts(($args) ); 						             
 					        		?>	
+
+					        		<script>
+											    console.log(<?php echo json_encode($author_posts); ?>);
+									</script>
 					        		<ul class="list-single-user">
 							        	 <li  class="item-single-user">
 							        	 	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
@@ -35,9 +49,18 @@ get_header(); ?>
 												 echo get_avatar($author_id,$size);
 												 ?></a>
 							        		 <ul class="list-so-user">
-							        	 		<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li>
-							        	 		<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li>
-							        	 		<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li>
+							        	 		<?php if ($author_facebook) { ?>
+							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_twitter) { ?>
+							        	 			<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_linked_in) { ?>
+							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
+							        	 		<?php } ?>
 							        	 </li>
 						        	</ul>
 						    
@@ -63,14 +86,17 @@ get_header(); ?>
 								    	<div id="tab1" class="tabContents">
 								        </div>
 								        <div id="tab2" class="tabContents">
-								        	<?php // Start the Loop 
-								        	$my_query = new WP_Query( 'posts_per_page=5' );
-								        	?>
+								        	
+											
 
-											<?php while ( $my_query->have_posts() ) : $my_query->the_post(); ?>
+
+											<?php 
+												while ( have_posts() ) : the_post(); ?>
 												<?php get_template_part( 'content-author', get_post_format() ); ?>
 											<?php endwhile; ?>
 											<?php Retailwire_content_nav( 'nav-below' ); ?>
+
+											
 											
 
 												
