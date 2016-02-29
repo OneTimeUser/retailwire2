@@ -29,7 +29,16 @@ get_header(); ?>
 
 						              					             
 					        		?>	
-
+					        			<?php	$args = array(
+												'posts_per_page'   => 10,
+												'author'	   => $author_id,
+												'post_status'      => 'publish',
+												'post_type'		   => 'discussion',
+												'orderby'          => 'date',
+												'order'            => 'DESC',
+												
+												);
+						              	$author_posts = get_posts(($args) ); 	 ?>
 					        		
 					        		<ul class="list-single-user">
 							        	 <li  class="item-single-user">
@@ -55,7 +64,7 @@ get_header(); ?>
 						    
 					</div>
 					<div class="single-user-r col grid_10_of_12">
-						<h2 class="title-user-single"><?php echo $author->display_name ; ?></a></h2>
+						<h2 class="title-user-single"><a><?php echo $author->display_name ; ?></a></h2>
 						<span class="position-user"><?php echo $author_position; ?></span>
 						<div class="content-single-user">
 							<?php echo $author_content_user ?>
@@ -64,8 +73,8 @@ get_header(); ?>
 							<div class="tab-single-user" id="tabContaier">
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
-										<li class="view-articles"><span class="active" link="#tab2">VIEW ARTICLES</a></li>
-										<li class="view-comment"><span link="#tab1">VIEW COMMENT</a></li>
+										<li class="view-articles"><span class="active" link="#tab2">VIEW ARTICLES</span></li>
+										<li class="view-comment"><span link="#tab1">VIEW COMMENT</span></li>
 										
 									</ul>
 
@@ -73,42 +82,18 @@ get_header(); ?>
 								<div class="content-dis">
 									<div class="tabDetails">
 								    	<div id="tab1" class="tabContents">
+
 								        </div>
 								        <div id="tab2" class="tabContents">
-								        	
-										<?php	$args = array(
-												'posts_per_page'   => 10,
-												'author'	   => $author_id,
-												'post_status'      => 'publish',
-												'post_type'		   => 'discussion',
-												'orderby'          => 'date',
-												'order'            => 'DESC',
-												
-												);
-						              			$author_posts = get_posts(($args) ); 	 ?>
-						              			<script>
-											    console.log(<?php echo json_encode($author_posts); ?>);
-												</script>
-
-												<?php	foreach ( $author_posts as $post ) : ?>
+								        	<?php	foreach ( $author_posts as $post ) : ?>
 												<?php get_template_part( 'content-author', get_post_format() ); ?>
 												<?php endforeach; ?>
-												<?php Retailwire_content_nav( 'nav-below' ); ?>
-											 
-<!-- 											<?php	while ( $author_posts->have_posts() ) : $author_posts->the_post(); ?>
-												<?php get_template_part( 'content-author', get_post_format() ); ?>
-												<?php endwhile; ?>
-												<?php Retailwire_content_nav( 'nav-below' ); ?>
- -->
-											
-											
-
-												
+												<?php Retailwire_content_nav( 'nav-below' ); ?> 
+									
+							
 								        </div>
 								    	
-										
 								    </div>
-									
 									
 								</div>
 
