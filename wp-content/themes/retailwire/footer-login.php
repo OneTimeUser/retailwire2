@@ -1,0 +1,139 @@
+<?php
+/**
+ * The template for displaying the footer.
+ *
+ * Contains the closing of the id #maincontentcontainer div and all content after.
+ * There are also four footer widgets displayed. These will be displayed from
+ * one to four columns, depending on how many widgets are active.
+ *
+ * @package Retailwire
+ * @since Retailwire 1.0
+ */
+?>
+
+		<?php	do_action( 'Retailwire_after_woocommerce' ); ?>
+	</div> <!-- /#maincontentcontainer -->
+
+
+
+</div> <!-- /.#wrapper.hfeed.site -->
+
+<?php wp_footer(); ?>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/jquery-1.8.3.min.js" async></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/owl.carousel.js" ></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/hmac.js" async></script>
+<script type="text/javascript" src="<?php echo get_stylesheet_directory_uri(); ?>/js/main.js" async></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($){
+
+		
+
+		$('.close-miss').click(function(){
+	      $('.dont-miss').fadeOut(1000);
+	    });
+
+
+		$(".tabContents").hide(); 
+		$(".tabContents:first").show(); 
+		
+		$("#tabContaier ul li span").click(function(){ 
+			var activeTab = $(this).attr("link"); 
+			$("#tabContaier ul li span").removeClass("active"); 
+			$(this).addClass("active"); 
+			$(".tabContents").hide(); 
+			$(activeTab).fadeIn(); 
+		});
+			
+	  $("#owl-demo").owlCarousel({
+	      navigation : true, 
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      singleItem:true
+	 
+	  });
+	  $("#owl-demo-2").owlCarousel({
+	      navigation : true, 
+	      slideSpeed : 300,
+	      paginationSpeed : 400,
+	      items : 3,
+		  // itemsCustom : [
+	   //      [1600, 3]
+	   //    ]
+	  });
+
+	  $('.m-arrow-menu,.m-arrow-search').click(function(){
+              $('.menu-mobile').slideToggle(500);
+        })
+	  $('.close-menu').click(function(){
+              $('.menu-mobile').slideToggle(500);
+              
+        })
+
+	   $(window).scroll(function() {
+		   	var scrollTop     = $(window).scrollTop();
+			var elementOffset = $('#maincontentcontainer').offset().top;
+			var distance      = (elementOffset - scrollTop);
+			
+			if ($(this).scrollTop() > elementOffset){  
+			    $('#headercontainer').addClass("sticky");
+			  }
+			  else{
+			    $('#headercontainer').removeClass("sticky");
+			  }
+			});
+
+	  // $(window).bind('resize', function(e){
+ 
+ 		   	if( $(window).width()<=768 ) {
+ 	          	$('.addthis_toolbox').detach().appendTo(".share-post-mobile");
+ 	          	$('.dont-miss a').text('Subscribe to the Newsletter!');
+ 	        }else {
+ 	        	$('.addthis_toolbox').detach().appendTo(".content-post");
+ 	        }
+  
+ 		// });
+ 	   	$('.link-search').click(function(){
+               $('.content-f-top').slideToggle(500);
+         })
+
+   		
+
+
+
+
+	});
+
+</script>
+<script type="text/javascript">
+// var disqus_config = function () {
+//     // The generated payload which authenticates users with Disqus
+//     this.page.remote_auth_s3 = '<message> <hmac> <timestamp>';
+//     this.page.api_key = '2jV4kkaizbc8U4auShxMeRCzFUA0hO8mX3pKfmkCPPj81xi58G1FVyEDwPTnJi1j';
+
+// // This adds the custom login/logout functionality
+//     this.sso = {
+//           name:   "SampleNews",
+//           button:  "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+//           icon:     "http://retailwire.icodedark.com/wp-content/uploads/2016/01/img-post.png",
+//           url:        "retailwire.icodedark.com/login/",
+//           logout:  "retailwire.icodedark.com/login",
+//           width:   "800",
+//           height:  "400"
+//     };
+// };
+</script>
+<!-- Start of Async HubSpot Analytics Code -->
+  <script type="text/javascript">
+    (function(d,s,i,r) {
+      if (d.getElementById(i)){return;}
+      var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+      n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/452866.js';
+      e.parentNode.insertBefore(n, e);
+    })(document,"script","hs-analytics",300000);
+  </script>
+<!-- End of Async HubSpot Analytics Code -->
+<script id="dsq-count-scr" src="//retailwire.disqus.com/count.js" async></script>
+</body>
+
+</html>
+
