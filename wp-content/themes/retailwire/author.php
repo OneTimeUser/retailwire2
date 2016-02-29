@@ -19,7 +19,7 @@ get_header(); ?>
 							<?php 
 									  $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 									  //var_dump($author);
-									  $author_id = $author->ID;;
+									  $author_id = $author->ID;
 									  $author_facebook = get_field('facebook', 'user_'. $author_id );
 						              $author_twitter = get_field('twitter', 'user_'. $author_id );
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
@@ -27,21 +27,10 @@ get_header(); ?>
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
 						              $author_content_user = get_field('content', 'user_'. $author_id );
 
-						              $args = array(
-												'posts_per_page'   => 10,
-												'post_author'	   => $author_id,
-												'post_status'      => 'publish',
-												'post_type'		=> 'discussion',
-												'orderby'          => 'date',
-												'order'            => 'DESC',
-												
-										);
-						              $author_posts = get_posts(($args) ); 						             
+						              					             
 					        		?>	
 
-					        		<script>
-											    console.log(<?php echo json_encode($author_posts); ?>);
-									</script>
+					        		
 					        		<ul class="list-single-user">
 							        	 <li  class="item-single-user">
 							        	 	 <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
@@ -87,15 +76,30 @@ get_header(); ?>
 								        </div>
 								        <div id="tab2" class="tabContents">
 								        	
-											
+										<?php	$args = array(
+												'posts_per_page'   => 10,
+												'author'	   => $author_id,
+												'post_status'      => 'publish',
+												'post_type'		   => 'discussion',
+												'orderby'          => 'date',
+												'order'            => 'DESC',
+												
+												);
+						              			$author_posts = get_posts(($args) ); 	 ?>
+						              			<script>
+											    console.log(<?php echo json_encode($author_posts); ?>);
+												</script>
 
-
-											<?php 
-												while ( have_posts() ) : the_post(); ?>
+												<?php	foreach ( $author_posts as $post ) : ?>
 												<?php get_template_part( 'content-author', get_post_format() ); ?>
-											<?php endwhile; ?>
-											<?php Retailwire_content_nav( 'nav-below' ); ?>
-
+												<?php endforeach; ?>
+												<?php Retailwire_content_nav( 'nav-below' ); ?>
+											 
+<!-- 											<?php	while ( $author_posts->have_posts() ) : $author_posts->the_post(); ?>
+												<?php get_template_part( 'content-author', get_post_format() ); ?>
+												<?php endwhile; ?>
+												<?php Retailwire_content_nav( 'nav-below' ); ?>
+ -->
 											
 											
 
