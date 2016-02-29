@@ -78,7 +78,7 @@
 
 
 		$(".tabContents").hide(); 
-		$(".tabContents:first").show(); 
+		//$(".tabContents:first").show(); 
 		
 		$("#tabContaier ul li span").click(function(){ 
 			var activeTab = $(this).attr("link"); 

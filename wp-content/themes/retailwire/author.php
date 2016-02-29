@@ -64,7 +64,7 @@ get_header(); ?>
 						    
 					</div>
 					<div class="single-user-r col grid_10_of_12">
-						<h2 class="title-user-single"><a><?php echo $author->display_name ; ?></a></h2>
+						<h2 class="title-user-single"><span><?php echo $author->display_name ; ?></span></h2>
 						<span class="position-user"><?php echo $author_position; ?></span>
 						<div class="content-single-user">
 							<?php echo $author_content_user ?>
@@ -73,7 +73,7 @@ get_header(); ?>
 							<div class="tab-single-user" id="tabContaier">
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
-										<li class="view-articles"><span class="active" link="#tab2">VIEW ARTICLES</span></li>
+										<li class="view-articles"><span link="#tab2">VIEW ARTICLES</span></li>
 										<li class="view-comment"><span link="#tab1">VIEW COMMENT</span></li>
 										
 									</ul>
