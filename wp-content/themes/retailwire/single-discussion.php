@@ -49,6 +49,11 @@ get_header(); ?>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
 				              		
 				              		<div class="article-excerpt"><?php the_field('comment_question'); ?></div>
+
+				              		<div class="single-dis-r mobileview">
+										<?php get_template_part( 'content-braintrust-discussion', get_post_format() ); ?>
+										
+									</div>
 					              	<?php
 									// If comments are open or we have at least one comment, load up the comment template
 									if ( comments_open() || '0' != get_comments_number() ) {
@@ -57,7 +62,7 @@ get_header(); ?>
 									?>
 				         		</div>
 				            </div>
-						<div class="single-dis-r">
+						<div class="single-dis-r normalview">
 							<?php get_template_part( 'content-braintrust-discussion', get_post_format() ); ?>
 							
 						</div>

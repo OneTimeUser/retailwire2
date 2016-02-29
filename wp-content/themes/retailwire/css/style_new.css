@@ -403,6 +403,10 @@ article#post-109{
     clear: none !important;
     }
 
+.mobileview{
+	display: none;
+}
+
 
 @media screen and (max-width: 680px){
 	.content-title h2 {
@@ -417,7 +421,14 @@ article#post-109{
 @media screen and (max-width: 600px){
 	.alm-reveal .item-dis-2{
 	height:215px;
-}
+	}
+
+	.normalview{
+		display:none;
+	}
+	.mobileview{
+		display: block;
+	}
 }
 
 @media screen and (max-width: 480px){
