@@ -26,6 +26,8 @@ class Personalize_Login_Plugin {
      	add_filter( 'authenticate', array( $this, 'maybe_redirect_at_authenticate' ), 101, 3 );
      	add_filter( 'login_redirect', array( $this, 'redirect_after_login' ), 10, 3 );
        	add_action( 'wp_logout', array( $this, 'redirect_after_logout' ) );
+       	// Disable login modals introduced in WordPress 3.6
+		remove_action( 'admin_enqueue_scripts', 'wp_auth_check_load' );
 
      	add_action( 'login_form_register', array( $this, 'redirect_to_custom_register' ) );
      	add_action( 'login_form_lostpassword', array( $this, 'redirect_to_custom_lostpassword' ) );
