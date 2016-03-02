@@ -810,6 +810,9 @@ function Retailwire_new_contactmethods( $contactmethods ) {
 	//add Position
 	$contactmethods['position'] = 'Position';
 
+	//add Disqus username
+	$contactmethods['disqus_username'] = 'Disqus Username (ex: retailwire-t74d97...)';
+
 	return $contactmethods;
 }
 add_filter( 'user_contactmethods', 'Retailwire_new_contactmethods', 10, 1 );

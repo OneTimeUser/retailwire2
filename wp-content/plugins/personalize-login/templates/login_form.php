@@ -1,3 +1,4 @@
+<div class="login-logo"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></div>
 <div class="login-form-container">
 	 <fieldset class="form-boundary">
     <?php if ( $attributes['show_title'] ) : ?>
@@ -42,6 +43,7 @@
 		    </p>
 		<?php endif; ?>
 		<legend class="form-title module-label"> Log In  </legend>
+		
     <?php
         wp_login_form(
             array(
@@ -55,5 +57,6 @@
     <a class="forgot-password" href="<?php echo wp_lostpassword_url(); ?>">
         <?php _e( 'Forgot your password?', 'personalize-login' ); ?>
     </a>
+    <div class="login-reg"><p>or  <a href="<?php echo home_url(); ?>/member-register">REGISTER</a></p><p>to join in the RetailWire discussions.</div>
     </fieldset>
 </div> 

@@ -122,7 +122,7 @@ function date(){
 						?>
 							<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
 						<?php } else{ ?>
-							<a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a>
+							<!-- <a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a> -->
 						<?php }?>
 						</li>
 						<li>
@@ -138,7 +138,7 @@ function date(){
 					</ul>
 				</div>
 				<ul class="m-top-right show_ipad">
-					<li><a href="<?php echo home_url(); ?>/member-login" class="m-regis"></a></li>
+					<!-- <li><a href="<?php echo home_url(); ?>/member-login" class="m-regis"></a></li> -->
 					<li><a href="<?php echo home_url(); ?>/contact" class="m-join"></a></li>
 					<li><a href="#" class="m-link-search"></a></li>
 
@@ -168,7 +168,14 @@ function date(){
 				<div class="m-bottom-menu">
 					<ul class="nav-menu-mobile">
 							<li>
-								<a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a>
+								<?php 
+								if (is_user_logged_in()){
+									$current_user = wp_get_current_user();
+								?>
+									<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+								<?php } else{ ?>
+									<!-- <a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a> -->
+								<?php }?>							
 							</li>
 							<li>
 								<a href="<?php echo home_url(); ?>/contact" class="join">join the braintrust</a>

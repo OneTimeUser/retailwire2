@@ -1,3 +1,6 @@
+
+<div class="login-logo"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></div>
+
 <div id="register-form" class="widecolumn">
     <fieldset class="form-boundary">
     <?php if ( $attributes['show_title'] ) : ?>

@@ -1,3 +1,5 @@
+<div class="login-logo"><img src="<?php echo( get_header_image() ); ?>" alt="<?php echo( get_bloginfo( 'title' ) ); ?>" /></div>
+
 <div id="password-lost-form" class="widecolumn">
     <fieldset class="form-boundary">
   

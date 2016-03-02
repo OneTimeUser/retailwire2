@@ -411,6 +411,28 @@ article#post-109{
 	display: none;
 }
 
+.login-logo{
+	width: 320px;
+	margin: 0 auto;
+}
+
+.login-submit{
+	margin-bottom: 5px ;
+}
+
+.forgot-password{
+	font-size: 12px;
+}
+
+.login-reg{
+	padding-top: 26px;
+    text-align: center;
+}
+
+.login-reg p{
+	margin-bottom: 5px;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	
