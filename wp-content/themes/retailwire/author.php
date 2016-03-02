@@ -38,6 +38,11 @@ get_header(); ?>
 												'order'            => 'DESC',
 												
 												);
+
+					        					$com = array(
+											        'user_id' => $author_id,
+											        'number' => 10, // how many comments to retrieve
+											        );
 						              	$author_posts = get_posts(($args) ); 	 ?>
 					        		
 					        		<ul class="list-single-user">
@@ -82,7 +87,26 @@ get_header(); ?>
 								<div class="content-dis">
 									<div class="tabDetails">
 								    	<div id="tab1" class="tabContents">
+								    		<?php
+											    
 
+											    $comments = get_comments( $com );
+
+											    if ( $comments )
+											    {
+											        $output.= "<ul>\n";
+											        foreach ( $comments as $c )
+											        {
+											        $output.= '<li>';
+											        $output.= '<a href="'.get_comment_link( $c->comment_ID ).'">';
+											        $output.= get_the_title($c->comment_post_ID);
+											        $output.= '</a>, Posted on: '. mysql2date('m/d/Y', $c->comment_date, $translate);
+											        $output.= "</li>\n";
+											        }
+											        $output.= '</ul>';
+
+											        echo $output;
+											    } else { echo "No comments made";} ?>
 								        </div>
 								        <div id="tab2" class="tabContents">
 								        	<?php	foreach ( $author_posts as $post ) : ?>
