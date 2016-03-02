@@ -25,7 +25,7 @@ get_header(); ?>
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
-						              $author_content_user = get_field('content', 'user_'. $author_id );
+						              $author_content_user = get_field('description', 'user_'. $author_id );
 
 						              					             
 					        		?>	
@@ -40,10 +40,23 @@ get_header(); ?>
 												);
 
 					        					$com = array(
-											        'user_id' => $author_id,
-											        'number' => 10, // how many comments to retrieve
+											        'post_author' => $author_id,
 											        );
-						              	$author_posts = get_posts(($args) ); 	 ?>
+
+					        			
+
+										//$comments = get_comments($com);
+										// foreach($comments as $comment) :
+										// 	echo($comment->comment_author);
+										// endforeach;
+										
+						              	$author_posts = get_posts(($args) ); 
+						              	// $comments = get_comments( ($com) );	 ?>
+						              	<script>
+											    console.log(<?php echo json_encode($comments); ?>);
+										</script>
+
+										
 					        		
 					        		<ul class="list-single-user">
 							        	 <li  class="item-single-user">
@@ -88,31 +101,38 @@ get_header(); ?>
 									<div class="tabDetails">
 								    	<div id="tab1" class="tabContents">
 								    		<?php
-											    
+												
+												$comm = array(
+													'user_id' => $author_id, // use user_id
 
-											    $comments = get_comments( $com );
+												);
+												$comments = get_comments($comm);
+												foreach($comments as $comment) :
+													echo($comment->comment_content);
+												endforeach;
 
-											    if ( $comments )
-											    {
-											        $output.= "<ul>\n";
-											        foreach ( $comments as $c )
-											        {
-											        $output.= '<li>';
-											        $output.= '<a href="'.get_comment_link( $c->comment_ID ).'">';
-											        $output.= get_the_title($c->comment_post_ID);
-											        $output.= '</a>, Posted on: '. mysql2date('m/d/Y', $c->comment_date, $translate);
-											        $output.= "</li>\n";
-											        }
-											        $output.= '</ul>';
+											
+											    // if ( $comments )
+											    // {
+											    //     $output.= "<ul>\n";
+											    //     foreach ( $comments as $c )
+											    //     {
+											    //     $output.= '<li>';
+											    //     $output.= '<a href="'.get_comment_link( $c->comment_ID ).'">';
+											    //     $output.= get_the_title($c->comment_post_ID);
+											    //     $output.= '</a>, Posted on: '. mysql2date('m/d/Y', $c->comment_date, $translate);
+											    //     $output.= "</li>\n";
+											    //     }
+											    //     $output.= '</ul>';
 
-											        echo $output;
-											    } else { echo "No comments made";} ?>
+											    //     echo $output;
+											    // } else { echo "No comments made";} ?>
 								        </div>
 								        <div id="tab2" class="tabContents">
 								        	<?php	foreach ( $author_posts as $post ) : ?>
 												<?php get_template_part( 'content-author', get_post_format() ); ?>
 												<?php endforeach; ?>
-												<?php Retailwire_content_nav( 'nav-below' ); ?> 
+											
 									
 							
 								        </div>

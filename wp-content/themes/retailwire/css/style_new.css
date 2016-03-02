@@ -433,6 +433,10 @@ article#post-109{
 	margin-bottom: 5px;
 }
 
+.content-single-user{
+	padding-bottom: 30px;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	
