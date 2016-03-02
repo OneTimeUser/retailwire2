@@ -20,14 +20,16 @@ get_header(); ?>
 									  $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 									  //var_dump($author);
 									  $author_id = $author->ID;
+									  $author_email = $author->email;
 									  $author_facebook = get_field('facebook', 'user_'. $author_id );
 						              $author_twitter = get_field('twitter', 'user_'. $author_id );
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
 						              $author_position = get_field('position', 'user_'. $author_id );
 						              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
-						              $author_content_user = get_field('description', 'user_'. $author_id );
-
-						              					             
+						              $author_bio_user = get_field('description', 'user_'. $author_id );
+						              $author_content_user = get_field('content', 'user_'. $author_id );
+						              $output = '';
+						              						             
 					        		?>	
 					        			<?php	$args = array(
 												'posts_per_page'   => 10,
@@ -52,9 +54,7 @@ get_header(); ?>
 										
 						              	$author_posts = get_posts(($args) ); 
 						              	// $comments = get_comments( ($com) );	 ?>
-						              	<script>
-											    console.log(<?php echo json_encode($comments); ?>);
-										</script>
+						              	
 
 										
 					        		
@@ -86,13 +86,14 @@ get_header(); ?>
 						<span class="position-user"><?php echo $author_position; ?></span>
 						<div class="content-single-user">
 							<?php echo $author_content_user ?>
+							<?php echo $author_bio_user ?>
 						</div>
 						<div class="single-user-bottom">
 							<div class="tab-single-user" id="tabContaier">
 								<div class="group-title-top">
 									<ul class="list-tab-dis">
 										<li class="view-articles"><span link="#tab2">VIEW ARTICLES</span></li>
-										<li class="view-comment"><span link="#tab1">VIEW COMMENT</span></li>
+										<li class="view-comment"><span class="active" link="#tab1">VIEW COMMENT</span></li>
 										
 									</ul>
 
@@ -103,30 +104,43 @@ get_header(); ?>
 								    		<?php
 												
 												$comm = array(
-													'user_id' => $author_id, // use user_id
+													'author_email' => $author_email, // use user_id
 
 												);
 												$comments = get_comments($comm);
-												foreach($comments as $comment) :
-													echo($comment->comment_content);
-												endforeach;
-
-											
-											    // if ( $comments )
-											    // {
-											    //     $output.= "<ul>\n";
-											    //     foreach ( $comments as $c )
-											    //     {
-											    //     $output.= '<li>';
-											    //     $output.= '<a href="'.get_comment_link( $c->comment_ID ).'">';
-											    //     $output.= get_the_title($c->comment_post_ID);
-											    //     $output.= '</a>, Posted on: '. mysql2date('m/d/Y', $c->comment_date, $translate);
-											    //     $output.= "</li>\n";
-											    //     }
-											    //     $output.= '</ul>';
-
-											    //     echo $output;
-											    // } else { echo "No comments made";} ?>
+												// foreach($comments as $comment) :
+												// 	echo($comment->comment_content);
+												// endforeach;
+												
+											if ( $comments )
+											        {
+											            $output.= "<ul class='profile-comments'>\n";
+											            foreach ( $comments as $c )
+											            {
+											            $output.= '<li>';
+											            $output.= '<span>';
+											            $output.= 'Posted on: '. mysql2date('m/d/Y', $c->comment_date, $translate);
+											            $output.= '</span>';
+											            $output.= '<h2>';
+											            if ( $pretty_permalink ) // uses a lot more queries (not recommended)
+											                $output.= '<a href="'.get_comment_link( $c->comment_ID ).'">';
+											            else
+											                $output.= '<a href="'.get_settings('siteurl').'/?p='.$c->comment_post_ID.'#comment-'.$c->comment_ID.'">';         
+											            $output.= get_the_title($c->comment_post_ID);
+											            $output.= '</a></h2>';
+											            
+											            $output.= '<div class="content-re">';
+											            $output.= $c->comment_content;
+											            $output.= '</div>';
+											            $output.= "</li>\n";
+											            }
+											            $output.= '</ul>';
+											            echo $output;
+											        }
+											      else { echo "No comments made";} ?>
+											    <script>
+											    console.log(<?php echo json_encode($comments); ?>);
+												</script>
 								        </div>
 								        <div id="tab2" class="tabContents">
 								        	<?php	foreach ( $author_posts as $post ) : ?>

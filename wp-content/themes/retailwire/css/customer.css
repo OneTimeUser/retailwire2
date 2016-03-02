@@ -697,7 +697,7 @@ margin-bottom: 10px;
     padding-left: 15px;
     min-height: 148px;
 }
-.info-resource span{
+.info-resource span, .profile-comments span{
 display: block;
 text-align: right;
 float: none;
@@ -708,13 +708,23 @@ font-size: 13px;
 text-align: left;
 line-height: 18px;
 }
-.info-resource h2 a{
+.info-resource h2 a, .profile-comments h2 a{
 font-family: jubilat;
 font-size: 16px;
 font-weight: bold;
 text-decoration: none;
 color: #000;
 }
+
+.profile-comments li{
+	border-bottom: 1px solid #ccc;
+}
+
+.profile-comments .content-re{
+	padding-bottom: 5px;
+}
+
+
 .content-re{
 
 }

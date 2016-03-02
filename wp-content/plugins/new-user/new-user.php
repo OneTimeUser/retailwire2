@@ -52,11 +52,11 @@ function wp_new_user_notification($user_id, $deprecated=null, $notify= ''){
 	$hashed = time() . ':' . $wp_hasher->HashPassword( $key );
 	$wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user->user_login ) );
 
-    $message = sprintf(__('Username: %s'), $user->user_login) . "\n";
+    $message = sprintf(__('Username: %s'), $user->user_login) . "\r\n";
 
-	$message .= __('Thanks for registering with RetailWire! To set your password, visit the following address:');
-	$message .= '' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login');
-    $message .= "\n" . sprintf( __('Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at %s.'), get_option('admin_email') ) . "\r\n\r\n";
+	$message .= __('Thanks for registering with RetailWire! To set your password, visit the following address:') . "\r\n";
+	$message .= '' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n";
+    $message .= sprintf( __('Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at %s.'), get_option('admin_email') ) . "\n\n";
 	$message .= __('Thank You!') . "\n";
 
 	wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message);
