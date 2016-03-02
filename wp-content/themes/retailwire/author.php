@@ -20,7 +20,7 @@ get_header(); ?>
 									  $author = get_user_by( 'slug', get_query_var( 'author_name' ) );
 									  //var_dump($author);
 									  $author_id = $author->ID;
-									  $author_email = $author->email;
+									  $author_email = get_the_author_meta( 'user_email', $author_id );
 									  $author_facebook = get_field('facebook', 'user_'. $author_id );
 						              $author_twitter = get_field('twitter', 'user_'. $author_id );
 						              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
@@ -34,6 +34,7 @@ get_header(); ?>
 					        			<?php	$args = array(
 												'posts_per_page'   => 10,
 												'author'	   => $author_id,
+												'author_email'=>$author_email,
 												'post_status'      => 'publish',
 												'post_type'		   => 'discussion',
 												'orderby'          => 'date',
@@ -41,9 +42,7 @@ get_header(); ?>
 												
 												);
 
-					        					$com = array(
-											        'post_author' => $author_id,
-											        );
+					        			
 
 					        			
 
@@ -108,6 +107,7 @@ get_header(); ?>
 
 												);
 												$comments = get_comments($comm);
+
 												// foreach($comments as $comment) :
 												// 	echo($comment->comment_content);
 												// endforeach;
@@ -139,6 +139,8 @@ get_header(); ?>
 											        }
 											      else { echo "No comments made";} ?>
 											    <script>
+											    console.log(<?php echo json_encode($comm); ?>);
+											     console.log(<?php echo json_encode($args); ?>);
 											    console.log(<?php echo json_encode($comments); ?>);
 												</script>
 								        </div>
