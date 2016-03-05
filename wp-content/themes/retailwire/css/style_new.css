@@ -98,7 +98,7 @@ need to add module class to all labels in php
 
 .sec-3-l{
 	 width: 36.5%;
-    height: 804px;
+    
     float: left;
 /*    background-color: purple;*/
     margin-right: 1%;
@@ -106,7 +106,7 @@ need to add module class to all labels in php
 
 .sec-3-m{
 	width: 36.5%;
-    height: 804px;
+   
     float: left;
     background-color: orange;
     margin-right: 1%;
@@ -196,13 +196,12 @@ need to add module class to all labels in php
 
 .list-press{
 	margin: 0px 15px 0px 15px;
-	height: 770px;
-    overflow: scroll;
+	
 }
 
 .content-twitter{
-	height: 770px;
-    overflow: scroll;
+	
+    
 }
 
 .date-press{
