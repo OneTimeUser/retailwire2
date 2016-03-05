@@ -1478,7 +1478,7 @@ function staff(){
     ob_start();
     
     ?>
-	<ul class="list-braintrust-1">
+	<ul class="list-braintrust-1 staff-list">
 						<?php
 							$args  = array(
 							    'role' => 'Staff'

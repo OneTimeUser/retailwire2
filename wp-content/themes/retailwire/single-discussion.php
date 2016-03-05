@@ -13,7 +13,7 @@ get_header(); ?>
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<div class="content-single-dis">
-							<div class="content-title"><h2><?php the_title(); ?></h2>
+							<div class="content-title"><h2><?php the_title(); ?></h2></div>
 							<div class="info-discussion">
 							         			
 			         			<span class="info-left"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"><?php comments_number( '0', '1', '%' ); ?></a></span><span class="share">
@@ -53,7 +53,6 @@ get_header(); ?>
 					            	<div class="info-dis single">
 								         	<span class="date-dis"><?php the_time('M d, Y'); ?></span>
 								    </div>
-					            	<!-- <div class="small-ad"><?php echo adrotate_ad(3); ?></div>  -->
 				              		<div class="article-author">by <?php the_author(); ?> </div>
 				              		<?php the_content(); ?>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
@@ -79,7 +78,7 @@ get_header(); ?>
 				      </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>
-			</div>
+			
 			<div class="sec-1-r">
 				<div class="ad-2">
 					<?php $background = of_get_option( 'ad_300x600', $background_defaults ); ?>

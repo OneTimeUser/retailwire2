@@ -342,10 +342,6 @@ article#post-109{
 	color: #9D9B8F !important;;
 }
 
-.wp-polls p{
-	text-align: left;
-	margin-left: 10px;
-}
 
 .form-boundary{
 	width: 320px;
@@ -436,6 +432,10 @@ article#post-109{
 
 .content-single-user{
 	padding-bottom: 30px;
+}
+
+.staff-list .list-user{
+	width: 25% !important;
 }
 
 @media screen and (max-width: 680px){
