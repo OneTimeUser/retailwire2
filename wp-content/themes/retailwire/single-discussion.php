@@ -14,6 +14,16 @@ get_header(); ?>
 
 					<div class="content-single-dis">
 							<div class="content-title"><h2><?php the_title(); ?></h2>
+							<div class="info-discussion">
+							         			
+			         			<span class="info-left"><span class="comment"> <a href="<?php the_permalink();?>#disqus_thread"><?php comments_number( '0', '1', '%' ); ?></a></span><span class="share">
+			         				<?php
+				         				$json = file_get_contents('http://api-public.addthis.com/url/shares.json?url='.get_post_permalink().'');
+										$obj = json_decode($json);
+										echo $obj->shares;
+			         				?>
+			         			</span></span>
+							         		
 
 							</div>
 							<div class="single-dis-l">
@@ -69,16 +79,15 @@ get_header(); ?>
 				      </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>
+			</div>
 			<div class="sec-1-r">
 				<div class="ad-2">
 					<?php $background = of_get_option( 'ad_300x600', $background_defaults ); ?>
 					 <img src="<?php echo esc_url( $background['image'] );  ?>">
 				</div>
 				<?php dynamic_sidebar('sidebar_discussion') ?>
-
-				<span class="s3-resource">resources</span>
 		
-				<?php echo do_shortcode('[slide_resources id="owl-demo"]'); ?>
+				
 			</div>
 			<div class="clear"></div>
 

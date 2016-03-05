@@ -8,11 +8,13 @@
 											  //$content_user = get_field('content', 'user_'. $author_id );
 											  $username = get_field('feat_brain');
 											  $user_id = $username['ID'];
+											  $user_position = get_field('position', 'user_'. $user_id );
+
 										 ?>
 									<div class="desc">"<?php the_field('feat_comm'); ?>"</div>
 									</div>
 									<div class="item-b-r">
-										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2></a>
+										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2><span><?php echo $user_position; ?></span></a>
 										<div class="img-user">
 											<a href="<?php echo get_author_posts_url($user_id); ?>">
 												<?php 
@@ -21,7 +23,7 @@
 												 ?>
 											</a>
 										</div>
-										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2></a>
+										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2><span><?php echo $user_position; ?></span></a>
 									</div>
 
 								</div>

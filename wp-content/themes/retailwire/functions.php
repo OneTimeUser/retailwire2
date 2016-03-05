@@ -1337,7 +1337,7 @@ function list_resource_1(){
           $args = array(
           	'post_type'=>'resources',
             'order' => 'desc',
-            'posts_per_page' => '6'
+            'posts_per_page' => '3'
      
           );
 
@@ -1471,7 +1471,83 @@ function admin(){
     return $list_post;
 }
 
+add_shortcode( 'staff', 'staff' );
 
+function staff(){
+
+    ob_start();
+    
+    ?>
+	<ul class="list-braintrust-1">
+						<?php
+							$args  = array(
+							    'role' => 'Staff'
+							);
+
+							// Create the WP_User_Query object
+							global $wp_query;
+							$wp_query = new WP_User_Query($args);
+
+							// Get the results
+							$authors = $wp_query->get_results();
+
+							if($authors): ?>
+								
+							   
+							        <?php foreach($authors as $author) : ?>
+							        	<?php $author_id = $author->ID;
+										  $author_facebook = get_field('facebook', 'user_'. $author_id );
+							              $author_twitter = get_field('twitter', 'user_'. $author_id );
+							              $author_linked_in = get_field('linked_in', 'user_'. $author_id );
+							              $author_position = get_field('position', 'user_'. $author_id );
+							              $author_avata_user = get_field('avata_user', 'user_'. $author_id );
+
+						        		?>
+							        	 <li  class="list-user">
+							             <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+												 $size="144";
+												 echo get_avatar($author_id,$size);
+												 ?></a>
+
+										<ul class="list-so-user">
+							        	 		<?php if ($author_facebook) { ?>
+							        	 			<li><a href="<?php echo $author_facebook; ?>" class="icon-face-user">fa</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-face-user inactive">fa</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_twitter) { ?>
+							        	 			<li><a href="<?php echo $author_twitter; ?>" class="icon-tt-user">tt</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
+							        	 		<?php } ?>
+							        	 		<?php if ($author_linked_in) { ?>
+							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
+							        	 		<?php } ?>
+							        	 		
+							        	 		
+							        	 </ul>
+							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
+							        	 <span class="position-user"><?php echo $author_position; ?></span>
+							        	 
+							        	 
+
+							        	</li>
+							        <?php endforeach; ?>
+							    
+							<?php else: ?>
+
+							    <div class="post">
+							        <p>Sorry, no posts matched your criteria.</p>
+							    </div>
+							<?php endif; ?>
+
+					
+					</ul>
+        
+
+    <?php $list_post = ob_get_contents(); 
+    ob_end_clean();
+    return $list_post;
+}
 
 add_shortcode( 'brain_featured', 'braintrust' );
 

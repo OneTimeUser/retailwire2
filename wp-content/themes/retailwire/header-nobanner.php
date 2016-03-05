@@ -57,7 +57,7 @@ function date(){
 
 	<div class="visuallyhidden skip-link"><a href="#primary" title="<?php esc_attr_e( 'Skip to main content', 'Retailwire' ); ?>"><?php esc_html_e( 'Skip to main content', 'Retailwire' ); ?></a></div>
 		<div class="dont-miss">
-			<p><a href="<?php echo home_url(); ?>/subscribe">dont miss retailwire newsletters,daily discussions,whitepapers and reports! sign up!</a></p>
+			<p><a href="<?php echo home_url(); ?>/subscribe">SIGN-UP FOR RETAILWIRE NEWSLETTERS! DON’T MISS OUT!</a></p>
 			<span class="close-miss"></span>
 		</div>
 	<div id="headerwrapper">	

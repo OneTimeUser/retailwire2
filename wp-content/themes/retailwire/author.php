@@ -73,7 +73,7 @@ get_header(); ?>
 							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
 							        	 		<?php } ?>
 							        	 		<?php if ($author_linked_in) { ?>
-							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><a href="<?php echo $author_linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
 							        	 		<?php } ?>
 							        	 </li>
@@ -104,7 +104,7 @@ get_header(); ?>
 												
 												$comm = array(
 													'author_email' => $author_email, // use user_id
-
+													'status' => 'approve',
 												);
 												$comments = get_comments($comm);
 

@@ -219,8 +219,9 @@ a {
 	outline: none;
 }
 
-a:visited { 
-	color: #666;
+a:link{
+	color: #333;
+	outline: none;
 }
 
 a:focus { 
@@ -230,7 +231,7 @@ a:focus {
 
 a:hover, a:active { 
 	outline: 0;
-	color: #2997ab;
+	color: #E8AA07;
 }
 
 .alignleft {
@@ -728,7 +729,7 @@ select {
 
 .site-title h1 {
 	margin-top: 20px;
-	margin-top: 2.25rem;
+	margin-top: 1.25rem;
 }
 
 .site-title img {
@@ -831,6 +832,7 @@ select {
 .social-media-icons {
 	float: right;
 	height: auto;
+	padding-left: 10px;
 }
 
 .social-media-icons ul {

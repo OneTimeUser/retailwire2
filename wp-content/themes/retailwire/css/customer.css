@@ -178,7 +178,6 @@ body #footercontainer {
 	margin-right: 40px;
 }
 .menu-footer li a{
-	color: #9e9b8c;
 	text-transform: uppercase;
 	font-size: 14px;
 	text-decoration: none;
@@ -312,7 +311,18 @@ body #bannercontainer {
     font-family: Calibri, Helvetica, Arial, sans-serif;
     font-size: 14px;
     text-align: Center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
+}
+
+.item-braintrust .link-name-author span{
+	 color: #898989;
+    font-family: Calibri, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    text-align: Center;
+    max-height: 15px;
+    overflow: hidden;
+    text-transform: none;
+    background: none;
 }
 .item-braintrust .img-brain{
 	text-align: center;
@@ -347,6 +357,13 @@ text-decoration: none;
 color: #fff;
 display: block;
 }
+
+.info-dis h2 a:hover{
+
+color: #E8AA07;
+
+}
+
 .info-dis{
     position: absolute;
     bottom: 0px;
@@ -366,6 +383,39 @@ display: inline-block;
 float: right;
 font-size: 12px;
 }
+
+.info-left{
+    width: 100%;
+    float: right;
+    text-align: right;
+        padding-right: 10px
+}
+
+.info-left .comment{
+	font-size: 12px;
+    color: #666;
+    display: inline;
+    background: url(../images/icon-comment-2.png)no-repeat center;
+    padding-left: 30px;
+}
+
+.info-left .share{
+	color: #666;
+	display: inline-block;
+	font-size: 12px;
+	background: url(../images/icon-share-2.png) center no-repeat;
+	padding-left: 30px;
+}
+
+.info-left .comment a{
+
+}
+
+.info-left .comment a, .info-left .share a{
+	color: #666;
+}
+
+
 .item-dis-2 .comment,
 .info-right .comment{
 font-size: 12px;
@@ -470,7 +520,6 @@ padding-left: 30px;
 	line-height: 16px;
 }
 .item-dis-2 h2 a{
-	color: #000;
 	font-size: 16px;
 	text-decoration: none;
 	font-family: Jubilat;
@@ -522,7 +571,6 @@ padding-left: 30px;
 	text-decoration: none;
 	font-size: 16px;
 	font-family: jubilat;
-	color: #000;
 	font-weight: bold;
 }
 
@@ -713,11 +761,15 @@ font-family: jubilat;
 font-size: 16px;
 font-weight: bold;
 text-decoration: none;
-color: #000;
+}
+
+.info-resource h2 a:hover, .profile-comments h2 a:hover{
 }
 
 .profile-comments li{
 	border-bottom: 1px solid #ccc;
+	border-right: 3px solid #ccc;
+	padding-right: 5px;
 }
 
 .profile-comments .content-re{
@@ -1151,7 +1203,6 @@ margin-bottom: 20px;}
 	text-decoration: none;
     font-size: 16px;
     font-family: Jubilat;
-    color: #000;
     font-weight: bold;
 }
 .date-press ul {
@@ -1223,6 +1274,12 @@ margin-bottom: 20px;}
 	text-transform: uppercase;
 	cursor: pointer;
 }
+
+.content-twitter ul li span:hover{
+	color: #E8AA07;
+
+}
+
 body .sec-3-m {
     background-color: transparent;
 }
@@ -1270,7 +1327,6 @@ body .sec-3-m {
 .title-user a{
 	text-decoration: none;
     padding-top: 10px;
-    color: #000 !important;
     display: block;
     text-align: left;
     font-family: Calibri;
@@ -1400,7 +1456,7 @@ body .sec-3-m {
 	margin-right: 0;
 }
 .list-resource-3 .item-resources-3{
-	width: 30%;
+	width: 100%;
 	list-style: none;
 	float: left;
 	margin: 0px 3% 20px 0px;
@@ -1880,7 +1936,6 @@ body .sec-3-m {
 	    margin-right: 10px;
 	}
 	.item-braintrust h2{
-	    margin-bottom: 10px;
 	}
 	.img-user{
 		padding-bottom: 10px;
