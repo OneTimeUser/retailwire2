@@ -23,10 +23,14 @@ function wp_new_user_notification($user_id, $deprecated=null, $notify= ''){
 	}
 	global $wpdb, $wp_hasher;
     $user = get_userdata($user_id);
+    $userEmail = $user->user_email;
+    $logoUrl = plugin_dir_url( __FILE__ ).'/rw-new.jpg';
 
     // The blogname option is escaped with esc_html on the way into the database in sanitize_option
     // we want to reverse this for the plain text arena of emails.
     $blogname = wp_specialchars_decode(get_option('blogname'), ENT_QUOTES);
+
+
 
     $message  = sprintf(__('New user registration on your site %s:'), $blogname);
     $message .= "\r\n\r\n" . sprintf(__('Username: %s'), $user->user_login);
@@ -52,13 +56,25 @@ function wp_new_user_notification($user_id, $deprecated=null, $notify= ''){
 	$hashed = time() . ':' . $wp_hasher->HashPassword( $key );
 	$wpdb->update( $wpdb->users, array( 'user_activation_key' => $hashed ), array( 'user_login' => $user->user_login ) );
 
-    $message = sprintf(__('Username: %s'), $user->user_login) . "\r\n";
+	$headers .= "MIME-Version: 1.0\r\n";
+	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
-	$message .= __('Thanks for registering with RetailWire! To set your password, visit the following address:') . "\r\n";
-	$message .= '' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n";
-    $message .= sprintf( __('Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at %s.'), get_option('admin_email') ) . "\n\n";
-	$message .= __('Thank You!') . "\n";
+	$message = '<html><body>';
+	$message .= '<img src="' . $logoUrl . '" />';
+	$message .= '<h1>Hello, Welcome to RetailWire</h1>';
+	$message .= '<h3>Thanks for registering.  To set your password, click the following:</h3>';
+	$message .= '<p>' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "</p>";
+	$message .= '<h3>Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at</h3>';
+	$message .= get_option('admin_email');
+	$message .= '</body></html>';
 
-	wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message);
+ //    $message = sprintf(__('Username: %s'), $user->user_login) . "\r\n";
+
+	// $message .= __('Thanks for registering with RetailWire! To set your password, visit the following address:') . "\r\n";
+	// $message .= '' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "\r\n";
+ //    $message .= sprintf( __('Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at %s.'), get_option('admin_email') ) . "\n\n";
+	// $message .= __('Thank You!') . "\n";
+
+	wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message, $headers);
     }
 endif; ?>

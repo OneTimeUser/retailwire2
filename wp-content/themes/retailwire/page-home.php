@@ -196,7 +196,7 @@ get_header(); ?>
 				<div class="home-press">
 					<span class="module-label title-press">PRESS RELEASES</span>
 					<div class="list-press" >
-						<?php echo do_shortcode('[ajax_load_more repeater="template_press" post_type="press_releases" posts_per_page="9" scroll="false"]'); ?>
+						<?php echo do_shortcode('[ajax_load_more repeater="template_press" post_type="press_releases" posts_per_page="10" scroll="false"]'); ?>
 
 
 				    </div>

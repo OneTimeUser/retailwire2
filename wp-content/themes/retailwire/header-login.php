@@ -36,6 +36,7 @@
 </head>
 
 <body <?php body_class(); ?>>
+
 <script type="text/javascript">
 function date(){
 	    var currentTime = new Date()
@@ -53,6 +54,7 @@ function date(){
 		}
 
 </script>
+
 <div id="wrapper" class="hfeed site">
 
 	

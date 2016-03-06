@@ -1459,8 +1459,18 @@ body .sec-3-m {
 	display: none;
 }
 .list-resource-3{
-	margin: 0 1rem 1.5rem 0;
+	margin: 0 1rem 1.5rem -2rem;
 }
+
+.list-resource-3 h2{
+	 font-size: 18px;
+	 padding-top: 10px;
+}
+
+.list-resource-3 h2 a{
+	text-decoration: none;
+}
+
 .list-resource-3 .item-resources-3:nth-child(3n){
 	margin-right: 0;
 }
@@ -1469,7 +1479,6 @@ body .sec-3-m {
 	list-style: none;
 	float: left;
 	margin: 0px 3% 20px 0px;
-	min-height: 220px;
 }
 .list-resource-3 .item-resources-3:nth-child(3n){
 	margin-right: 0;

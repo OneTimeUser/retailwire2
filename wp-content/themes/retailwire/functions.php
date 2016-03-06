@@ -1346,36 +1346,21 @@ function list_resource_1(){
             if ( $wp_query->have_posts() ) {
 
               while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
+              
               <li class="item-resources-3">
-					<a href="<?php the_permalink(); ?>">
-                          <?php if ( has_post_thumbnail() ) { ?>
-                                    <img src="<?php
-                                    $thumb_id = get_post_thumbnail_id();
-                                    $thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-                                    echo $thumb_url[0];?>" title="<?php the_title();?>" >
-                           <?php }else { ?>
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/post-2.jpg" >
-                           <?php } ?>
-                    </a>
-					<div class="bottom-footer-res">
-						<strong><?php
-								$terms = get_the_terms( $post->ID, 'categoris_resources' );
-								if ( $terms && ! is_wp_error( $terms ) ) : 
+              	<a href="<?php the_permalink(); ?>">
+					<?php
+					if ( has_post_thumbnail() ) { ?>
+					<img src="<?php $thumb_id = get_post_thumbnail_id();
+						$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+						echo $thumb_url[0];?>" title="<?php the_title();?>"/>
+					<?php } else { ?>
+					<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>/images/post-2.jpg" />
+					<?php } ?>
+					</a>
+					<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+					
 
-									$draught_links = array();
-
-									foreach ( $terms as $term ) {
-										$draught_links[] = $term->name;
-									}
-														
-									$on_draught = join( ", ", $draught_links );
-								?>
-								<?php echo $on_draught; ?>
-
-								<?php endif; ?>
-						</strong>
-						<span><?php echo get_excerpt('100'); ?></span>
-					</div>
               </li>
 
             <?php endwhile; // end of the loop.

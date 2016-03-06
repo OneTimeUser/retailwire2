@@ -90,15 +90,15 @@ function date(){
 						if (is_user_logged_in()){
 							$current_user = wp_get_current_user();
 						?>
-							<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>//<a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+							<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>// <a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
 						<?php } else{ ?>
-<!-- 							<a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a>
- -->						<?php }?>
+							<a href="<?php echo home_url(); ?>/member-login" class="regis">Sign In For Discussions</a>// <a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
+						<?php }?>
 						</li>
-						<li>
-							<a href="<?php echo home_url(); ?>/contact"  class="join">join the braintrust</a>
-						</li>
-							<li class="form-seach-top">
+<!-- 						<li>
+							<a href="<?php echo home_url(); ?>/subscribe"  class="join">Join the Braintrust</a>
+						</li> -->
+						<li class="form-seach-top">
 							<a href="#" class="link-search">search</a>
 							<div class="content-f-top">
 								<?php get_search_form(); ?>	
@@ -108,8 +108,17 @@ function date(){
 					</ul>
 				</div>
 				<ul class="m-top-right show_ipad">
-<!-- 					<li><a href="<?php echo home_url(); ?>/member-login" class="m-regis"></a></li>
- -->					<li><a href="<?php echo home_url(); ?>/contact" class="m-join"></a></li>
+					<li>
+						<?php 
+							if (is_user_logged_in()){
+								$current_user = wp_get_current_user();
+							?>
+								<a href="<?php echo home_url(); ?>/member-account"  class="m-regis"></a>
+							<?php } else{ ?>
+								<a href="<?php echo home_url(); ?>/member-login" class="m-regis"></a>
+						<?php }?>
+					</li> 
+					<!-- <li><a href="<?php echo home_url(); ?>/subscribe" class="m-join"></a></li> -->
 					<li><a href="#" class="m-link-search"></a></li>
 
 				</ul>
@@ -138,11 +147,18 @@ function date(){
 				<div class="m-bottom-menu">
 					<ul class="nav-menu-mobile">
 							<li>
-								<a href="<?php echo home_url(); ?>/member-register" class="regis">Register</a>//<a href="<?php echo home_url(); ?>/member-login" class="sign-in">Sign In</a>
+								<?php 
+								if (is_user_logged_in()){
+									$current_user = wp_get_current_user();
+								?>
+									<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>// <a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+								<?php } else{ ?>
+									<a href="<?php echo home_url(); ?>/member-login" class="regis">Sign In For Discussions</a>//<a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
+								<?php }?>							
 							</li>
-							<li>
+<!-- 							<li>
 								<a href="<?php echo home_url(); ?>/contact" class="join">join the braintrust</a>
-							</li>
+							</li> -->
 					</ul>
 					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu-mobile' ) ); ?>
 					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu', 'menu_class' => 'nav-menu-mobile' ) ); ?>
