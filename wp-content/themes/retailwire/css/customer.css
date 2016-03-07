@@ -2464,7 +2464,9 @@ body .sec-3-m {
 	}
 
 	.item-home .item-braintrust .desc {
-		padding: 0px;
+		width: 75%;
+		margin: 0 auto;
+		padding: 15px 15px 0 15px;
 	}
 	.item-home .item-discussion img {
     width: 100% !important;
@@ -2490,7 +2492,7 @@ body .sec-3-m {
 		color: #b6b6b6;
 	}
 	.item-b-l{
-		width: 75%;
+		width: 100%;
 		margin: 0 auto;
 		
 	}
@@ -2674,7 +2676,7 @@ body .sec-3-m {
     font-size: 14px;
 	}
 	.item-home .item-braintrust .desc {
-    padding: 5px 20px 0px 0px;
+   
 	}
 	.section-3 .item-resource h2,
 	.section-3 .item-resource p{
