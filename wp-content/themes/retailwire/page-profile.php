@@ -136,7 +136,7 @@ get_header(); ?>
 
                     <?php 
                         //action hook for plugin and extra fields
-                        //do_action('edit_user_profile',$current_user); //adds avatar modification
+                        do_action('edit_user_profile',$current_user); //adds avatar modification
                     ?>
                     <?php if ( $_GET['updated'] == 'true' ) : ?> <p>Your profile has been updated</p> 
                     <?php endif; ?>
