@@ -235,7 +235,7 @@ body #bannercontainer {
 .widget_tag_cloud h2,
 #text-6 .widgettitle{
 	display: inline-block;
-    background: #509cd0;
+    background: #76c7ff;
     font-size: 16px;
     color: #fff;
     padding: 5px 10px;
@@ -1763,7 +1763,7 @@ body .sec-3-m {
 	font-family: Calibri;
     font-size: 15px;
     font-weight: bold;
-    color: #509cd0;
+    color: #76c7ff;
     line-height: 21px;
     text-transform: uppercase;
 }
@@ -1771,7 +1771,7 @@ body .sec-3-m {
 	font-family: Calibri;
 	font-size: 15px;
 	font-weight: bold;
-	color: #509cd0;
+	color: #76c7ff;
 	line-height: 21px;
 	margin-bottom: 15px;
 }
@@ -1779,7 +1779,7 @@ body .sec-3-m {
 	display: block;
 	margin-top: 10px;
 	font-size: 14px;
-	color: #509cd0;
+	color: #76c7ff;
 }
 .input-brain{
 	overflow: hidden;
@@ -1795,7 +1795,7 @@ body .sec-3-m {
 	display: block;
 	padding-top: 10px;
 	font-weight: bold;
-	color: #509cd0;
+	color: #76c7ff;
 }
 .input-brain br{
 	display: none;
@@ -1823,7 +1823,7 @@ body .sec-3-m {
 }
 .radio-1 .wpcf7-list-item span{
 	font-size: 14px;
-	color: #509cd0;
+	color: #76c7ff;
 	font-weight: bold;
 }
 .input-brain-submit{
@@ -1891,7 +1891,7 @@ body .sec-3-m {
 	color: #000;
 }
 .read-more a{
-    color: #509cd0;
+    color: #76c7ff;
     text-decoration: none;
     font-weight: bold;
 }

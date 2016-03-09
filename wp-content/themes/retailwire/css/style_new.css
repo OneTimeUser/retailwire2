@@ -174,7 +174,7 @@ need to add module class to all labels in php
 }
 
 .title-press{
-	background-color:rgb(80,156,208);
+	background-color:#76c7ff;
 	display: inline-block;
 
 }
@@ -449,6 +449,32 @@ article#post-109{
 
 span.post-categories{
 	display:none;
+}
+
+.more-linkage {
+	font-size: 16px;
+    font-weight: 600;
+    font-family: calibri, sans-serif;
+    width: auto;
+    height: 42px;
+    line-height: 44px;
+    background: #eeac00;
+    color: #fff;
+    border: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    margin: 0 29px 11px;
+    padding: 0 20px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: none;
+}
+
+.more-linkage a{
+	color: white !important;
 }
 
 @media screen and (max-width: 680px){

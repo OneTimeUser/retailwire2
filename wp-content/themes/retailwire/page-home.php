@@ -185,7 +185,7 @@ get_header(); ?>
 		            wp_reset_query();
 		            
 		            }?>
-		            <span class="more-linkage"><a href="<?php echo home_url(); ?>/retail-new">MORE...</a></span>
+		            <span class="more-linkage" id="load-more"><a href="<?php echo home_url(); ?>/retail-new">More</a></span>
 		    </div>
 		</div>
 		<div class="section-5">
