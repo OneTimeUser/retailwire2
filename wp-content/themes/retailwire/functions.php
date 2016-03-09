@@ -865,11 +865,10 @@ if ( ! function_exists( 'Retailwire_get_social_media' ) ) {
 	function Retailwire_get_social_media() {
 		$output = '';
 		$icons = array(
-			
-			array( 'url' => of_get_option( 'social_facebook', '' ), 'icon' => 'fa-facebook', 'title' => esc_html__( 'Friend me on Facebook', 'Retailwire' ) ),
 			array( 'url' => of_get_option( 'social_twitter', '' ), 'icon' => 'fa-twitter', 'title' => esc_html__( 'Follow me on Twitter', 'Retailwire' ) ),
+			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'Retailwire' ) ),	
+			array( 'url' => of_get_option( 'social_facebook', '' ), 'icon' => 'fa-facebook', 'title' => esc_html__( 'Friend me on Facebook', 'Retailwire' ) ),
 			array( 'url' => of_get_option( 'social_googleplus', '' ), 'icon' => 'fa-google-plus', 'title' => esc_html__( 'Connect with me on Google+', 'Retailwire' ) ),
-			array( 'url' => of_get_option( 'social_linkedin', '' ), 'icon' => 'fa-linkedin', 'title' => esc_html__( 'Connect with me on LinkedIn', 'Retailwire' ) ),
 			array( 'url' => of_get_option( 'social_slideshare', '' ), 'icon' => 'fa-slideshare', 'title' => esc_html__( 'Follow me on SlideShare', 'Retailwire' ) ),
 			array( 'url' => of_get_option( 'social_dribbble', '' ), 'icon' => 'fa-dribbble', 'title' => esc_html__( 'Follow me on Dribbble', 'Retailwire' ) ),
 			array( 'url' => of_get_option( 'social_tumblr', '' ), 'icon' => 'fa-tumblr', 'title' => esc_html__( 'Follow me on Tumblr', 'Retailwire' ) ),
@@ -1369,6 +1368,7 @@ function list_resource_1(){
             }?>
 
     </ul>
+    <span class="more-linkage"><a href="<?php echo home_url(); ?>/resources">MORE...</a></span>
         
 
     <?php $list_post = ob_get_contents(); 
@@ -1504,7 +1504,7 @@ function staff(){
 							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
 							        	 		<?php } ?>
 							        	 		<?php if ($author_linked_in) { ?>
-							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><a href="<?php echo $author_linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
 							        	 		<?php } ?>
 							        	 		
@@ -1581,7 +1581,7 @@ function braintrust(){
 							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
 							        	 		<?php } ?>
 							        	 		<?php if ($author_linked_in) { ?>
-							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><a href="<?php echo $author_linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
 							        	 		<?php } ?>
 							        	 </ul>
@@ -1658,7 +1658,7 @@ function braintrust_all(){
 							        	 			<li><span class="icon-tt-user inactive">tt</span></li> 
 							        	 		<?php } ?>
 							        	 		<?php if ($author_linked_in) { ?>
-							        	 			<li><a href="<?php echo $linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
+							        	 			<li><a href="<?php echo $author_linked_in; ?>" class="icon-in-user">gg</a></li> <?php } else { ?>
 							        	 			<li><span class="icon-in-user inactive">gg</span></li> 
 							        	 		<?php } ?>
 							        	 </ul>

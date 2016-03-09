@@ -1,8 +1,8 @@
-
+									<div class="item-braintrust">	
+									<span class="module-label title-brain">Braintrust</span>
 									<?php 
 				              		if(get_field('feat_comm')){ ?>
-				              		<div class="item-braintrust">	
-									<span class="module-label title-brain">Braintrust</span>
+				              		
 									
 										<div class="item-b-l">
 				              			
@@ -15,7 +15,7 @@
 										<div class="desc">"<?php the_field('feat_comm'); ?>"</div>
 										</div>
 										<div class="item-b-r">
-											<a class="link-name-author" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2><span><?php echo $user_position; ?></span></a>
+											<a class="link-name-author" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?><span><?php echo $user_position; ?></span></h2></a>
 											<div class="img-user">
 												<a href="<?php echo get_author_posts_url($user_id); ?>">
 													<?php 
@@ -24,12 +24,12 @@
 													 ?>
 												</a>
 											</div>
-											<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?></h2><span><?php echo $user_position; ?></span></a>
+											<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id); ?>"><h2><?php echo $username["display_name"]; ?><span><?php echo $user_position; ?></span></h2></a>
 										</div>
 										<div class="line-5"></div>
 									
-									<?php 
-				              		if(get_field('feat_comm_2')){ ?>
+									<?php } 
+				              		if(get_field('feat_comm_2') && get_field('feat_comm')){ ?>
 
 									
 										<div class="item-b-l">
@@ -41,7 +41,7 @@
 										<div class="desc">"<?php the_field('feat_comm_2'); ?>"</div>
 									</div>
 									<div class="item-b-r">
-										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id2); ?>"><h2><?php echo $username2["display_name"]; ?></h2><span><?php echo $user_position2; ?></span></a>
+										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id2); ?>"><h2><?php echo $username2["display_name"]; ?><span><?php echo $user_position2; ?></span></h2></a>
 										<div class="img-user">
 											<a href="<?php echo get_author_posts_url($user_id2); ?>">
 												<?php 
@@ -50,12 +50,12 @@
 												 ?>
 											</a>
 										</div>
-										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id2); ?>"><h2><?php echo $username2["display_name"]; ?></h2><span><?php echo $user_position2; ?></span></a>
+										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id2); ?>"><h2><?php echo $username2["display_name"]; ?><span><?php echo $user_position2; ?></span></h2></a>
 									</div>
 										<div class="line-5"></div>
 									
 									<?php } 
-									if(get_field('feat_comm_3')){ ?>
+									if(get_field('feat_comm_3') && get_field('feat_comm_2') && get_field('feat_comm')){ ?>
 								
 										<div class="item-b-l">
 					              			
@@ -66,7 +66,7 @@
 										<div class="desc">"<?php the_field('feat_comm_3'); ?>"</div>
 									</div>
 									<div class="item-b-r">
-										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id3); ?>"><h2><?php echo $username3["display_name"]; ?></h2><span><?php echo $user_position3; ?></span></a>
+										<a class="link-name-author" href="<?php echo get_author_posts_url($user_id3); ?>"><h2><?php echo $username3["display_name"]; ?><span><?php echo $user_position3; ?></span></h2></a>
 										<div class="img-user">
 											<a href="<?php echo get_author_posts_url($user_id3); ?>">
 												<?php 
@@ -75,15 +75,14 @@
 												 ?>
 											</a>
 										</div>
-										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id3); ?>"><h2><?php echo $username3["display_name"]; ?></h2><span><?php echo $user_position3; ?></span></a>
+										<a class="link-name-author show-600" href="<?php echo get_author_posts_url($user_id3); ?>"><h2><?php echo $username3["display_name"]; ?><span><?php echo $user_position3; ?></span></h2></a>
 									</div>
 										
-									
-				              		
-									</div>
+									<?php } 
+
+								if(!get_field('feat_comm')){ ?>
 								
-								<?php } ?>
-								<?php	} else {  ?>
+							
 
 								<div class="item-braintrust">
 				              		<div class="item-b-l">
@@ -112,5 +111,6 @@
 									</div>
 									
 								</div>
-
 								<?php } ?>
+
+								</div>

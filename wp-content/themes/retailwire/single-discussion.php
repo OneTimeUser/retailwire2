@@ -53,7 +53,10 @@ get_header(); ?>
 					            	<div class="info-dis single">
 								         	<span class="date-dis"><?php the_time('M d, Y'); ?></span>
 								    </div>
-				              		<div class="article-author">by <?php the_author(); ?> </div>
+
+				              		<div class="article-author">by <a href="<?php 
+				              		$user_id = get_the_author_id();
+				              		echo get_author_posts_url($user_id); ?>"><?php the_author(); ?></a></div>
 				              		<?php the_content(); ?>
 				              		<div class="article-tags"><?php the_tags('',', ',''); ?></div>
 				              		
@@ -71,10 +74,10 @@ get_header(); ?>
 									?>
 				         		</div>
 				            </div>
-						<div class="single-dis-r normalview">
-							<?php get_template_part( 'content-braintrust-discussion', get_post_format() ); ?>
-							
-						</div>
+							<div class="single-dis-r normalview">
+								<?php get_template_part( 'content-braintrust-discussion', get_post_format() ); ?>
+								
+							</div>
 				      </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>

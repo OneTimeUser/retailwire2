@@ -120,7 +120,7 @@ function date(){
 						if (is_user_logged_in()){
 							$current_user = wp_get_current_user();
 						?>
-							<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>// <a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+							<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>// <a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>// <a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
 						<?php } else{ ?>
 							<a href="<?php echo home_url(); ?>/member-login" class="regis">Sign In For Discussions</a>// <a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
 						<?php }?>
@@ -181,9 +181,9 @@ function date(){
 								if (is_user_logged_in()){
 									$current_user = wp_get_current_user();
 								?>
-									<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a>// <a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a>
+									<a href="<?php echo home_url(); ?>/member-account"  class="regis"><?php echo $current_user->display_name;?></a><br><a href="<?php echo wp_logout_url( home_url() ); ?>"> Logout</a><br><a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
 								<?php } else{ ?>
-									<a href="<?php echo home_url(); ?>/member-login" class="regis">Sign In For Discussions</a>//<a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
+									<a href="<?php echo home_url(); ?>/member-login" class="regis">Sign In For Discussions</a><br><a href="<?php echo home_url(); ?>/subscribe">Newsletter Sign Up</a>
 								<?php }?>							
 							</li>
 <!-- 							<li>

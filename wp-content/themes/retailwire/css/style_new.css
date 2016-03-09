@@ -437,6 +437,16 @@ article#post-109{
 	width: 25% !important;
 }
 
+.more-linkage{
+	    float: right;
+    padding-right: 35px;
+    font-family: jubilat, serif;
+}
+
+.more-linkage a{
+	text-decoration: none;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	

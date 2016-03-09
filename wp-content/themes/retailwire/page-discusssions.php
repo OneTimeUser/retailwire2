@@ -50,7 +50,7 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="sec-1-r">
-				<?php dynamic_sidebar('tags') ?>
+				<?php dynamic_sidebar('sidebar-page') ?>
 			</div>
 			<div class="clear"></div>
 

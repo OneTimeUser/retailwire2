@@ -387,9 +387,9 @@ font-size: 12px;
 
 .info-left{
     width: 100%;
-    float: right;
+/*    float: right;
     text-align: right;
-        padding-right: 10px
+        padding-right: 10px*/
 }
 
 .info-left .comment{
@@ -2525,6 +2525,7 @@ body .sec-3-m {
 
 	.single-dis-l .item-discussion{
 		height: auto !important;
+		float: left;
 	}
 
 	.single-dis-r{
@@ -2538,6 +2539,7 @@ body .sec-3-m {
 
 	.single-dis-r .item-braintrust .desc{
 		min-height: auto;
+		text-align: center;
 	}
 
 

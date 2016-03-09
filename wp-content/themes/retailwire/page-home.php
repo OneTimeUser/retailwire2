@@ -188,7 +188,7 @@ get_header(); ?>
 		            wp_reset_query();
 		            
 		            }?>
-
+		            <span class="more-linkage"><a href="<?php echo home_url(); ?>/retail-new">MORE...</a></span>
 		    </div>
 		</div>
 		<div class="section-5">
@@ -230,7 +230,7 @@ get_header(); ?>
 						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_tech" list="tech/rwfeed_tech"]'); ?>
 						        </div>
 						        <div id="tab5" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed count="6" user="retailwire]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list: count="6" user="rwfeed_retail" list="retailwire/rwfeed_retail"]'); ?>
 						        </div>
 								
 						    </div>
