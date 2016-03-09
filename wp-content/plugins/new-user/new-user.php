@@ -61,10 +61,14 @@ function wp_new_user_notification($user_id, $deprecated=null, $notify= ''){
 
 	$message = '<html><body>';
 	$message .= '<img src="' . $logoUrl . '" />';
-	$message .= '<h1>Hello, Welcome to RetailWire</h1>';
-	$message .= '<h3>Thanks for registering.  To set your password, click the following:</h3>';
+	$message .= '<h1>Hello, Welcome to RetailWire!</h1>';
+	$message .= '<h3>Thanks for registering.  Just three quick steps, and you&quot;re all done:</h3>';
+	$message .= '<h3>1. Set your password by clicking this link:</h3>';
 	$message .= '<p>' . network_site_url("wp-login.php?action=rp&key=$key&login=" . rawurlencode($user->user_login), 'login') . "</p>";
-	$message .= '<h3>Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at</h3>';
+	$message .= '<h3>2. After setting your password, you’ll be taken to a page to complete your profile. Please take a moment to complete the form.</h3>';
+	$message .= '<h3>3. And be sure to subscribe to our newsletters so we can keep you informed. Click here to join our list:</h3>';
+	$message .= '<p>' . network_site_url("subscribe") . "</p>";	
+	$message .= '<h3>If you have any problems, please contact us at</h3>';
 	$message .= get_option('admin_email');
 	$message .= '</body></html>';
 
@@ -75,6 +79,6 @@ function wp_new_user_notification($user_id, $deprecated=null, $notify= ''){
  //    $message .= sprintf( __('Login, update your password and take a moment to fill in your profile.  Then continue on and read the latest in retail news and discussions. If you have any problems, please contact us at %s.'), get_option('admin_email') ) . "\n\n";
 	// $message .= __('Thank You!') . "\n";
 
-	wp_mail($user->user_email, sprintf(__('[%s] Your username and password info'), $blogname), $message, $headers);
+	wp_mail($user->user_email, sprintf(__('[%s] Welcome! Please complete your RetailWire profile.'), $blogname), $message, $headers);
     }
 endif; ?>
