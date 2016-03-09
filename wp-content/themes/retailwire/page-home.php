@@ -138,10 +138,7 @@ get_header(); ?>
 
 				<?php }
 			/*}*/ ?>
-			<a href="">
-				<?php $background2 = of_get_option( 'ad_970x90', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background2['image'] );  ?>">
-			</a>
+
 		</div>
 		<div class="section-3">
 			<span class="s3-resource">resources</span>
@@ -230,7 +227,7 @@ get_header(); ?>
 						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_tech" list="tech/rwfeed_tech"]'); ?>
 						        </div>
 						        <div id="tab5" class="tabContents">
-						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list: count="6" user="rwfeed_retail" list="retailwire/rwfeed_retail"]'); ?>
+						        	<?php echo do_shortcode('[db_twitter_feed feed_type="list" count="6" user="rwfeed_retail" list="retailwire/rwfeed_retail"]'); ?>
 						        </div>
 								
 						    </div>

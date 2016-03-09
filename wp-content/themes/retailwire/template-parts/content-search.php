@@ -18,6 +18,7 @@
 			<?php retailwire_posted_on(); ?>
 		</div><!-- .entry-meta -->
 		<?php endif; ?>
+
 	</header><!-- .entry-header -->
 
 	<div class="entry-summary">

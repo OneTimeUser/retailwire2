@@ -43,6 +43,5 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php retailwire_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->

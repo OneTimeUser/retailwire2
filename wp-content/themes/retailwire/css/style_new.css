@@ -447,6 +447,10 @@ article#post-109{
 	text-decoration: none;
 }
 
+span.post-categories{
+	display:none;
+}
+
 @media screen and (max-width: 680px){
 	.content-title h2 {
 	

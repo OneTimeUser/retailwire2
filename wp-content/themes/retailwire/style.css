@@ -889,11 +889,11 @@ select {
 }
 
 .entry-header h1 a:visited {
-	color: #333;
+	
 }
 
 .entry-header h1 a:hover {
-	color: #2997ab;
+	
 }
 
 article.sticky .featured-post {
@@ -946,11 +946,11 @@ article.sticky {
 }
 
 .header-meta a:visited {
-	color: #333;
+	
 }
 
 .header-meta a:hover {
-	color: #2997ab;
+	
 }
 
 .entry-content {

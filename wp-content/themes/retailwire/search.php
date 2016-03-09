@@ -12,8 +12,8 @@ get_header(); ?>
 
 
 		<div class="col grid_8_of_12">
-
-			<?php if ( have_posts() ) : ?>
+		<?php 
+			 if ( have_posts() ) : ?>
 
 				<header class="page-header">
 					<h1 class="page-title"><?php printf( esc_html__( 'Search Results for: %s', 'Retailwire' ), '<span>&ldquo;' . get_search_query() . '&rdquo;</span>' ); ?></h1>

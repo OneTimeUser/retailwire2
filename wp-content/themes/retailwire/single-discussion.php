@@ -83,10 +83,7 @@ get_header(); ?>
 			</div>
 			
 			<div class="sec-1-r">
-				<div class="ad-2">
-					<?php $background = of_get_option( 'ad_300x600', $background_defaults ); ?>
-					 <img src="<?php echo esc_url( $background['image'] );  ?>">
-				</div>
+				
 				<?php dynamic_sidebar('sidebar_discussion') ?>
 		
 				

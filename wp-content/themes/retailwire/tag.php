@@ -27,10 +27,19 @@ get_header(); ?>
 						$term_id = get_query_var('tag_id');
 						$query = new WP_Query( array( "post_type" => "discussion", "tag_id" => $term_id ) );
 						$count = $query->post_count;
-						if ($count != 0){?>
-					<?php while ($query->have_posts() ) : $query->the_post(); ?>
+
+						?>
+						<script>
+						    console.log(<? echo json_encode($query); ?>);
+						</script>
+						<?php
+
+						if ($query->have_posts() ){?>
+					<?php while ($query->have_posts() ) { 
+						$query->the_post(); ?>
+					
 						<?php get_template_part( 'template-parts/content', 'extract' ); ?>  <!-- 'extract'   -->
-					<?php endwhile; ?>
+					<?php } ?>
 						<?php Retailwire_content_nav( 'nav-below' ); ?>
 					<?php }else{ ?>
 						<?php get_template_part( 'no-results' ); // Include the template that displays a message that posts cannot be found ?>
