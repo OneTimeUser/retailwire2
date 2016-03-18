@@ -19,7 +19,7 @@ get_header( 'nobanner' ); ?>
 						$firstCategory = $category[0]->cat_name;
 						echo $firstCategory ;
 						 ?></span> -->
-						<span class="date_single"><?php the_time( 'd/m/Y' ); ?></span>
+						<span class="date_single">Posted: <?php the_time( 'F j, Y' ); ?></span>
 						<div class="content_single"><?php the_content(); ?> </div>
 						
 

@@ -361,6 +361,32 @@ article#post-109{
 	width: 100%
 }
 
+.form-boundary select{
+	width: 100%;
+	padding: 0.5rem;
+    font-family: inherit;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.form-boundary label.checkbox{
+	position: relative;
+	padding-left: 23px;
+	display: block;
+}
+.form-boundary label.checkbox input[type=checkbox]{
+	position: absolute;
+	left: 0;
+	top: 6px;
+	width: auto;
+}
+
+.form-boundary input.error,
+.form-boundary select.error {
+	background: #fff2f2;
+	border-color: #f00;
+}
+
 .signup-submit{
 	padding-top: 15px;
 }

@@ -429,8 +429,8 @@ function Retailwire_scripts_styles() {
 
 	// Load jQuery Validation as well as the initialiser to provide client side comment form validation
 	// You can change the validation error messages below
+	wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.13.0.js', array( 'jquery' ), '1.13.0', true );
 	if ( is_singular() && comments_open() ) {
-		wp_register_script( 'validate', trailingslashit( get_template_directory_uri() ) . 'js/jquery.validate.min.1.13.0.js', array( 'jquery' ), '1.13.0', true );
 		wp_register_script( 'commentvalidate', trailingslashit( get_template_directory_uri() ) . 'js/comment-form-validation.js', array( 'jquery', 'validate' ), '1.13.0', true );
 
 		wp_enqueue_script( 'commentvalidate' );
