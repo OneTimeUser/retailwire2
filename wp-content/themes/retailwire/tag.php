@@ -25,7 +25,7 @@ get_header(); ?>
 					<?php // Start the Loop ?>
 					<?php
 						$term_id = get_query_var('tag_id');
-						$query = new WP_Query( array( "post_type" => "discussion", "tag_id" => $term_id ) );
+						$query = new WP_Query( array( "post_type" => array("discussion", "resources"), "tag_id" => $term_id ) );
 						$count = $query->post_count;
 
 						?>

@@ -20,7 +20,10 @@ get_header( 'nobanner' ); ?>
 						echo $firstCategory ;
 						 ?></span> -->
 						<span class="date_single">Posted: <?php the_time( 'F j, Y' ); ?></span>
-						<div class="content_single"><?php the_content(); ?> </div>
+						<div class="content_single">
+							<?php the_content(); ?>
+							<div class="article-tags"><?php the_tags('',', ',''); ?></div>
+						</div>
 						
 
 				    </div>
