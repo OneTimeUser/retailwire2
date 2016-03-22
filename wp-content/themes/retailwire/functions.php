@@ -1467,7 +1467,7 @@ add_filter( 'pre_get_posts', 'tgm_io_cpt_search' );
  */
 function tgm_io_cpt_search( $query ) {
 	
-    if ( $query->is_search ) {
+    if ( $query->is_search && !is_admin() ) {
 	$query->set( 'post_type', array( 'post', 'discussion', 'press_releases', 'resources' ) );
     }
     
