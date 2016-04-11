@@ -29,7 +29,7 @@ get_header(); ?>
 						 ?></strong>
 						 </span>
 						<div class="content_single"><?php the_content(); ?> </div>
-						<span class="call_single"><a href="<?php the_field('source_url'); ?>">READ MORE</a></span>
+						<span class="call_single"><a href="<?php the_field('source_url'); ?>" target="_blank">READ MORE</a></span>
 				    </div>
 				<?php endwhile; // end of the loop. ?>
 			</div>

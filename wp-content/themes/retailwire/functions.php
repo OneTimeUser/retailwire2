@@ -1208,25 +1208,15 @@ function ad2(){
 }
 
 function get_excerpt($number){
-
-$excerpt = get_the_content();
-
-$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
-
-$excerpt = strip_shortcodes($excerpt);
-
-$excerpt = strip_tags($excerpt);
-
-$excerpt = substr($excerpt, 0, $number);
-
-$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
-
-$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
-
-$excerpt = $excerpt.'.';
-
-return $excerpt;
-
+	$excerpt = get_the_content();
+	$excerpt = preg_replace(" (\[.*?\])",'',$excerpt);
+	$excerpt = strip_shortcodes($excerpt);
+	$excerpt = strip_tags($excerpt);
+	$excerpt = substr($excerpt, 0, $number);
+	$excerpt = substr($excerpt, 0, strripos($excerpt, " "));
+	$excerpt = trim(preg_replace( '/\s+/', ' ', $excerpt));
+	$excerpt = $excerpt.'...';
+	return $excerpt;
 }
 
 add_shortcode( 'slide_resources', 'slide_resources' );
@@ -1662,10 +1652,10 @@ function braintrust_all(){
 
 						        		?>
 							        	 <li  class="list-user">
-							        	 <!-- <a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
+											<a class="avata" href="<?php echo get_author_posts_url($author->ID); ?>" class="author"><?php 
 												 $size="144";
 												 echo get_avatar($author_id,$size);
-												 ?></a> -->
+												 ?></a>
 							        	 <h2 class="title-user"><a href="<?php echo get_author_posts_url($author->ID); ?>"><?php echo $author->display_name; ?></a></h2>
 							        	 <span class="position-user"><?php echo $author_position; ?></span>
 							        	 <ul class="list-so-user">

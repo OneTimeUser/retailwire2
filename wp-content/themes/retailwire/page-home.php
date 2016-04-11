@@ -163,7 +163,7 @@ get_header(); ?>
 		              while ( $wp_query->have_posts() ) : $wp_query->the_post();?>
 		              
 		              <div class="sub-list-post <?php  if ( has_post_thumbnail() == '' ) { echo 'not-thumbnail'; } ?>">
-		              	<a href="<?php the_permalink(); ?>">
+		              	<a href="<?php echo get_field('source_url'); ?>" target="_blank">
 							<?php
 							if ( has_post_thumbnail() ) { ?>
 							<div class="thumnail-icon"><img src="<?php $thumb_id = get_post_thumbnail_id();
@@ -172,7 +172,7 @@ get_header(); ?>
 							<?php } ?>
 							</a>
 							<div class="group-info">
-								<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+								<h3><a href="<?php echo get_field('source_url'); ?>" target="_blank"><?php the_title(); ?></a></h3>
 								<div class="date">
 									<span><?php the_field('news_source'); ?></span>
 									

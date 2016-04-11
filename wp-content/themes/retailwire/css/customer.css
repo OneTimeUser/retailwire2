@@ -772,6 +772,18 @@ text-decoration: none;
 .info-resource h2 a:hover, .profile-comments h2 a:hover{
 }
 
+.retail-news-listing h2 a {
+    margin-bottom: .5rem;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.1666;
+	font-weight: 400;
+}
+.retail-news-listing .headline {
+	line-height: 1.3;
+	margin-bottom: 5px;
+}
+
 .profile-comments li{
 	border-right: 1px solid #9D9B8F;
 	border-bottom: 3px solid #9D9B8F;
@@ -1309,8 +1321,6 @@ body .sec-3-m {
     padding: 0px;
 }
 .content-braintrust-all{
-	border-bottom: 5px solid #9E9B8C;
-    border-right: 1px solid #9E9B8C;
 }	
 .list-user{
     display: inline-block;
@@ -1397,6 +1407,34 @@ body .sec-3-m {
 	margin-bottom: 20px;
 	display: inline-block;
 }
+
+.braintrust-all .list-braintrust-1 .list-user {
+	width: 40%;
+	margin-right: 5% !important;
+	margin-bottom: 30px !important;
+	position: relative;
+	padding-left: 142px;
+	min-height: 127px;
+	max-width: 345px;
+}
+.braintrust-all .list-braintrust-1 .list-user:nth-child(2n):after {
+	content: '';
+	clear: both;
+	display: block;
+}
+.braintrust-all .list-braintrust-1 .list-user .avata {
+	width: 127px;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.braintrust-all .list-braintrust-1 .list-user .title-user a {
+	padding-top: 0;
+}
+.braintrust-all .list-braintrust-1 .list-user .list-so-user {
+	text-align: left;
+}
+
 .single-user{
 	overflow: hidden;
 }
@@ -1411,14 +1449,18 @@ body .sec-3-m {
 	margin-top: 20px;
 }
 .single-user-r{
-
+	padding-left: 14px;
 }
 .single-user-r .title-user-single{
-    font-size: 20px;
+    font-size: 30px;
     color: #000;
     margin: 0px;
     font-family: Calibri;
     font-weight: bold;
+}
+.single-user-r .position-user {
+	font-size: 21px;
+	margin-bottom: 20px;
 }
 .single-user-bottom {
 
@@ -1459,7 +1501,7 @@ body .sec-3-m {
 	display: none;
 }
 .list-resource-3{
-	margin: 0 1rem 1.5rem -2rem;
+	margin: 1rem 1rem 1.5rem -2rem;
 }
 
 .list-resource-3 h2{
@@ -1477,7 +1519,6 @@ body .sec-3-m {
 .list-resource-3 .item-resources-3{
 	width: 100%;
 	list-style: none;
-	float: left;
 	margin: 0px 3% 20px 0px;
 }
 .list-resource-3 .item-resources-3:nth-child(3n){
@@ -2213,6 +2254,15 @@ body .sec-3-m {
 	.item-braintrust h2 {
     margin-bottom: 10px;
 	}
+	
+	.braintrust-all .list-braintrust-1 .list-user {
+		width: 100%;
+		margin-right: 0 !important;
+		max-width: 100%;
+		float: none;
+		display: block;
+	}
+	
 	.sec-3-l, .sec-3-m {
     width: auto;
     float: none;
@@ -2397,6 +2447,12 @@ body .sec-3-m {
 	.info-resource h2 a, .item-dis-2 h2 a {
     font-size: 18px;
 	}
+	.retail-news-listing h2 a {
+		margin-bottom: .5rem;
+		font-size: 1.5rem;
+		line-height: 1.1666;
+		font-weight: 400;
+	}
 	.list-tab-dis {
     /*padding: 20px 0px 0px 0px;
     float: none;*/
@@ -2408,7 +2464,8 @@ body .sec-3-m {
 	  width: 30%;
 	}
 	.single-user-r {
-      width: 68%;
+		width: 68%;
+		padding-left: 0;
 	}
 	.item-braintrust .desc p{
 		margin-bottom:10px;

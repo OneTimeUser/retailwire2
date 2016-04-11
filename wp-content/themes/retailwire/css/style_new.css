@@ -458,6 +458,12 @@ article#post-109{
 .content-single-user{
 	padding-bottom: 30px;
 }
+.content-single-user ul {
+	list-style-type: disc;
+}
+.content-single-user ul li {
+	margin: 15px 0;
+}
 
 .staff-list .list-user{
 	width: 25% !important;
